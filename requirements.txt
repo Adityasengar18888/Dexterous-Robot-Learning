@@ -1,0 +1,22 @@
+# Core Simulation and Physics
+pybullet>=3.2.5
+
+# Reinforcement Learning & Environments
+gymnasium>=1.0.0
+stable-baselines3>=2.4.0
+
+# Scientific Computing & Deep Learning
+torch>=2.2.0
+torchvision>=0.17.0
+numpy>=1.26.0
+scipy>=1.12.0
+pandas>=2.2.0
+
+# Configuration, Experiment Logging & Utilities
+pyyaml>=6.0.1
+tensorboard>=2.16.0
+
+# Testing and Code Quality
+pytest>=8.0.0
+pytest-cov>=5.0.0
+ruff>=0.4.0
