@@ -12,22 +12,29 @@
 
 ### Test Execution Results
 - **Command**: `.\.conda-env\python.exe -m pytest -v`
-- **Total Tests**: 12
-- **Passed**: 12
+- **Total Tests**: 37
+- **Passed**: 37
 - **Failed**: 0
-- **Duration**: 1.38s
+- **Duration**: 4.71s
 
-| Test Case | Module | Result | Metric |
+| Test Module | Tests | Status | Scope |
 |---|---|---|---|
-| `test_config_dict_attribute_access` | `tests/test_config.py` | **PASSED** | Dot notation & nested mutation verified |
-| `test_deep_update` | `tests/test_config.py` | **PASSED** | Deep dictionary recursive update preserved base keys |
-| `test_load_default_config` | `tests/test_config.py` | **PASSED** | YAML load succeeds with valid schema |
-| `test_load_panda_robot_config` | `tests/test_config.py` | **PASSED** | Robot YAML contains 7 arm joints, 2 finger joints, EE link 11 |
-| `test_missing_config_raises_file_not_found` | `tests/test_config.py` | **PASSED** | FileNotFoundError properly raised on invalid path |
-| `test_panda_initialization` | `tests/test_panda_robot.py` | **PASSED** | Robot ID valid, EE initialized in workspace |
-| `test_panda_reset` | `tests/test_panda_robot.py` | **PASSED** | Neutral joint angles restored within 1e-3 rad, velocities = 0 |
-| `test_workspace_clipping` | `tests/test_panda_robot.py` | **PASSED** | Out-of-bounds positions strictly clipped to safety box |
-| `test_ik_solver_accuracy` | `tests/test_panda_robot.py` | **PASSED** | Target [0.55, 0.10, 0.20] reached with error < 0.010 m |
-| `test_cartesian_delta_motion` | `tests/test_panda_robot.py` | **PASSED** | Delta motion moves EE along desired vector |
-| `test_gripper_control` | `tests/test_panda_robot.py` | **PASSED** | Fully closed (< 0.015m), fully open (> 0.065m) |
-| `test_determinism_and_reproducibility` | `tests/test_panda_robot.py` | **PASSED** | Bitwise identical trajectory output across repeated runs |
+| `tests/test_config.py` | 5 | **PASSED** | Attribute dot-access, recursive merging, schema validation |
+| `tests/test_imports.py` | 13 | **PASSED** | All 10 core dependencies, SB3 SAC+HER, Gymnasium GoalEnv, PyBullet |
+| `tests/test_panda_robot.py` | 7 | **PASSED** | Low-level kinematics, URDF links, delta actions, IK, determinism |
+| `tests/test_simulation.py` | 5 | **PASSED** | PyBulletSimulation lifecycle, context manager, table/ground, stepping, reset |
+| `tests/test_controller.py` | 7 | **PASSED** | PandaController load, joint query, EE read, move_ee IK, gripper open/close, finite checks |
+
+### Interactive Demo Verification
+- **Commands**:
+  - `.\.conda-env\python.exe -m src.robots.demo_panda`
+  - `.\.conda-env\python.exe -m experiments.demo_panda`
+- **Trajectory Result**:
+  - Waypoint 1 (Center Hover): Reached within 2.6 mm error
+  - Waypoint 2 (Forward Reach): Reached within 4.5 mm error
+  - Waypoint 3 (Left Offset): Reached within 1.9 mm error
+  - Waypoint 4 (Right Offset): Reached within 0.7 mm error
+  - Waypoint 5 (Table Pre-Grasp): Reached within 2.5 mm error
+  - Gripper Actuation: Closed to 0.00 cm, opened to 8.00 cm
+  - Clean reset and disconnect verified.
+
