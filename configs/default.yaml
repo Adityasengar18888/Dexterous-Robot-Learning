@@ -1,0 +1,28 @@
+# Global simulation and environment defaults
+sim:
+  timestep: 0.0041666667 # 240 Hz physics simulation
+  gravity: [0.0, 0.0, -9.81]
+  control_frequency: 40.0 # 40 Hz control frequency (6 physics sub-steps per step)
+  seed: 42
+  headless: true
+  enable_gui: false
+  solver_iterations: 150
+
+robot:
+  type: "panda"
+  config_file: "configs/robot/panda.yaml"
+
+task:
+  name: "reach"
+  max_episode_steps: 50
+  distance_threshold: 0.05 # 5cm threshold for sparse goal satisfaction
+
+rl:
+  algorithm: "SAC"
+  replay_strategy: "future"
+  n_sampled_goal: 4
+  gamma: 0.98
+  tau: 0.005
+  learning_rate: 0.001
+  batch_size: 256
+  buffer_size: 1000000
