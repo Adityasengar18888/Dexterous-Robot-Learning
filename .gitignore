@@ -43,6 +43,7 @@ videos/*
 !videos/.gitkeep
 runs/
 *.tfevents.*
+*replay_buffer.pkl
 tensorboard/
 experiments/results/
 

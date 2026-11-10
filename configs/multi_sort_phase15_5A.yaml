@@ -1,0 +1,31 @@
+# Phase 15.2.5A Configuration: Collision-Aware Pre-Grasp Dense Multi-Sort
+# Prepared ONLY (DO NOT train SAC in Phase 15.2.5A).
+
+env:
+  name: "MultiSortPreGrasp"
+  num_objects: 2
+  distance_threshold: 0.05
+  max_episode_steps: 300
+  action_scale: 0.05
+
+rl:
+  algo: "SAC"
+  policy: "MultiInputPolicy"
+  seed: 42
+  total_timesteps: 20000
+  buffer_size: 300000
+  batch_size: 128
+  learning_rate: 0.0003
+  learning_starts: 1000
+  gamma: 0.98
+  tau: 0.005
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 4
+  her_copy_info_dict: true
+  device: "cpu"
+
+paths:
+  model_save_path: "experiments/multi_sort_phase15_5A/seed42/models"
+  tensorboard_log: "logs/multi_sort_phase15_5A/seed42"
+

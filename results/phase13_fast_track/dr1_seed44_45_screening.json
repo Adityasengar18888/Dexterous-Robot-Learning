@@ -1,0 +1,222 @@
+{
+    "screening_30ep": {
+        "seed_44": {
+            "Nominal_DR0": {
+                "n_episodes": 30,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.016483639335880623,
+                "mean_hold_duration": 88.73333333333333,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 496.67352483409144,
+                "failure_taxonomy": {
+                    "SUCCESS": 30
+                }
+            },
+            "Matched_DR1": {
+                "n_episodes": 30,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.01825130462336039,
+                "mean_hold_duration": 88.4,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 497.5873272762323,
+                "failure_taxonomy": {
+                    "SUCCESS": 30
+                }
+            },
+            "Heldout_Stress": {
+                "n_episodes": 30,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 0.8666666666666667,
+                "transport_rate": 0.8666666666666667,
+                "placement_rate": 0.8666666666666667,
+                "success_rate": 0.8666666666666667,
+                "mean_final_dist": 0.07045960888887443,
+                "mean_hold_duration": 75.26666666666667,
+                "drop_rate": 0.03333333333333333,
+                "timeout_rate": 0.13333333333333333,
+                "mean_reward": 388.77259783465416,
+                "failure_taxonomy": {
+                    "SUCCESS": 26,
+                    "GRASP_BUT_NO_LIFT": 4
+                }
+            }
+        },
+        "seed_45": {
+            "Nominal_DR0": {
+                "n_episodes": 30,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.018278231347600576,
+                "mean_hold_duration": 89.4,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 504.6892683663095,
+                "failure_taxonomy": {
+                    "SUCCESS": 30
+                }
+            },
+            "Matched_DR1": {
+                "n_episodes": 30,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.019135856100668456,
+                "mean_hold_duration": 89.23333333333333,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 503.82920636155956,
+                "failure_taxonomy": {
+                    "SUCCESS": 30
+                }
+            },
+            "Heldout_Stress": {
+                "n_episodes": 30,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 0.8,
+                "transport_rate": 0.8,
+                "placement_rate": 0.8,
+                "success_rate": 0.8,
+                "mean_final_dist": 0.054125918944676686,
+                "mean_hold_duration": 79.16666666666667,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.2,
+                "mean_reward": 360.15133708529174,
+                "failure_taxonomy": {
+                    "SUCCESS": 24,
+                    "GRASP_BUT_NO_LIFT": 6
+                }
+            }
+        }
+    },
+    "full_100ep": {
+        "seed_44": {
+            "Nominal_DR0": {
+                "n_episodes": 100,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.01733007299713786,
+                "mean_hold_duration": 87.91,
+                "drop_rate": 0.01,
+                "timeout_rate": 0.0,
+                "mean_reward": 493.55844241635873,
+                "failure_taxonomy": {
+                    "SUCCESS": 100
+                }
+            },
+            "Matched_DR1": {
+                "n_episodes": 100,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.01747192721348251,
+                "mean_hold_duration": 88.13,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 495.75800325194376,
+                "failure_taxonomy": {
+                    "SUCCESS": 100
+                }
+            },
+            "Heldout_Stress": {
+                "n_episodes": 100,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 0.94,
+                "transport_rate": 0.94,
+                "placement_rate": 0.94,
+                "success_rate": 0.94,
+                "mean_final_dist": 0.04182002994231876,
+                "mean_hold_duration": 81.83,
+                "drop_rate": 0.05,
+                "timeout_rate": 0.06,
+                "mean_reward": 427.84378487374636,
+                "failure_taxonomy": {
+                    "SUCCESS": 94,
+                    "GRASP_BUT_NO_LIFT": 6
+                }
+            }
+        },
+        "seed_45": {
+            "Nominal_DR0": {
+                "n_episodes": 100,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.019390689060091927,
+                "mean_hold_duration": 89.29,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 504.74618466297164,
+                "failure_taxonomy": {
+                    "SUCCESS": 100
+                }
+            },
+            "Matched_DR1": {
+                "n_episodes": 100,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 1.0,
+                "transport_rate": 1.0,
+                "placement_rate": 1.0,
+                "success_rate": 1.0,
+                "mean_final_dist": 0.018677558321505736,
+                "mean_hold_duration": 89.31,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.0,
+                "mean_reward": 505.03168523773553,
+                "failure_taxonomy": {
+                    "SUCCESS": 100
+                }
+            },
+            "Heldout_Stress": {
+                "n_episodes": 100,
+                "reach_rate": 1.0,
+                "grasp_rate": 1.0,
+                "lift_rate": 0.79,
+                "transport_rate": 0.79,
+                "placement_rate": 0.79,
+                "success_rate": 0.79,
+                "mean_final_dist": 0.05640023258049037,
+                "mean_hold_duration": 82.29,
+                "drop_rate": 0.0,
+                "timeout_rate": 0.21,
+                "mean_reward": 355.3725348861888,
+                "failure_taxonomy": {
+                    "SUCCESS": 79,
+                    "GRASP_BUT_NO_LIFT": 21
+                }
+            }
+        }
+    }
+}

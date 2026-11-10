@@ -1,0 +1,8 @@
+{
+    "experiment_id": "pnp_dr2_seed46",
+    "seed": 46,
+    "algorithm": "SAC+HER",
+    "environment": "PandaPickPlaceEnv",
+    "training_timesteps": 100000,
+    "git_commit": "unavailable"
+}

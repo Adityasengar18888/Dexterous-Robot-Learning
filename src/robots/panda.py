@@ -110,6 +110,16 @@ class FrankaPanda(BaseRobot):
                 physicsClientId=self.cid,
             )
 
+        # Set high friction for gripper fingers
+        for finger_idx in self.finger_joint_indices:
+            p.changeDynamics(
+                self.body_id,
+                finger_idx,
+                lateralFriction=2.0,
+                spinningFriction=0.1,
+                physicsClientId=self.cid,
+            )
+
         self.reset()
 
     def reset(self, joint_positions: Sequence[float] | None = None) -> None:

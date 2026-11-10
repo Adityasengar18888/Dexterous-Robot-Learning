@@ -1,0 +1,46 @@
+# Phase 15.2.5B.1 Configuration: Vertical Approach Learning & Demo-Guided SAC + HER
+# Preserves Phase B baseline configs/models cleanly in separate experiment directories.
+
+env:
+  name: "SinglePreGrasp"
+  distance_threshold: 0.05
+  max_episode_steps: 80
+  action_scale: 0.05
+  reward_config:
+    use_vertical_potential: true
+    w_vertical_potential: 2.0
+    grasp_z_offset: 0.0
+    vert_stop_tol_m: 0.008
+
+rl:
+  algo: "SAC"
+  policy: "MultiInputPolicy"
+  seed: 42
+  total_timesteps: 10000          # Initial B.1 budget; conditional extension to 20,000-50,000 total
+  buffer_size: 200000
+  batch_size: 128
+  learning_rate: 0.0003
+  learning_starts: 500
+  gamma: 0.98
+  tau: 0.005
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 4
+  her_copy_info_dict: true
+  device: "cpu"
+  demo_warmstart_path: "experiments/multi_sort_phase15_5B1/seed42/demonstrations/single_pregrasp_demos_50ep.pkl"
+  demo_warmstart_method: "her_buffer"
+
+eval:
+  eval_freq: 2500
+  n_eval_episodes: 10
+  deterministic: true
+
+checkpointing:
+  save_freq: 2500
+  naming_pattern: "checkpoint_{timesteps}_steps.zip"
+
+paths:
+  model_save_path: "experiments/multi_sort_phase15_5B1/seed42/models"
+  tensorboard_log: "logs/multi_sort_phase15_5B1/seed42"
+

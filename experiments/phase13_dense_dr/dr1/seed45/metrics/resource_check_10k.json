@@ -1,0 +1,12 @@
+{
+    "process_name": "phase13_dr1_seed45",
+    "step": 500001,
+    "elapsed_seconds": 0.82,
+    "steps_per_sec": 611067.51,
+    "process_ram_mb": 550.77,
+    "process_cpu_percent": 0.0,
+    "system_ram_available_gb": 1.04,
+    "system_ram_total_gb": 15.52,
+    "system_ram_percent": 93.3,
+    "replay_buffer_size": 0
+}

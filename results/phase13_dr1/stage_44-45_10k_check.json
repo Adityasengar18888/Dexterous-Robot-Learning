@@ -1,0 +1,26 @@
+{
+    "44": {
+        "process_name": "phase13_dr1_seed44",
+        "step": 10000,
+        "elapsed_seconds": 391.07,
+        "steps_per_sec": 25.57,
+        "process_ram_mb": 569.36,
+        "process_cpu_percent": 486.7,
+        "system_ram_available_gb": 2.18,
+        "system_ram_total_gb": 15.52,
+        "system_ram_percent": 86.0,
+        "replay_buffer_size": 9999
+    },
+    "45": {
+        "process_name": "phase13_dr1_seed45",
+        "step": 10000,
+        "elapsed_seconds": 392.04,
+        "steps_per_sec": 25.51,
+        "process_ram_mb": 569.83,
+        "process_cpu_percent": 489.3,
+        "system_ram_available_gb": 2.18,
+        "system_ram_total_gb": 15.52,
+        "system_ram_percent": 86.0,
+        "replay_buffer_size": 9999
+    }
+}

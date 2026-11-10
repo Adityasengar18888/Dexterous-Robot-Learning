@@ -1,0 +1,43 @@
+# Phase 14.4 Configuration: Adaptive Post-Lift Transport & Target Alignment
+controller:
+  name: "E_ADAPTIVE_TRANSPORT"
+  base_pipeline: "D_DUAL_STAGE" # Reuses Phase 14.3 Stage 1 + Phase 14-Lite C_SLIP_AWARE
+  stage1_spatial_acquisition:
+    train_ws_x_min: 0.40
+    train_ws_x_max: 0.60
+    train_ws_y_min: -0.20
+    train_ws_y_max: 0.20
+    ws_edge_margin: 0.02
+    xy_align_tol: 0.014
+    grasp_z_offset: 0.019
+    pregrasp_z_offset: 0.045
+    min_acquire_force: 10.0
+  stage2_slip_aware_lift:
+    accel_limit_z: 0.45
+    jerk_limit_z: 0.30
+    slip_rel_dist_delta: 0.0025
+    min_stable_force: 15.0
+    slip_accel_limit_z: 0.20
+    stable_width_min: 0.042
+    max_slip_hold_steps: 3
+  stage4_adaptive_transport:
+    transport_lift_z_thresh: 0.050      # Activate only after cube_z > 0.05m
+    align_cos_thresh: 0.75              # Correct if policy direction diverges from goal
+    fine_align_radius: 0.085            # Begin damped overshoot-prevention & offset correction
+    target_settle_radius: 0.015         # Target alignment center tolerance (well inside 0.05m)
+    max_transport_cmd: 0.90             # Bounded normalized action step
+    overshoot_brake_radius: 0.060       # Progressive velocity taper to prevent target overshoot
+    kp_transport: 0.85                  # Smooth gain from (goal - obj) / action_scale
+    safe_closure_cmd: -1.0              # Physical gripper closure within [-1, 1]
+    table_release_z_max: 0.028          # Only release if goal is physically table-supported
+
+evaluation:
+  seeds: [42, 43]
+  screening_episodes: 20
+  confirmation_episodes: 100
+  eval_seed_start: 1001
+  regimes: ["Heldout_DR4", "Nominal_DR0", "Matched_DR4"]
+  checkpoints:
+    seed42: "experiments/phase13_dense_dr/dr4/seed42/models/checkpoint_500000.zip"
+    seed43: "experiments/phase13_dense_dr/dr4/seed43/models/checkpoint_500000.zip"
+

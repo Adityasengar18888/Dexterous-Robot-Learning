@@ -1,0 +1,26 @@
+[
+    {
+        "seed": 42,
+        "exp_dir": "experiments/phase13_dense_dr/dr1\\seed42",
+        "status": "PASS",
+        "failures": [],
+        "duration_seconds": 53642.14,
+        "duration_hours": 14.9,
+        "final_replay_buffer_size": 1000000,
+        "start_time": "2026-10-05 22:24:26",
+        "end_time": "2026-10-06 13:18:28",
+        "reproducibility": "PASS"
+    },
+    {
+        "seed": 43,
+        "exp_dir": "experiments/phase13_dense_dr/dr1\\seed43",
+        "status": "PASS",
+        "failures": [],
+        "duration_seconds": 45810.83,
+        "duration_hours": 12.73,
+        "final_replay_buffer_size": 1000000,
+        "start_time": "2026-10-05 22:24:28",
+        "end_time": "2026-10-06 11:07:59",
+        "reproducibility": "PASS"
+    }
+]

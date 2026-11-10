@@ -1,0 +1,22 @@
+{
+    "experiment_id": "phase13_dr1_seed44",
+    "phase": 13,
+    "dr_level": 1,
+    "seed": 44,
+    "python_version": "3.11.16",
+    "torch_version": "2.14.1+cpu",
+    "cuda_available": false,
+    "cpu_count_physical": 16,
+    "cpu_count_logical": 22,
+    "threads_assigned": 6,
+    "total_timesteps_target": 1000000,
+    "training_start_time": "2026-10-07 08:53:45",
+    "checkpoints_planned": [
+        250000,
+        500000,
+        750000,
+        1000000
+    ],
+    "checkpoint_hashes": {},
+    "status": "RUNNING"
+}

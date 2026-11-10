@@ -1,0 +1,30 @@
+checkpoints:
+- 250000
+- 500000
+- 750000
+- 1000000
+dr_level: 1
+env:
+    action_scale: 0.05
+    distance_threshold: 0.05
+    dr_config:
+        enabled: true
+        object_position:
+            enabled: true
+    max_episode_steps: 100
+    name: PandaPickPlaceDenseRewardEnv
+phase: 13
+rl:
+    algorithm: SAC
+    batch_size: 256
+    buffer_size: 1000000
+    gamma: 0.95
+    her: true
+    her_strategy: future
+    learning_rate: 0.001
+    learning_starts: 250
+    n_sampled_goal: 4
+    policy: MultiInputPolicy
+    tau: 0.05
+seed: 44
+total_timesteps: 1000000

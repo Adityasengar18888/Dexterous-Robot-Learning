@@ -1,0 +1,7 @@
+{
+    "experiment_id": "pnp_dr0_smoke_seed42",
+    "seed": 42,
+    "algorithm": "SAC+HER",
+    "environment": "PandaPickPlaceEnv",
+    "training_timesteps": 10000
+}

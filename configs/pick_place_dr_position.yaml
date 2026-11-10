@@ -1,0 +1,30 @@
+env:
+  name: "PickPlace"
+  distance_threshold: 0.05
+  max_episode_steps: 100
+  action_scale: 0.05
+  randomizer:
+    enabled: true
+    object_position:
+      enabled: true
+
+rl:
+  seed: 42
+  total_timesteps: 5000
+  buffer_size: 1000000
+  batch_size: 256
+  learning_rate: 0.001
+  learning_starts: 250
+  gamma: 0.95
+  tau: 0.05
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 4
+
+eval:
+  eval_freq: 2500
+  n_eval_episodes: 10
+
+paths:
+  model_save_path: "experiments/dr_position/models"
+  tensorboard_log: "logs/dr_position"

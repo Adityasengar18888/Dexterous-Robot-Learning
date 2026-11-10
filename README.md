@@ -113,10 +113,10 @@ The repository maintains automated testing for configuration integrity, kinemati
 |---|---|---|---|
 | **Phase 0** | **Project Initialization** | Repository scaffold, dependencies, configs, docs, import smoke tests | **COMPLETED** |
 | **Phase 1** | **Robot Kinematics & Control** | Franka Panda model, IK solver, Cartesian delta control, limits | **COMPLETED** |
-| **Phase 2** | **GoalEnv & Reach Task** | Gymnasium GoalEnv base, sparse reward engine, Reach task | *Pending Approval* |
-| **Phase 3** | **SAC + HER Training Pipeline** | SB3 SAC + HerReplayBuffer, evaluation protocol, Reach benchmark | *Pending Approval* |
-| **Phase 4** | **Pick & Grasping Mechanics** | Object physics, contact points, grasping stabilization | Planned |
-| **Phase 5** | **Pick and Place Task** | Dual-phase goal conditioning, target placement | Planned |
+| **Phase 2** | **GoalEnv & Reach Task** | Gymnasium GoalEnv base, sparse reward engine, Reach task | **COMPLETED** |
+| **Phase 3** | **SAC + HER Training Pipeline** | SB3 SAC + HerReplayBuffer, evaluation protocol, Reach benchmark | **COMPLETED** |
+| **Phase 4** | **Pick & Grasping Mechanics** | Object physics, contact points, grasping stabilization | **COMPLETED** |
+| **Phase 5** | **Pick and Place Task** | Dual-phase goal conditioning, target placement | **COMPLETED** |
 | **Phase 6** | **Sorting Task** | Multi-class sorting into target bins | Planned |
 | **Phase 7** | **Multi-Object Manipulation** | Clutter, sequential picking, obstacle negotiation | Planned |
 | **Phase 8** | **Multi-Part Assembly** | High-precision peg-in-hole and multi-part mating | Planned |

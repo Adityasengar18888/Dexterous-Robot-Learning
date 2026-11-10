@@ -1,0 +1,40 @@
+# Phase 15.2.4 Configuration: Continuous Proximity Reward Optimization (SAC + HER)
+# Fresh model & fresh HerReplayBuffer on PandaMultiSortDenseV2Env.
+
+env:
+  name: "MultiSortDenseV2"
+  num_objects: 2
+  distance_threshold: 0.05
+  max_episode_steps: 300
+  action_scale: 0.05
+
+rl:
+  algo: "SAC"
+  policy: "MultiInputPolicy"
+  seed: 42
+  total_timesteps: 10000          # Initial 10k smoke; conditional extension up to 50,000 total steps
+  buffer_size: 300000
+  batch_size: 128
+  learning_rate: 0.0003
+  learning_starts: 1000
+  gamma: 0.98
+  tau: 0.005
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 4
+  her_copy_info_dict: true
+  device: "cpu"
+
+eval:
+  eval_freq: 5000
+  n_eval_episodes: 20
+  deterministic: true
+
+checkpointing:
+  save_freq: 2500
+  naming_pattern: "checkpoint_{timesteps}_steps.zip"
+
+paths:
+  model_save_path: "experiments/multi_sort_phase15_4/seed42/models"
+  tensorboard_log: "logs/multi_sort_phase15_4/seed42"
+

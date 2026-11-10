@@ -1,0 +1,38 @@
+# Phase 15.2 Baseline Configuration: Multi-Object Sorting (SAC + HER)
+# Prepared in Phase 15.2.1 (Compute-efficient smoke baseline; DO NOT launch full run without Phase 15.2.2 approval)
+
+env:
+  name: "MultiSort"
+  num_objects: 2
+  distance_threshold: 0.05
+  max_episode_steps: 300
+  action_scale: 0.05
+
+rl:
+  algo: "SAC"
+  policy: "MultiInputPolicy"
+  seed: 42
+  total_timesteps: 10000          # Initial smoke budget (full run target: 300,000-500,000 with dense reward/curriculum)
+  buffer_size: 300000             # CPU-friendly replay buffer (~1,000 full 300-step episodes)
+  batch_size: 128
+  learning_rate: 0.0003
+  learning_starts: 1000           # Must exceed max_episode_steps (300) so >=3 full HER trajectories exist
+  gamma: 0.98
+  tau: 0.005
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 4
+
+eval:
+  eval_freq: 2500
+  n_eval_episodes: 20
+  deterministic: true
+
+checkpointing:
+  save_freq: 10000
+  naming_pattern: "multi_sort_p15_seed{seed}_step{timesteps}.zip"
+
+paths:
+  model_save_path: "experiments/phase15_2/multi_sort/seed42/models"
+  tensorboard_log: "logs/phase15_2/multi_sort/seed42"
+

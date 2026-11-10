@@ -1,0 +1,68 @@
+# Phase 15.1 Configuration: Sim-to-Real Transfer Readiness Benchmark
+experiment:
+  name: "phase15_1_sim_to_real_readiness"
+  controller: "E_ADAPTIVE_TRANSPORT"
+  phase14_config: "configs/phase14_4_config.yaml"
+  env_config: "configs/pick_place_heldout.yaml"
+  seeds: [42, 43]
+  episodes_per_condition_per_seed: 20
+  eval_seed_start: 1001
+  noise_seed_base: 2026
+  max_runtime_minutes: 45
+
+checkpoints:
+  seed42:
+    path: "experiments/phase13_dense_dr/dr4/seed42/models/checkpoint_500000.zip"
+    sha256: "481885754A024C4345DEBB8E1885042216E2C0FC28393BE2FEA8325D6C242F7C"
+  seed43:
+    path: "experiments/phase13_dense_dr/dr4/seed43/models/checkpoint_500000.zip"
+    sha256: "E1E7EC8D23EB6CF113CA003237A326E2B1EFC32D6DDE4A3CCA906D71C0D6C9C5"
+
+observation_noise:
+  distribution: "clipped_gaussian"
+  sigma_to_bound_ratio: 0.5  # sigma = bound / 2.0 (~95.4% within [-bound, +bound])
+  conditions:
+    A0_CLEAN:
+      bound_m: 0.0
+      std_m: 0.0
+    A1_NOISE_3MM:
+      bound_m: 0.003
+      std_m: 0.0015
+    A2_NOISE_5MM:
+      bound_m: 0.005
+      std_m: 0.0025
+
+latency:
+  # Effective RL control cycle: 10..15 IK substeps + 10 gripper substeps @ 240Hz = 20..25 substeps (83.3..104.2 ms/step)
+  conditions:
+    B0_DELAY_0:
+      obs_delay_steps: 0
+      action_delay_steps: 0
+    B1_OBS_DELAY_1:
+      obs_delay_steps: 1
+      action_delay_steps: 0
+    B2_OBS_DELAY_2:
+      obs_delay_steps: 2
+      action_delay_steps: 0
+    B3_OBS_DELAY_4:
+      obs_delay_steps: 4
+      action_delay_steps: 0
+    B4_COMBINED_DELAY_1_1:
+      obs_delay_steps: 1
+      action_delay_steps: 1
+
+unprivileged_contact:
+  conditions:
+    C0_PRIVILEGED:
+      strip_contacts: false
+    C1_UNPRIVILEGED:
+      strip_contacts: true
+      settle_closure_steps: 2
+      jaw_cube_width_min: 0.042
+      jaw_cube_width_max: 0.066
+
+readiness_thresholds:
+  A_ROBUST: 0.90
+  B_DEGRADED_BUT_USABLE: 0.75
+  C_FRAGILE: 0.50
+

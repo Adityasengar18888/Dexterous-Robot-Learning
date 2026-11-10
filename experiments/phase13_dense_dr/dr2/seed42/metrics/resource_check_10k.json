@@ -1,0 +1,12 @@
+{
+    "process_name": "phase13_dr2_seed42",
+    "step": 10000,
+    "elapsed_seconds": 393.92,
+    "steps_per_sec": 25.39,
+    "process_ram_mb": 547.58,
+    "process_cpu_percent": 498.5,
+    "system_ram_available_gb": 1.32,
+    "system_ram_total_gb": 15.52,
+    "system_ram_percent": 91.5,
+    "replay_buffer_size": 9999
+}

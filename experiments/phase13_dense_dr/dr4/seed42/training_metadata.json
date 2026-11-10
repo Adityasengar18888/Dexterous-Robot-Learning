@@ -1,0 +1,27 @@
+{
+    "experiment_id": "phase13_dr4_seed42",
+    "phase": 13,
+    "dr_level": 4,
+    "seed": 42,
+    "python_version": "3.11.16",
+    "torch_version": "2.14.1+cpu",
+    "cuda_available": false,
+    "cpu_count_physical": 16,
+    "cpu_count_logical": 22,
+    "threads_assigned": 6,
+    "total_timesteps_target": 500000,
+    "training_start_time": "2026-11-04 09:12:23",
+    "checkpoints_planned": [
+        250000,
+        500000
+    ],
+    "checkpoint_hashes": {
+        "checkpoint_250000.zip": "95c986555f3127d8c362f41b59fc922dc807df0d2b06d74c69bc5a1752039a68",
+        "checkpoint_500000.zip": "481885754a024c4345debb8e1885042216e2c0fc28393be2fea8325d6c242f7c",
+        "final_model.zip": "064154c4c0d4259c705cd1f5875e85bef04c54bd6bb5dc20e4b6e7f1d3108b92"
+    },
+    "status": "COMPLETE",
+    "training_end_time": "2026-11-04 18:11:51",
+    "total_duration_seconds": 32367.89,
+    "final_replay_buffer_size": 500000
+}

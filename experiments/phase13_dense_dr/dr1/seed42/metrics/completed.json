@@ -1,0 +1,8 @@
+{
+    "experiment_id": "phase13_dr1_seed42",
+    "seed": 42,
+    "total_timesteps": 1000000,
+    "duration_seconds": 53642.14,
+    "duration_hours": 14.9,
+    "status": "COMPLETE"
+}

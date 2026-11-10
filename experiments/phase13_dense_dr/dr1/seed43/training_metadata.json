@@ -1,0 +1,31 @@
+{
+    "experiment_id": "phase13_dr1_seed43",
+    "phase": 13,
+    "dr_level": 1,
+    "seed": 43,
+    "python_version": "3.11.16",
+    "torch_version": "2.14.1+cpu",
+    "cuda_available": false,
+    "cpu_count_physical": 16,
+    "cpu_count_logical": 22,
+    "threads_assigned": 6,
+    "total_timesteps_target": 1000000,
+    "training_start_time": "2026-10-05 22:24:28",
+    "checkpoints_planned": [
+        250000,
+        500000,
+        750000,
+        1000000
+    ],
+    "checkpoint_hashes": {
+        "checkpoint_250000.zip": "af49839d5592b9590b1c7f34e20fa91ed7829d31e78f2ecf03dad8047baec45d",
+        "checkpoint_500000.zip": "51424ffcaa67b300407bf5503f5218c760b98eb2347fbb4f3e4f2fe7cdae9b9f",
+        "checkpoint_750000.zip": "b2b5755599035539de12b57050cc0c115c36f555d0dd265cf191a5bc5f9f8b91",
+        "checkpoint_1000000.zip": "264b38ae5148c71fad02ea63a00322b5941aeaab7595d5efb1655cd906501e10",
+        "final_model.zip": "e4115b038e0ad15dbb2e9dc8affa16c442766a5745baf1698ce8955d3f30b8db"
+    },
+    "status": "COMPLETE",
+    "training_end_time": "2026-10-06 11:07:59",
+    "total_duration_seconds": 45810.83,
+    "final_replay_buffer_size": 1000000
+}

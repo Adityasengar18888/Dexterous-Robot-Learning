@@ -1,0 +1,41 @@
+# Phase 15.2 Dense Multi-Object Sorting Configuration (SAC + HER)
+# Prepared in Phase 15.2.2 for Phase 15.2.3 smoke & baseline training.
+# NOTE: Do NOT start training in Phase 15.2.2.
+
+env:
+  name: "MultiSortDense"
+  num_objects: 2
+  distance_threshold: 0.05
+  max_episode_steps: 300
+  action_scale: 0.05
+
+rl:
+  algo: "SAC"
+  policy: "MultiInputPolicy"
+  seed: 42
+  total_timesteps: 10000          # Initial smoke budget (full convergence target: 300k-500k)
+  buffer_size: 300000
+  batch_size: 128
+  learning_rate: 0.0003
+  learning_starts: 1000           # Exceeds max_episode_steps (300) for >= 3 complete HER episodes
+  gamma: 0.98
+  tau: 0.005
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 4
+  her_copy_info_dict: true        # Required so HerReplayBuffer supplies transition context to compute_reward
+  device: "cpu"
+
+eval:
+  eval_freq: 2500
+  n_eval_episodes: 20
+  deterministic: true
+
+checkpointing:
+  save_freq: 2500
+  naming_pattern: "checkpoint_{timesteps}_steps.zip"
+
+paths:
+  model_save_path: "experiments/multi_sort_phase15_dense/seed42/models"
+  tensorboard_log: "logs/multi_sort_phase15_dense/seed42"
+

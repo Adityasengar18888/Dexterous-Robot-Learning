@@ -1,0 +1,28 @@
+env:
+  name: "PickPlace"
+  distance_threshold: 0.05
+  max_episode_steps: 100
+  action_scale: 0.05
+  randomizer:
+    enabled: true
+    object_position:
+      enabled: true
+      ranges:
+        x: [0.35, 0.40] # Edge of workspace
+        y: [-0.25, -0.20] # Edge of workspace
+    target_position:
+      enabled: true
+      ranges:
+        x: [0.65, 0.70]
+        y: [0.20, 0.25]
+        z: [0.15, 0.20] # High target
+    object_orientation:
+      enabled: true
+    mass:
+      enabled: true
+      min: 0.20
+      max: 0.25 # Heavier than DR4
+    friction:
+      enabled: true
+      min: 0.3
+      max: 0.5 # Slippier than DR4

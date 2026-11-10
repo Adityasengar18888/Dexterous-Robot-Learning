@@ -1,0 +1,31 @@
+env:
+  action_scale: 0.05
+  distance_threshold: 0.05
+  max_episode_steps: 100
+  name: PickPlace
+  randomizer:
+    enabled: true
+    object_orientation:
+      enabled: true
+    object_position:
+      enabled: true
+    target_position:
+      enabled: true
+eval:
+  eval_freq: 2500
+  n_eval_episodes: 10
+paths:
+  model_save_path: experiments/pnp_dr3_seed44/models
+  tensorboard_log: experiments/pnp_dr3_seed44/logs
+rl:
+  batch_size: 256
+  buffer_size: 1000000
+  gamma: 0.95
+  her_n_sampled_goal: 4
+  her_strategy: future
+  learning_rate: 0.001
+  learning_starts: 250
+  seed: 44
+  tau: 0.05
+  total_timesteps: 100000
+  use_her: true

@@ -1,0 +1,4 @@
+stage,timesteps,initial_state_type,success_rate,grasp_rate,lift_rate,transport_rate,placement_rate,mean_final_distance,median_final_distance,mean_transport_progress,mean_hold_duration,drop_rate,timeout_rate
+1,10000,NORMAL_START,0.0,0.09,0.0,0.0,0.0,0.24134297773241997,0.24003370106220245,0.005318697914481163,0.5,0.01,1.0
+1,25000,NORMAL_START,0.0,0.05,0.0,0.0,0.0,0.2346758472919464,0.23209649324417114,0.0010809028148651124,0.76,0.02,1.0
+1,50000,NORMAL_START,0.0,0.1,0.0,0.0,0.0,0.23643062435090542,0.23209649324417114,0.0053432901203632355,3.66,0.05,1.0
