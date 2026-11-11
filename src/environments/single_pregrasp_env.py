@@ -32,6 +32,7 @@ class SinglePreGraspRewardConfig(PreGraspRewardConfig):
     w_vertical_potential: float = 2.0
     grasp_z_offset: float = 0.000
     vert_stop_tol_m: float = 0.008
+    gate_goal_lift_on_lifted_dg: bool = False
 
 
 class PandaSinglePreGraspEnv(PandaMultiSortEnv):
@@ -333,7 +334,11 @@ class PandaSinglePreGraspEnv(PandaMultiSortEnv):
 
         g_prev = np.linalg.norm(prev_ag - dg, axis=-1)
         g_curr = np.linalg.norm(ag - dg, axis=-1)
-        r_goal_lift = cfg.w_transport * np.clip(g_prev - g_curr, -cfg.step_delta_clip_m, cfg.step_delta_clip_m) * held_any
+        r_goal_lift_raw = cfg.w_transport * np.clip(g_prev - g_curr, -cfg.step_delta_clip_m, cfg.step_delta_clip_m) * held_any
+        if cfg.gate_goal_lift_on_lifted_dg:
+            r_goal_lift = np.where(dg[:, 2] >= cfg.hold_z_min, r_goal_lift_raw, 0.0).astype(np.float32)
+        else:
+            r_goal_lift = r_goal_lift_raw
 
         held_goal_prev = (g_prev <= self.distance_threshold) & (prev_ag[:, 2] >= cfg.hold_z_min) & prev_bilat
         held_goal_curr = (g_curr <= self.distance_threshold) & (ag[:, 2] >= cfg.hold_z_min) & curr_bilat

@@ -1,0 +1,28 @@
+{
+  "campaign": "ANTIGRAVITY PHASE 17",
+  "simulation_only_disclaimer": "All Phase 17 tests are simulation-side assessments only and do NOT constitute physical hardware safety or real-world deployment proof.",
+  "milestones": [
+    {
+      "id": "17.1",
+      "name": "Cross-Simulator Policy Validation (PyBullet -> MuJoCo 4.0.1)",
+      "status": "PARTIALLY_COMPLETE",
+      "evidence": "results/phase16_17/phase17_cross_simulator_results.json",
+      "notes": "Built MJCF Franka Panda PickPlace twin; evaluated frozen PyBullet policies with zero retraining (sac_dr4_seed42: 40% bilateral contact, 5% grasp, 0% full success) and calibrated MuJoCo contact/friction physics (50% bilateral contact, 15% grasp, 5% full success); classified mismatches in observation Z offset and actuator/contact dynamics."
+    },
+    {
+      "id": "17.2",
+      "name": "Sim-to-Real Readiness Assessment (Simulation-Side)",
+      "status": "COMPLETE",
+      "evidence": "results/phase16_17/phase17_safety_assessment.json",
+      "notes": "7-condition stress test + SafetySupervisor E-stop check (32.41 us check latency, 250 post-trip commands blocked): 100% under 5mm noise, frequency jitter & low friction/heavy mass; 90% under 1-step latency; 60% under RGB-D +-8mm calib bias; 20% under 2-step latency."
+    },
+    {
+      "id": "17.3",
+      "name": "Optional Hardware Integration Preparation",
+      "status": "NOT_ATTEMPTED",
+      "evidence": "src/deployment/hardware_interface.py",
+      "notes": "ROS 2 topic/service contracts, FrankaState/CartesianDeltaCommand abstractions, SafetySupervisor, and StubLiveFrankaDriver designed and unit-tested; live physical hardware execution NOT_ATTEMPTED (no physical robot)."
+    }
+  ]
+}
+

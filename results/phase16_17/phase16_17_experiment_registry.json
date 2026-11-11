@@ -1,0 +1,31 @@
+{
+  "campaign": "PHASE 16 & 17 EXPERIMENT REGISTRY",
+  "artifacts": [
+    {"phase": "16.0", "type": "report", "path": "results/phase16_17/phase16_0_baseline_audit.md"},
+    {"phase": "16.1", "type": "script", "path": "scripts/run_phase16_1_hrl.py"},
+    {"phase": "16.1", "type": "model", "path": "experiments/phase16_17/hrl/skill_library.pt"},
+    {"phase": "16.1", "type": "model", "path": "experiments/phase16_17/hrl/best_hrl_meta.pt"},
+    {"phase": "16.1", "type": "model", "path": "experiments/phase16_17/hrl/final_hrl_meta.pt"},
+    {"phase": "16.1", "type": "model", "path": "experiments/phase16_17/hrl/flat_sac_her_12k.zip"},
+    {"phase": "16.1", "type": "metrics", "path": "results/phase16_17/phase16_1_hrl_results.json"},
+    {"phase": "16.2", "type": "module", "path": "src/perception/rgbd_camera.py"},
+    {"phase": "16.2", "type": "module", "path": "src/perception/vision_detector.py"},
+    {"phase": "16.2", "type": "metrics", "path": "results/phase16_17/phase16_2_vision_results.json"},
+    {"phase": "16.3", "type": "module", "path": "src/environments/dynamic_pick_place_env.py"},
+    {"phase": "16.3", "type": "module", "path": "src/perception/dynamic_tracker.py"},
+    {"phase": "16.3", "type": "metrics", "path": "results/phase16_17/phase16_3_dynamic_results.json"},
+    {"phase": "16.4", "type": "module", "path": "src/environments/contact_assembly_env.py"},
+    {"phase": "16.4", "type": "module", "path": "src/controllers/compliant_assembly_controller.py"},
+    {"phase": "16.4", "type": "metrics", "path": "results/phase16_17/phase16_4_contact_assembly_results.json"},
+    {"phase": "16.5", "type": "module", "path": "src/deployment/runtime.py"},
+    {"phase": "16.6", "type": "script", "path": "scripts/run_phase16_2_and_6_vision_auto.py"},
+    {"phase": "16.6", "type": "metrics", "path": "results/phase16_17/phase16_6_autonomous_results.json"},
+    {"phase": "17.1", "type": "module", "path": "src/cross_sim/mujoco_panda_env.py"},
+    {"phase": "17.1", "type": "metrics", "path": "results/phase16_17/phase17_cross_simulator_results.json"},
+    {"phase": "17.2", "type": "script", "path": "scripts/run_phase17_cross_sim_and_safety.py"},
+    {"phase": "17.2", "type": "metrics", "path": "results/phase16_17/phase17_safety_assessment.json"},
+    {"phase": "17.3", "type": "module", "path": "src/deployment/hardware_interface.py"},
+    {"phase": "17.3", "type": "docs", "path": "docs/phase17_3_hardware_architecture.md"}
+  ]
+}
+

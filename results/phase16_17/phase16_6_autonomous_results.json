@@ -1,0 +1,17 @@
+{
+  "n_episodes": 20,
+  "elapsed_s": 192.26,
+  "full_2obj_success_rate": 0.0,
+  "obj1_success_rate": 0.25,
+  "obj2_success_rate": 0.0,
+  "learned_skill_distribution_pct": {
+    "REACH": 33.77,
+    "ALIGN": 0.06,
+    "GRASP": 15.5,
+    "LIFT": 0.45,
+    "TRANSPORT": 0.2,
+    "PLACE": 50.03
+  },
+  "replan_triggers": 229,
+  "scripted_safety_clamps_total": 1049
+}

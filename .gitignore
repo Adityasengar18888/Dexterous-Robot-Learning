@@ -56,3 +56,6 @@ experiments/results/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Monograph temporary page preview renders
+publication/_page_previews/

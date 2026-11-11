@@ -1,132 +1,157 @@
-# Dexterous Robot Learning — Goal-Conditioned Manipulation Platform (SAC + HER)
+# Dexterous Robot Learning — Autonomous Manipulation Platform (Phases 0–17)
 
-A modular, reproducible reinforcement learning and adaptive control platform for goal-conditioned robotic manipulation using **Soft Actor-Critic (SAC)** paired with **Hindsight Experience Replay (HER)** on a 7-DOF **Franka Emika Panda** arm in **PyBullet**.
+A modular, reproducible reinforcement learning, imitation learning, hierarchical control, and sim-to-sim verification platform for autonomous manipulation using a 7-DOF **Franka Emika Panda** arm across **PyBullet** (primary) and **MuJoCo 4.0.1** (cross-simulator parity), executed under **CPU-only PyTorch**.
 
----
-
-## 1. Project Overview & Current Milestone
-
-The repository began with sparse-reward goal-conditioned benchmarks (`Reach`, `Pick`, `PickPlace`, `Sort`, `MultiSort`, `Assembly`) and evolved through domain-randomized dense RL (**Phases 11–13.5**), controller-level OOD generalization without SAC retraining (**Phase 14: 98.0% Held-out DR4 / 100.0% Nominal DR0**), sim-to-real perturbation benchmarking (**Phase 15.1**), and hierarchical curriculum/reward engineering for **Two-Object Sequential Sorting (`Phase 15.2`)**.
-
-| Milestone Window | Primary Achievement | Current Verdict |
-| :--- | :--- | :---: |
-| **Phases 0–13** | Robot kinematics/IK, GoalEnvs (`Reach -> Assembly`), DR4 SAC+HER (`500k` Seed 42/43: `99%` Matched DR4, `57%` Held-out DR4 baseline) | **COMPLETE** |
-| **Phase 13.5** | Failure taxonomy revealing OOD `GRASP_BUT_NO_LIFT` (`30.5%`) and workspace-edge misses | **COMPLETE** |
-| **Phase 14 (14-Lite / 14.3 / 14.4)** | Zero-retraining adaptive control (`C_SLIP_AWARE -> D_DUAL_STAGE -> E_ADAPTIVE_TRANSPORT`): **`98.0%`** Held-out DR4 (`99.0%` Seed 43, `97.0%` Seed 42), **`100.0%`** DR0, **`98.5%`** Matched DR4 (`N=200–600`) | **COMPLETE** |
-| **Phase 15.1** | Frozen `E_ADAPTIVE_TRANSPORT` robustness (`320` eps): **Class A (`±3–5 mm` obs noise: `95–97.5%`)**, **Class C/D (`>=1–2 step` latency: `72.5% -> 0%`)**, **Class D (unprivileged force stripping: `42.5%`)** | **COMPLETE** |
-| **Phase 15.2.1–15.2.4** | MultiSort dense reward + continuous proximity (`PandaMultiSortDenseV2Env`): `0->50k` reduced min EE-Obj1 distance **`0.4893 m -> 0.1745 m`** (`20%` O1 Reach, `0%` Grasp) | **COMPLETE** |
-| **Phase 15.2.5A** | Collision-aware [`PreGraspController`](src/controllers/pregrasp_controller.py) state machine + HER-compatible reward (`24/24` tests, **`50/50 (100%)`** scripted two-object sequential sorting, `0` table collisions) | **COMPLETE** |
-| **Phase 15.2.5B** | Single-object curriculum (`PandaSinglePreGraspEnv`, `22D/3D`) & verified `28D -> 43D` transfer adapter (`373,260 -> 392,460` params, `9/9` tests); `20k` SAC+HER converged to XY hover at `z = 0.50 m` (`0%` Grasp) | **BLOCKED (Gate Halt)** |
-| **Phase 15.2.5B.1** | Verified downward action pathway (`0.485 m -> 0.0216 m`), added un-gated $\Phi_z$ (`w_z = 2.0`), generated `50/50` demos, seeded `HerReplayBuffer`; `z_err` dropped **`0.4790 m -> 0.0424 m`**, peak **`60%` Reach & `40%` Bilateral Grasp** at `7.5k`, but closed-gripper demo bias (`78.4%`) held `Lift = 0%` at `20k` (`16/16` tests passing) | **PARTIALLY COMPLETE** |
-| **Phase 15.2.5B.2 → 15.2.8** | Demo rebalancing (`65–75%` open descent), decaying BC warm-start & entropy floor, `100`-ep generalization, `28D->43D` transfer to two-object sorting | *Next / Planned* |
-| **Phase 15.3.1 → 15.3.5** | Orientation-aware quaternion manipulation, peg-in-hole / slot alignment, contact-rich insertion & multi-part assembly | *Planned* |
+> **Simulation-Only Verification Notice:** All quantitative results reported in this repository were measured exclusively in **PyBullet** and **MuJoCo 4.0.1** physics simulations. **Phase 17.3 physical robot hardware deployment was explicitly `NOT_ATTEMPTED`**, and **Phase 18** represents unexecuted future scope.
 
 ---
 
-## 2. Empirical Results & Visualizations
+## 1. Comprehensive 100-Page Research Monograph (`publication/`)
 
-### A. Phase 13.5 → Phase 14.4: Resolving OOD Manipulation Without SAC Retraining
+All architectural design decisions, mathematical derivations (Equations 1–18), debugging forensics (`ERR-001`–`ERR-012`), empirical ablations (`27` experiments, `61` TensorBoard logs, `44` evaluation NPZs), and complete `122`-test regression verification records spanning **Phases 0 through 17** are consolidated into a publication-grade 100-page monograph:
 
-Across `DR4 Seed 42` and `DR4 Seed 43` frozen checkpoints (`SHA-256` verified), controller-level interventions resolved pre-lift slipping (**14-Lite**), workspace-edge grasp acquisition (**14.3**), and post-lift overshoot/direction bias (**14.4**), raising combined Held-out DR4 end-to-end success from **`57.0% -> 98.0%`** (`N = 200`, Seed 43: `33.0% -> 99.0%`).
+- **Primary PDF Monograph (Exact 100 A4 Pages):** [`publication/Dexterous_Robot_Learning_Phase_1_to_17_Monograph.pdf`](publication/Dexterous_Robot_Learning_Phase_1_to_17_Monograph.pdf)
+- **LaTeX & Markdown Sources:** [`publication/Dexterous_Robot_Learning_Monograph.tex`](publication/Dexterous_Robot_Learning_Monograph.tex) · [`publication/research_monograph_source.md`](publication/research_monograph_source.md)
+- **PDF QA Report (`0` blanks / `0` clipped boxes):** [`publication/pdf_validation_report.md`](publication/pdf_validation_report.md)
+- **Machine-Readable Registries:** [`historical_phase_registry.json`](publication/historical_phase_registry.json) · [`phase_completion_matrix.json`](publication/phase_completion_matrix.json) · [`debugging_history.csv`](publication/debugging_history.csv) · [`experiment_inventory.csv`](publication/experiment_inventory.csv) · [`complete_test_inventory.csv`](publication/complete_test_inventory.csv) · [`project_file_inventory.json`](publication/project_file_inventory.json)
 
-| Phase 13.5 Diagnostic: Lift Failure Mechanism | Phase 14-Lite: Slip-Aware Lift Stabilization |
+| 4-Layer System Architecture (`Phases 1–17`) | Phase 12 `1M`-Step Learning Breakthrough |
 | :---: | :---: |
-| ![Phase 13.5 Lift Trajectory Comparison](results/phase13_5/plots/lift_trajectory_comparison.png) | ![Phase 14-Lite Lift Trajectory Stabilization](results/phase14_lite/lift_trajectory_stabilization.png) |
+| ![System Architecture Stack](publication/architecture_diagrams/arch_01_system_stack_ph1_to_17.png) | ![Phase 12 1M S-Curve](publication/figures_2d/fig03_phase12_1m_learning_curve.png) |
 
-| Phase 14-Lite Controller Ablation (`A`, `B`, `C`) | Phase 14.3 Spatial Grasp Acquisition (`D_DUAL_STAGE`) |
+---
+
+## 2. Project Milestone Evolution & Current Records (`Phases 0–18`)
+
+| Phase | Milestone / Capability | Verified Empirical Record | Status |
+| :--- | :--- | :--- | :---: |
+| **0–1** | Kinematics, PyBullet `240 Hz` + DLS IK (`5` waypoints) | `0.7–4.5 mm` error; `0–8 cm` gripper; `37/37` tests | **COMPLETE** |
+| **2–10** | GoalEnvs (`Reach -> Assembly`), `HER` friction fix, `DR R0–R4` | Scripted Reach/Pick/PickPlace/Sort/MultiSort/Assembly; `56/56` tests | **COMPLETE** |
+| **11** | `25x100k` sparse HER study (`DR0–DR4`) & curriculum | `0%` sparse plateau (static-goal trap); Transport `100%` (`40–50k`) | **COMPLETE** |
+| **12** | `1M` Dense `SAC+HER` Pick-and-Place (`Seed 42`) | `43%@400k -> 99%@500k -> 100%@600k–1M` (`0.0142 m`, `89.84` hold) | **COMPLETE** |
+| **13–13.5** | DR1/DR2/DR4 training + `1,520`-ep slip forensics | Matched DR4 `99%`, Held-out `57%`; `30.5%` OOD `68.4N->0N` force collapse | **COMPLETE** |
+| **14** | Zero-retraining Adaptive Shield (`Ctrl A -> E`) | Held-out DR4 **`57.0% -> 98.0%`** (`+41.0 pp`, Seed 43: `33% -> 99%`); DR0 `100%` | **COMPLETE** |
+| **15.1** | Frozen `Ctrl E` perturbation sweep (`320` eps) | Clean/`±3 mm` `97.5%`, `±5 mm` `95.0%`, `1`-lag `72.5%`, `>=2`-lag `0%`, Unpriv `42.5%` | **COMPLETE** |
+| **15.2** | `2`-Obj Sorting (`15.2.5A`) + `5B2–5B8` BC-SAC (`5B7`) | Scripted `50/50 (100%)` in `76.4` steps; `5B7` masked BC **`75%` Grasp / `45%` Lift** (`0%` coll); `2`-Obj RL `28D->43D` gated | **PARTIAL** *(RL Gate)* |
+| **15.3** | Orientation-aware Peg-in-Slot (`PandaAssemblyDenseEnv`) | Scripted **`56.67%`** insertion (`1.41 deg` align); BC `23.33%` pre-align / `0%`; `111/111` tests | **PARTIAL** *(RL 0%)* |
+| **16.1** | `5`-Skill Option-Critic Hierarchical RL (`12k` steps) | **`30.0%`** PickPlace / **`33.33%`** Grasp (`ent 1.79 -> 0.59`) vs **`0.0%`** Flat SAC | **COMPLETE** |
+| **16.2** | Oblique `128x128` RGB-D unprojection (`FOV=55 deg`) | **`99.9–100%`** detection, `14.81–15.55 mm` err, `0.9999` IoU; Vision SAC `60%` grasp / `15%` place | **COMPLETE** |
+| **16.3** | Kalman velocity tracker (`PandaDynamicPickPlaceEnv`) | **`100%`** linear & moving cube+target, **`95%`** sine & step disturbance (`100%` grasp) | **COMPLETE** |
+| **16.4** | Compliant force-impedance peg assembly (`30` eps) | Scripted compliant **`53.33%`** (`pos_err 0.0468 vs 0.0532 m`), `22` jam recoveries | **PARTIAL** |
+| **16.6** | Autonomous `2`-Obj RGB-D + HRL + replan (`20` eps) | **`25.0%`** Obj-1 sorting, `0.0%` full `2`-obj, `229` replans, `1,049` safety clamps | **PARTIAL** |
+| **17.1** | Cross-Simulator Validation (`PyBullet -> MuJoCo 4.0.1`) | Zero-shot `40%` bilat contact / `5%` grasp; calibrated **`50%` contact / `15%` grasp / `5%` place** | **PARTIAL** *(Gap Quantified)* |
+| **17.2** | Sim-to-Real stress (`S1–S6`) & `SafetySupervisor` E-Stop | **`100%`** (`±5mm`/jitter/low-fric+mass), `90%` 1-lag, `60%` `±8mm` RGB-D; **`32.41 us`** E-stop | **COMPLETE** |
+| **17.3** | Physical Franka FCI Driver (`StubLiveFrankaDriver` tests) | Unit-tested HAL & safety refusal only; **no physical robot commands executed** | **NOT_ATTEMPTED** |
+| **18** | Real-world FCI calibration & visuomotor pretraining | Architectural roadmap only (Chapter 14 of Monograph) | **FUTURE SCOPE** |
+
+> Verified Regression Suite (latest post-edit run): **`122 / 122` passed assertions (`96` AST test functions across `tests/`)**.
+
+---
+
+## 3. Recent Quantitative Results & 3D Visualizations
+
+### A. Phase 15: Multi-Object Sorting, Balanced BC-SAC Grasp Ablations & Peg-in-Slot Assembly
+
+| Single-Object Grasp/Lift Ablation (`5B–5B8`) | Phase 15 Capability Funnel Overview |
 | :---: | :---: |
-| ![Phase 14-Lite Controller Comparison](results/phase14_lite/controller_comparison.png) | ![Phase 14.3 Controller Comparison](results/phase14_3/phase14_3_comparison.png) |
+| ![Phase 15 Single Grasp Ablation](results/phase15_master/phase15_single_grasp_learning_and_ablation.png) | ![Phase 15 Milestone Funnel](results/phase15_master/phase15_milestone_summary_funnel.png) |
 
-| Phase 14.4 Final Adaptive Transport (`E_ADAPTIVE_TRANSPORT`) |
+| Peg-in-Slot Orientation Assembly (`15.3`) | Frozen DR Robustness Sweep (`Phase 15.1–15.3`) |
+| :---: | :---: |
+| ![Phase 15 Assembly Benchmark](results/phase15_master/phase15_orientation_assembly_benchmark.png) | ![Phase 15 Robustness](results/phase15_master/phase15_robustness_generalization.png) |
+
+---
+
+### B. Phase 16 & 17: Hierarchical RL, Oblique RGB-D, Dynamic Tracking, MuJoCo Parity & Safety
+
+| Phase 16.1–16.2: HRL vs Flat SAC & Oblique RGB-D | Phase 16.3–16.6: Dynamic, Compliant & Autonomous |
+| :---: | :---: |
+| ![Phase 16 HRL & Vision](results/phase16_17/phase16_hrl_and_vision_benchmarks.png) | ![Phase 16 Dynamic Contact Auto](results/phase16_17/phase16_dynamic_contact_autonomous.png) |
+
+| Phase 17.1–17.2: MuJoCo 4.0.1 Transfer & E-Stop Stress | Phase 0–17 Regression Scaling & CPU Throughput |
+| :---: | :---: |
+| ![Phase 17 Cross-Sim & Safety](results/phase16_17/phase17_cross_sim_and_sim2real_safety.png) | ![Project Timeline Tests & FPS](publication/figures_2d/fig10_project_timeline_tests_throughput.png) |
+
+---
+
+### C. Live 3D Kinematics, D5 Slip Trajectories & Clip-to-World RGB-D Unprojection
+
+| Live PyBullet `FrankaPanda` 3D Link Chains | Genuine 3D `ep5001` Lift vs `ep5002` Slip Divergence |
+| :---: | :---: |
+| ![3D Panda FK](publication/figures_3d/fig3d_01_panda_fk_and_workspace.png) | ![3D Manipulation Trajectories](publication/figures_3d/fig3d_02_3d_manipulation_trajectories.png) |
+
+| Oblique `55 deg` RGB-D Frustum & Unprojected Cube Cloud (`91 px`) |
 | :---: |
-| ![Phase 14.4 Final Confirmation Comparison](results/phase14_4/phase14_4_comparison.png) |
+| ![3D Oblique RGB-D Frustum](publication/figures_3d/fig3d_03_oblique_rgbd_frustum_and_mujoco_workspace.png) |
 
 ---
 
-### B. Phase 15.1: Sim-to-Real Transfer Readiness (`E_ADAPTIVE_TRANSPORT`)
-
-Evaluating the frozen Phase 14 controller across `320` paired episodes established strong pose-noise resilience (**`97.5%`** at `±3 mm`, **`95.0%`** at `±5 mm`), severe closed-loop sensitivity above `1` control step (**`72.5%` at 1-step -> `0.0%` at 2+ steps**), and reliance on privileged PyBullet bilateral contact forces (**`42.5%`** with kinematic jaw-stall fallback).
-
-![Phase 15.1 Sim-to-Real Readiness Profile](results/phase15_1/phase15_1_readiness_chart.png)
-
----
-
-### C. Phase 15.2: Multi-Object Sorting Learning Progression (`15.2.4` → `15.2.5B.1`)
-
-1. **Continuous Proximity Reach (`Phase 15.2.4`, `0 -> 50k`)**: Reduced minimum EE-to-Object-1 distance from **`0.4893 m` to `0.1745 m`** (`20%` Reach), but premature gripper closure caused up to `163.2` collisions/ep with `0%` grasping.
-
-![Phase 15.2.4 Continuous Proximity Reach Learning](results/phase15_2_4/phase15_2_4_reach_learning.png)
-
-2. **Pre-Grasp Controller Feasibility vs Learned RL Funnel (`Phase 15.2.5A–B.1`)**: While the scripted [`PreGraspController`](src/controllers/pregrasp_controller.py) achieved **`50/50 (100.0%)`** two-object sorting (`76.4` mean steps, `0` collisions), SAC+HER in **Phase B** parked at `z = 0.50 m` due to XY-gated vertical rewards. Introducing continuous vertical potential $\Phi_z = -2.0 \cdot \operatorname{clip}(|z_{EE} - z_{\text{grasp}}|, 0, 1)$ plus a `4,000`-transition `HerReplayBuffer` demo warm-start in **Phase B.1** solved vertical descent (`z_err: 0.4790 m -> 0.0424 m`, `minZ = 0.0200 m`) and achieved **`60.0%` Reach** and **`40.0%` Bilateral Grasp** at `7,500` steps—before closed-gripper bias from the demo holding tail (`78.4%` closed actions) pushed premature closure to `100%` by `20k`.
-
-![Phase 15.2.5B vs Phase 15.2.5B.1 Learning Curves](results/phase15_2_5B1/phase15_2_5B_vs_B1_progress.png)
-
-![Phase 15.2 Manipulation Funnel Comparison](results/phase15_2_5A/phase15_2_5A_scripted_vs_rl_funnel.png)
-
----
-
-## 3. Repository Structure
+## 4. Repository Structure
 
 ```text
 Dexterous-Robot-Learning/
 ├── README.md
 ├── LICENSE                                  # Apache License 2.0
 ├── pyproject.toml & requirements.txt
-├── configs/                                 # Declarative YAML training & evaluation configs
-│   ├── pick_place_dr*.yaml / phase14_4_config.yaml / phase15_1_config.yaml
-│   └── multi_sort_phase15*.yaml             # 15.2.2, 15.2.4, 15.2.5A, 15.2.5B, 15.2.5B1
+├── configs/                                 # 30 declarative YAML configs (reach -> assembly_phase15_3)
 ├── src/
-│   ├── controllers/                         # Phase 15.2.5A PreGraspController state machine
-│   ├── environments/                        # Reach, Pick, PickPlace, Sort, MultiSort, Dense/PreGrasp variants, Assembly
-│   ├── objects/                             # Cube, SortingBin, mechanical assembly parts/targets
-│   ├── robots/                              # FrankaPanda URDF/IK/workspace & PandaController
-│   ├── rl/                                  # train.py, evaluate.py, adaptive_controllers.py, transfer_utils.py, Phase 15.1 wrappers
-│   └── utils/                               # PyBulletSimulation, DomainRandomizer, config loaders
-├── scripts/                                 # Demo generation, checkpoint evaluation, chart generation
-├── tests/                                   # Unit, kinematic, HER compatibility, vertical pathway, transfer tests
-├── experiments/                             # Saved model checkpoints (.zip), demos, manifests (*replay_buffer.pkl gitignored)
-├── results/                                 # Structured JSON metrics, Markdown audit/final reports, and PNG figures
-└── docs/                                    # Architecture, methodology, experiment & Phase 10 reports
+│   ├── controllers/                         # PreGraspController, AssemblyController, CompliantAssemblyController
+│   ├── cross_sim/                           # MuJoCoPandaPickPlaceEnv (4.0.1 MJCF parity adapter)
+│   ├── deployment/                          # HardwareInterface abstractions, SafetySupervisor, decoupled runtime loop
+│   ├── environments/                        # 12 PyBullet Gym/HER Envs (Reach, PickPlace, MultiSort, Dynamic, Assembly)
+│   ├── hrl/                                 # Option-Critic SMDP meta-policy & 5-skill neural library
+│   ├── objects/                             # Cube, SortingBin, Peg & Slot receptacles
+│   ├── perception/                          # SimulatedRGBDCamera (clip-to-world), VisionDetector, Kalman dynamic tracker
+│   ├── robots/                              # FrankaPanda 7-DOF DLS IK, workspace clipping & PandaController
+│   ├── rl/                                  # train.py, evaluate.py, bc_sac.py, adaptive_controllers.py, transfer_utils.py
+│   └── utils/                               # PyBulletSimulation, DomainRandomizer, ConfigDict helpers
+├── scripts/                                 # Training, evaluation, balanced demos & Phase 15-17 benchmark runners
+├── tests/                                   # 96 test functions expanding to 122/122 passed pytest checks
+├── experiments/                             # Saved SB3/HRL models & manifests (*replay_buffer.pkl gitignored)
+├── results/                                 # Phase 11 -> Phase 17 JSON/CSV metrics, final reports & charts
+├── publication/                             # Complete 100-page PDF Monograph, .tex, .md, 34 PNGs & registries
+└── docs/                                    # Architecture, Phase 9-14 technical reports & Phase 17.3 hardware spec
 ```
 
 ---
 
-## 4. Setup & Verification
+## 5. Setup, Tests & Monograph Reproduction
 
-### Environment Installation
-
-```powershell
-# 1. Create Python 3.11 Conda/Micromamba environment with PyBullet
-micromamba create -p .\.conda-env -c conda-forge python=3.11 pybullet -y
-
-# 2. Install RL and scientific dependencies
-uv pip install --python .\.conda-env\python.exe -r requirements.txt
-```
-
-### Running Tests & Benchmarks
+### Environment Setup & Test Verification (`122/122`)
 
 ```powershell
-# Run Phase 15.2.5A + 15.2.5B + 15.2.5B.1 verification suite (16/16 passing)
-.\.conda-env\python.exe -m pytest tests/test_vertical_action_pathway.py tests/test_vertical_potential_reward_her.py tests/test_b1_demos_and_warmstart.py tests/test_single_pregrasp_and_transfer.py tests/test_pregrasp_controller.py tests/test_pregrasp_reward.py tests/test_pregrasp_her_compatibility.py -v
-
-# Re-run full repository test suite
-.\.conda-env\python.exe -m pytest -v
-
-# Reproduce Phase 14.4 Adaptive Transport confirmation / Phase 15.1 Sim-to-Real benchmark
-.\.conda-env\python.exe run_phase14_4.py
-.\.conda-env\python.exe run_phase15_1.py
-
-# Regenerate Phase 15.2 figures from results/*.json
+# Windows Intel OpenMP runtime safety flag + Conda Library bin PATH
+$env:KMP_DUPLICATE_LIB_OK = "TRUE"
 $env:PATH = "$PWD\.conda-env;$PWD\.conda-env\Library\bin;$PWD\.conda-env\Scripts;$env:PATH"
-.\.conda-env\python.exe scripts/generate_phase15_2_charts.py
+
+# Run full repository regression suite (122 passed)
+.\.conda-env\python.exe -m pytest -v
+```
+
+### Re-Running Benchmarks & Rebuilding the 100-Page Monograph
+
+```powershell
+# Reproduce Phase 16 (HRL, RGB-D, Dynamic, Compliant Assembly) & Phase 17 (MuJoCo + Stress)
+.\.conda-env\python.exe scripts/run_phase16_1_hrl.py
+.\.conda-env\python.exe scripts/run_phase16_2_and_6_vision_auto.py
+.\.conda-env\python.exe scripts/run_phase16_3_dynamic.py
+.\.conda-env\python.exe scripts/run_phase16_4_contact_assembly.py
+.\.conda-env\python.exe scripts/run_phase17_cross_sim_and_safety.py
+
+# Regenerate all registries, 34 publication figures, 100-page PDF & validation report
+.\.conda-env\python.exe publication/build_registries.py
+.\.conda-env\python.exe publication/generate_all_figures.py
+.\.conda-env\python.exe publication/build_monograph_pdf.py
+.\.conda-env\python.exe publication/validate_pdf.py
 ```
 
 ---
 
-## 5. Detailed Documentation Links
+## 6. Key Technical Documentation Index
 
-- **Phase 14 Closure**: [Phase 14.4 Final Report](results/phase14_4/phase14_4_final_report.md)
-- **Phase 15.1 Readiness**: [Phase 15.1 Final Report](results/phase15_1/phase15_1_final_report.md)
-- **Phase 15.2.4 Proximity**: [Phase 15.2.4 Final Report](results/phase15_2_4/phase15_2_4_final_report.md)
-- **Phase 15.2.5A Pre-Grasp**: [Phase 15.2.5A Final Report](results/phase15_2_5A/phase15_2_5A_final_report.md)
-- **Phase 15.2.5B / B.1**: [Phase 15.2.5B Final Report](results/phase15_2_5B/phase15_2_5B_final_report.md) · [Phase 15.2.5B.1 Final Report](results/phase15_2_5B1/phase15_2_5B1_final_report.md) · [Phase 15.2.5C Transfer Audit](results/phase15_2_5C/phase15_2_5C_transfer_audit.md)
+- **Master 100-Page Monograph:** [`publication/Dexterous_Robot_Learning_Phase_1_to_17_Monograph.pdf`](publication/Dexterous_Robot_Learning_Phase_1_to_17_Monograph.pdf)
+- **Phase 17 Deployment Readiness Report:** [`results/phase16_17/PHASE17_DEPLOYMENT_READINESS_REPORT.md`](results/phase16_17/PHASE17_DEPLOYMENT_READINESS_REPORT.md)
+- **Phase 16 Final Technical Report:** [`results/phase16_17/PHASE16_FINAL_TECHNICAL_REPORT.md`](results/phase16_17/PHASE16_FINAL_TECHNICAL_REPORT.md)
+- **Phase 15 Final Technical Report:** [`results/phase15_master/PHASE15_FINAL_TECHNICAL_REPORT.md`](results/phase15_master/PHASE15_FINAL_TECHNICAL_REPORT.md)
+- **Phase 14.4 Adaptive Transport Confirmation:** [`results/phase14_4/phase14_4_final_report.md`](results/phase14_4/phase14_4_final_report.md)
+- **Phase 17.3 Hardware Interface Spec (Not Attempted on Physical Robot):** [`docs/phase17_3_hardware_architecture.md`](docs/phase17_3_hardware_architecture.md)

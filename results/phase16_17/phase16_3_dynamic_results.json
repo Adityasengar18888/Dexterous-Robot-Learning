@@ -1,0 +1,72 @@
+{
+  "linear_no_prediction": {
+    "motion_mode": "linear",
+    "cube_speed_mps": 0.045,
+    "target_speed_mps": 0.0,
+    "predictive_tracking": false,
+    "n_episodes": 20,
+    "elapsed_s": 13.24,
+    "success_rate": 0.95,
+    "grasp_rate": 1.0,
+    "mean_vel_err_mm_s": 126.84,
+    "mean_pred_err_mm": 31.38,
+    "disturbances_detected": 1068,
+    "replan_triggers": 1068
+  },
+  "linear_predictive": {
+    "motion_mode": "linear",
+    "cube_speed_mps": 0.045,
+    "target_speed_mps": 0.0,
+    "predictive_tracking": true,
+    "n_episodes": 20,
+    "elapsed_s": 11.93,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_vel_err_mm_s": 124.85,
+    "mean_pred_err_mm": 33.45,
+    "disturbances_detected": 1133,
+    "replan_triggers": 1133
+  },
+  "sinusoidal_predictive": {
+    "motion_mode": "sinusoidal",
+    "cube_speed_mps": 0.045,
+    "target_speed_mps": 0.0,
+    "predictive_tracking": true,
+    "n_episodes": 20,
+    "elapsed_s": 11.4,
+    "success_rate": 0.95,
+    "grasp_rate": 1.0,
+    "mean_vel_err_mm_s": 125.26,
+    "mean_pred_err_mm": 34.89,
+    "disturbances_detected": 1185,
+    "replan_triggers": 1185
+  },
+  "disturbance_step_predictive": {
+    "motion_mode": "disturbance_step",
+    "cube_speed_mps": 0.035,
+    "target_speed_mps": 0.0,
+    "predictive_tracking": true,
+    "n_episodes": 20,
+    "elapsed_s": 15.05,
+    "success_rate": 0.95,
+    "grasp_rate": 1.0,
+    "mean_vel_err_mm_s": 120.77,
+    "mean_pred_err_mm": 32.45,
+    "disturbances_detected": 1141,
+    "replan_triggers": 1141
+  },
+  "moving_target_and_cube": {
+    "motion_mode": "linear",
+    "cube_speed_mps": 0.035,
+    "target_speed_mps": 0.02,
+    "predictive_tracking": true,
+    "n_episodes": 20,
+    "elapsed_s": 15.83,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_vel_err_mm_s": 113.38,
+    "mean_pred_err_mm": 33.81,
+    "disturbances_detected": 1150,
+    "replan_triggers": 1150
+  }
+}

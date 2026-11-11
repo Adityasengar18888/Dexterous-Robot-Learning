@@ -1,0 +1,57 @@
+{
+  "A0_Clean_Nominal": {
+    "n_episodes": 20,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 2.0
+  },
+  "S1_Sensor_Noise_5mm": {
+    "n_episodes": 20,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 2.45
+  },
+  "S2_Camera_Calib_Err_8mm": {
+    "n_episodes": 20,
+    "success_rate": 0.6,
+    "grasp_rate": 0.65,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 0.75
+  },
+  "S3_Actuator_Latency_1step": {
+    "n_episodes": 20,
+    "success_rate": 0.9,
+    "grasp_rate": 1.0,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 14.6
+  },
+  "S4_Actuator_Latency_2step": {
+    "n_episodes": 20,
+    "success_rate": 0.2,
+    "grasp_rate": 0.75,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 22.55
+  },
+  "S5_Control_Freq_Jitter": {
+    "n_episodes": 20,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 2.0
+  },
+  "S6_Low_Friction_Heavy_Mass": {
+    "n_episodes": 20,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_collisions": 0.0,
+    "mean_safety_ws_clamps": 2.0
+  },
+  "SafetySupervisor_EStop_Check": {
+    "estop_triggered_on_50N_spike": true,
+    "blocked_post_trip_commands": 250,
+    "mean_check_latency_us": 32.41,
+    "physical_safety_disclaimer": "Simulation-only check; NOT proof of physical hardware safety."
+  }
+}

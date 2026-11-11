@@ -1,0 +1,97 @@
+test_id,test_name,file_path,line_start,phase,objective,assert_statements,parametrized_cases,status
+T-001,test_quaternion_normalization_sign_invariance_and_wraparound,tests/test_assembly_dense_and_orientation.py,18,Phase 15.3,Verified functional/unit assertion check.,7,1,PASSED
+T-002,test_assembly_dense_batched_parity_and_her_buffer,tests/test_assembly_dense_and_orientation.py,35,Phase 15.3,Verified functional/unit assertion check.,3,1,PASSED
+T-003,test_assembly_env_initialization,tests/test_assembly_env.py,7,Phase 8-9,Verified functional/unit assertion check.,3,1,PASSED
+T-004,test_assembly_env_reset,tests/test_assembly_env.py,15,Phase 8-9,Verified functional/unit assertion check.,6,1,PASSED
+T-005,test_assembly_env_step,tests/test_assembly_env.py,28,Phase 8-9,Verified functional/unit assertion check.,6,1,PASSED
+T-006,test_demo_dataset_exists_and_all_50_valid,tests/test_b1_demos_and_warmstart.py,46,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,10,1,PASSED
+T-007,test_her_buffer_demo_warmstart_and_short_rl_step,tests/test_b1_demos_and_warmstart.py,64,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,8,1,PASSED
+T-008,test_balanced_demo_distribution,tests/test_bc_sac.py,22,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,6,1,PASSED
+T-009,test_bc_decaying_sac_objective_entropy_floor_and_standard_save,tests/test_bc_sac.py,33,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,5,1,PASSED
+T-010,test_config_dict_attribute_access,tests/test_config.py,8,Phase 0,Verify dot notation and nested dict access in ConfigDict.,5,1,PASSED
+T-011,test_deep_update,tests/test_config.py,21,Phase 0,Verify deep dictionary merging without overriding unaffected keys.,4,1,PASSED
+T-012,test_load_default_config,tests/test_config.py,33,Phase 0,Verify loading configs/default.yaml.,5,1,PASSED
+T-013,test_load_panda_robot_config,tests/test_config.py,45,Phase 0,Verify loading configs/robot/panda.yaml.,7,1,PASSED
+T-014,test_missing_config_raises_file_not_found,tests/test_config.py,59,Phase 0,Verify FileNotFoundError on nonexistent configuration path.,1,1,PASSED
+T-015,test_panda_controller_load,tests/test_controller.py,19,Phase 1,Verify PandaController loads Panda robot into simulation.,3,1,PASSED
+T-016,test_panda_joints_accessible,tests/test_controller.py,28,Phase 1,Verify that arm joint positions and velocities can be read and are correct shapes.,4,1,PASSED
+T-017,test_ee_position_can_be_read,tests/test_controller.py,42,Phase 1,Verify that end-effector position and orientation are readable vectors.,4,1,PASSED
+T-018,test_controller_does_not_produce_nan_or_inf,tests/test_controller.py,56,Phase 1,Verify that all state queries and trajectories contain only finite real numbers.,5,1,PASSED
+T-019,test_move_ee_cartesian_positioning,tests/test_controller.py,70,Phase 1,Verify moving end-effector reaches target without producing NaN/Inf.,2,1,PASSED
+T-020,test_gripper_open_and_close,tests/test_controller.py,83,Phase 1,Verify open_gripper and close_gripper actuate properly.,6,1,PASSED
+T-021,test_controller_reset_works,tests/test_controller.py,101,Phase 1,Verify reset restores joints and sets velocities to zero.,1,1,PASSED
+T-022,test_1_reset_and_observation_space_compatibility,tests/test_dense_multi_sort_env.py,48,Phases 2-8,Verified functional/unit assertion check.,7,1,PASSED
+T-023,test_2_reward_calculation_per_stage,tests/test_dense_multi_sort_env.py,61,Phases 2-8,Verified functional/unit assertion check.,5,1,PASSED
+T-024,test_3_reward_boundedness,tests/test_dense_multi_sort_env.py,109,Phases 2-8,Verified functional/unit assertion check.,2,1,PASSED
+T-025,test_4_reward_reproducibility,tests/test_dense_multi_sort_env.py,132,Phases 2-8,Verified functional/unit assertion check.,3,1,PASSED
+T-026,test_5_first_object_placement_reward_not_complete,tests/test_dense_multi_sort_env.py,147,Phases 2-8,Verified functional/unit assertion check.,4,1,PASSED
+T-027,test_6_and_9_second_object_placement_and_full_completion,tests/test_dense_multi_sort_env.py,171,Phases 2-8,Verified functional/unit assertion check.,4,1,PASSED
+T-028,test_7_incorrect_bin_placement_penalized,tests/test_dense_multi_sort_env.py,194,Phases 2-8,Verified functional/unit assertion check.,3,1,PASSED
+T-029,test_8_false_release_prevention_and_hover_rejection,tests/test_dense_multi_sort_env.py,215,Phases 2-8,Verified functional/unit assertion check.,11,1,PASSED
+T-030,test_10_and_11_and_12_her_relabeling_batched_consistency_and_nan,tests/test_dense_multi_sort_env.py,250,Phases 2-8,Verified functional/unit assertion check.,5,1,PASSED
+T-031,test_13_v2_proximity_multiple_distances_and_grasp_gating,tests/test_dense_multi_sort_env.py,303,Phases 2-8,Verified functional/unit assertion check.,6,1,PASSED
+T-032,test_14_v2_active_object_switching_and_her_sampling,tests/test_dense_multi_sort_env.py,337,Phases 2-8,Verified functional/unit assertion check.,6,1,PASSED
+T-033,test_runtime_imports_without_training_pipeline,tests/test_deployment_runtime.py,30,Phases 16-17,Runtime module must load without importing src.rl.train or HerReplayBuffer.,1,1,PASSED
+T-034,test_safety_monitor_workspace_clamp_and_estop,tests/test_deployment_runtime.py,41,Phases 16-17,Verified functional/unit assertion check.,5,1,PASSED
+T-035,test_hardware_interface_safety_and_refusal,tests/test_deployment_runtime.py,54,Phases 16-17,Verified functional/unit assertion check.,4,1,PASSED
+T-036,test_reach_env_initialization,tests/test_environment.py,9,Phases 2-8,Verify environment initialization and spaces.,8,1,PASSED
+T-037,test_reach_env_step,tests/test_environment.py,26,Phases 2-8,"Verify environment stepping, truncation, and return types.",6,1,PASSED
+T-038,test_reach_env_compute_reward,tests/test_environment.py,48,Phases 2-8,Verify batched and unbatched sparse reward computation.,3,1,PASSED
+T-039,test_reach_env_reproducibility,tests/test_environment.py,72,Phases 2-8,Verify seeding produces consistent trajectories.,2,1,PASSED
+T-040,test_skill_features_and_teacher_shapes,tests/test_hrl_phase16.py,12,Phases 16-17,Verified functional/unit assertion check.,5,1,PASSED
+T-041,test_hrl_meta_selection_and_smdp_her_buffer,tests/test_hrl_phase16.py,29,Phases 16-17,Verified functional/unit assertion check.,5,1,PASSED
+T-042,test_core_dependency_imports,tests/test_imports.py,22,Phase 0,Verify that each required core library can be imported without errors.,1,10,PASSED
+T-043,test_stable_baselines3_her_sac,tests/test_imports.py,28,Phase 0,Verify SAC and HerReplayBuffer are available in Stable-Baselines3.,2,1,PASSED
+T-044,test_gymnasium_goal_env,tests/test_imports.py,35,Phase 0,Verify gymnasium.Env and GoalEnv spaces compatibility.,4,1,PASSED
+T-045,test_pybullet_connection,tests/test_imports.py,55,Phase 0,Verify pybullet can initialize in DIRECT headless mode and load standard data assets.,2,1,PASSED
+T-046,test_multi_sort_env_initialization,tests/test_multi_sort_env.py,7,Phases 2-8,Verified functional/unit assertion check.,3,1,PASSED
+T-047,test_multi_sort_env_reset,tests/test_multi_sort_env.py,15,Phases 2-8,Verified functional/unit assertion check.,5,1,PASSED
+T-048,test_multi_sort_env_step,tests/test_multi_sort_env.py,28,Phases 2-8,Verified functional/unit assertion check.,7,1,PASSED
+T-049,test_panda_initialization,tests/test_panda_robot.py,30,Phase 1,Test loading Franka Panda into PyBullet and verifying joint configurations.,8,1,PASSED
+T-050,test_panda_reset,tests/test_panda_robot.py,46,Phase 1,Test that resetting the robot puts arm joints at neutral positions with zero velocities.,1,1,PASSED
+T-051,test_workspace_clipping,tests/test_panda_robot.py,61,Phase 1,Test safety clipping to the bounding box.,3,1,PASSED
+T-052,test_ik_solver_accuracy,tests/test_panda_robot.py,77,Phase 1,Test that commanding a target position via IK moves the EE close to target.,1,1,PASSED
+T-053,test_cartesian_delta_motion,tests/test_panda_robot.py,95,Phase 1,"Test that applying Cartesian delta actions [dx, dy, dz, 0] moves EE in expected direction.",1,1,PASSED
+T-054,test_gripper_control,tests/test_panda_robot.py,111,Phase 1,Test gripper opening and closing actuation.,2,1,PASSED
+T-055,test_determinism_and_reproducibility,tests/test_panda_robot.py,130,Phase 1,Verify bitwise identical outcomes for identical action sequences under reset.,1,1,PASSED
+T-056,test_all_environments_init_reset_step_and_reward_consistency,tests/test_phase15_integration.py,30,Phase 15.5,Verified functional/unit assertion check.,9,11,PASSED
+T-057,test_checkpoint_loading_and_deterministic_predict,tests/test_phase15_integration.py,71,Phase 15.5,Verified functional/unit assertion check.,3,1,PASSED
+T-058,test_phase2_transfer_adapter_with_5b2_checkpoint,tests/test_phase15_integration.py,84,Phase 15.5,Verified functional/unit assertion check.,3,1,PASSED
+T-059,test_observation_noise_clean_identity,tests/test_phase15_wrappers.py,47,Phase 15.1-15.2.4,Verified functional/unit assertion check.,1,1,PASSED
+T-060,test_observation_noise_bounds_and_vel_preservation,tests/test_phase15_wrappers.py,57,Phase 15.1-15.2.4,Verified functional/unit assertion check.,5,1,PASSED
+T-061,test_latency_wrapper_fifo_ordering,tests/test_phase15_wrappers.py,79,Phase 15.1-15.2.4,Verified functional/unit assertion check.,3,1,PASSED
+T-062,test_unprivileged_contact_stripping_and_enforcement,tests/test_phase15_wrappers.py,100,Phase 15.1-15.2.4,Verified functional/unit assertion check.,5,1,PASSED
+T-063,test_dynamic_pick_place_env_step_and_disturbance,tests/test_phase16_17_envs.py,12,Phases 16-17,Verified functional/unit assertion check.,3,1,PASSED
+T-064,test_contact_assembly_env_telemetry,tests/test_phase16_17_envs.py,28,Phases 16-17,Verified functional/unit assertion check.,5,1,PASSED
+T-065,test_mujoco_panda_twin_observation_and_kinematics,tests/test_phase16_17_envs.py,42,Phases 16-17,Verified functional/unit assertion check.,9,1,PASSED
+T-066,test_frozen_phase15_and_phase16_deployment_smoke,tests/test_phase16_integration_all.py,12,Phases 16-17,Verify DeploymentRuntime executes frozen checkpoint cleanly on PyBullet PickPlace.,4,1,PASSED
+T-067,test_pick_env_initialization,tests/test_pick_env.py,9,Phases 2-8,Verified functional/unit assertion check.,10,1,PASSED
+T-068,test_pick_env_randomization,tests/test_pick_env.py,30,Phases 2-8,Verified functional/unit assertion check.,2,1,PASSED
+T-069,test_pregrasp_authorization_rejects_unsafe_states,tests/test_pregrasp_controller.py,17,Phase 1,Verified functional/unit assertion check.,6,1,PASSED
+T-070,test_pregrasp_full_acquisition_and_transition_logging,tests/test_pregrasp_controller.py,58,Phase 1,Verified functional/unit assertion check.,10,1,PASSED
+T-071,test_her_relabeling_stateless_recomputation_and_active_object_switch,tests/test_pregrasp_her_compatibility.py,14,Phase 15.2.5A,Verified functional/unit assertion check.,5,1,PASSED
+T-072,test_her_replay_buffer_rollout_and_virtual_sampling_no_nan,tests/test_pregrasp_her_compatibility.py,45,Phase 15.2.5A,Verified functional/unit assertion check.,3,1,PASSED
+T-073,test_pregrasp_reward_components_and_gates,tests/test_pregrasp_reward.py,38,Phase 15.2.5A,Verified functional/unit assertion check.,10,1,PASSED
+T-074,test_pregrasp_reward_anti_exploitation_and_two_object_switching,tests/test_pregrasp_reward.py,82,Phase 15.2.5A,Verified functional/unit assertion check.,6,1,PASSED
+T-075,test_randomization_disabled,tests/test_randomization.py,7,Phase 10,Verified functional/unit assertion check.,2,1,PASSED
+T-076,test_randomization_enabled,tests/test_randomization.py,18,Phase 10,Verified functional/unit assertion check.,5,1,PASSED
+T-077,test_randomization_reproducibility,tests/test_randomization.py,44,Phase 10,Verified functional/unit assertion check.,1,1,PASSED
+T-078,test_orientation_normalization,tests/test_randomization.py,60,Phase 10,Verified functional/unit assertion check.,2,1,PASSED
+T-079,test_simulation_starts_and_connects,tests/test_simulation.py,8,Phase 1,Verify PyBulletSimulation connects in DIRECT mode and assigns a valid client ID.,4,1,PASSED
+T-080,test_simulation_context_manager,tests/test_simulation.py,19,Phase 1,Verify simulation manager works cleanly with Python context manager syntax.,3,1,PASSED
+T-081,test_simulation_loads_ground_and_table,tests/test_simulation.py,27,Phase 1,Verify ground plane and table are loaded on initialization/reset.,3,1,PASSED
+T-082,test_simulation_can_step,tests/test_simulation.py,36,Phase 1,Verify simulation step advances physics without error.,1,1,PASSED
+T-083,test_simulation_reset_works,tests/test_simulation.py,45,Phase 1,Verify reset clears and re-initializes bodies and physics parameters.,3,1,PASSED
+T-084,test_single_pregrasp_registration_spaces_and_her,tests/test_single_pregrasp_and_transfer.py,20,Phase 15.2.5A,Verified functional/unit assertion check.,5,1,PASSED
+T-085,test_single_pregrasp_scripted_reward_audit,tests/test_single_pregrasp_and_transfer.py,53,Phase 15.2.5A,Verified functional/unit assertion check.,3,1,PASSED
+T-086,test_b_to_c_policy_transfer_exact_functional_equivalence,tests/test_single_pregrasp_and_transfer.py,72,Phase 15.2.5A,Verified functional/unit assertion check.,3,1,PASSED
+T-087,test_sort_env_initialization,tests/test_sort_env.py,7,Phases 2-8,Verified functional/unit assertion check.,3,1,PASSED
+T-088,test_sort_env_reset,tests/test_sort_env.py,14,Phases 2-8,Verified functional/unit assertion check.,5,1,PASSED
+T-089,test_sort_env_step,tests/test_sort_env.py,26,Phases 2-8,Verified functional/unit assertion check.,5,1,PASSED
+T-090,test_observation_and_action_pathway_spec,tests/test_vertical_action_pathway.py,74,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,8,1,PASSED
+T-091,test_negative_vertical_command_produces_measurable_descent_and_gripper_independence,tests/test_vertical_action_pathway.py,102,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,9,1,PASSED
+T-092,test_vertical_potential_all_part3_cases,tests/test_vertical_potential_reward_her.py,51,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,12,1,PASSED
+T-093,test_vertical_potential_her_relabeling_batched_parity_and_active_object_change,tests/test_vertical_potential_reward_her.py,103,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,4,1,PASSED
+T-094,test_b1_live_her_replay_buffer_recomputation,tests/test_vertical_potential_reward_her.py,155,Phase 15.2.5B-B.2,Verified functional/unit assertion check.,2,1,PASSED
+T-095,test_rgbd_camera_and_vision_localization_accuracy,tests/test_vision_and_dynamic_phase16.py,13,Phases 16-17,Verified functional/unit assertion check.,5,1,PASSED
+T-096,test_dynamic_tracker_velocity_prediction_and_replan,tests/test_vision_and_dynamic_phase16.py,36,Phases 16-17,Verified functional/unit assertion check.,4,1,PASSED

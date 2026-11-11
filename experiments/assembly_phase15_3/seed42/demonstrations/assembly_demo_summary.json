@@ -1,0 +1,8 @@
+{
+  "accepted_episodes": 28,
+  "rejected_episodes": 47,
+  "total_transitions": 2510,
+  "mean_length": 89.64285714285714,
+  "mean_return": 9.075883205996693,
+  "dataset_path": "experiments/assembly_phase15_3/seed42/demonstrations\\assembly_demos.pkl"
+}

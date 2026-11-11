@@ -1,0 +1,67 @@
+{
+  "zero_shot_eval": {
+    "sac_dr4_seed42": {
+      "policy": "PyBullet_SAC_DR4_Seed42_ZeroShot",
+      "n_episodes": 20,
+      "elapsed_s": 4.35,
+      "success_rate": 0.0,
+      "grasp_rate": 0.05,
+      "bilateral_contact_rate": 0.4,
+      "mean_min_ee_obj_dist_m": 0.0394,
+      "mean_min_goal_dist_m": 0.1956
+    },
+    "sac_dr4_seed43": {
+      "policy": "PyBullet_SAC_DR4_Seed43_ZeroShot",
+      "n_episodes": 20,
+      "elapsed_s": 5.73,
+      "success_rate": 0.0,
+      "grasp_rate": 0.0,
+      "bilateral_contact_rate": 0.0,
+      "mean_min_ee_obj_dist_m": 0.1211,
+      "mean_min_goal_dist_m": 0.2383
+    },
+    "hrl_meta": {
+      "policy": "PyBullet_HRL_ZeroShot",
+      "n_episodes": 20,
+      "elapsed_s": 4.43,
+      "success_rate": 0.0,
+      "grasp_rate": 0.0,
+      "bilateral_contact_rate": 0.0,
+      "mean_min_ee_obj_dist_m": 0.0775,
+      "mean_min_goal_dist_m": 0.2383
+    }
+  },
+  "calibrated_physics_eval": {
+    "sac_dr4_seed42": {
+      "policy": "PyBullet_SAC_DR4_Seed42_CalibratedMuJoCo",
+      "n_episodes": 20,
+      "elapsed_s": 5.51,
+      "success_rate": 0.05,
+      "grasp_rate": 0.15,
+      "bilateral_contact_rate": 0.5,
+      "mean_min_ee_obj_dist_m": 0.0382,
+      "mean_min_goal_dist_m": 0.1787
+    },
+    "hrl_meta": {
+      "policy": "PyBullet_HRL_CalibratedMuJoCo",
+      "n_episodes": 20,
+      "elapsed_s": 4.53,
+      "success_rate": 0.0,
+      "grasp_rate": 0.0,
+      "bilateral_contact_rate": 0.0,
+      "mean_min_ee_obj_dist_m": 0.0775,
+      "mean_min_goal_dist_m": 0.2383
+    }
+  },
+  "physics_comparison": {
+    "pybullet_timestep_s": 0.004166666666666667,
+    "mujoco_timestep_s": 0.004166666666666667,
+    "cube_mass_kg": 0.1,
+    "cube_size_m": 0.05,
+    "pybullet_ee_init": [
+      0.307,
+      0.0,
+      0.59
+    ]
+  }
+}

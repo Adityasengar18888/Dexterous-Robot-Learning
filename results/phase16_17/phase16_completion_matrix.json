@@ -1,0 +1,56 @@
+{
+  "campaign": "ANTIGRAVITY PHASE 16",
+  "hardware": "CPU-only PyTorch 2.14.1+cpu, single-process PyBullet",
+  "milestones": [
+    {
+      "id": "16.0",
+      "name": "Baseline Audit & Preservation",
+      "status": "COMPLETE",
+      "evidence": "results/phase16_17/phase16_0_baseline_audit.md",
+      "notes": "Preserved all Phase 15 checkpoints/results; 111/111 baseline pytest tests passed; measured CPU throughput (282-426 env_steps/s)."
+    },
+    {
+      "id": "16.1",
+      "name": "Hierarchical Reinforcement Learning (HRL)",
+      "status": "COMPLETE",
+      "evidence": "results/phase16_17/phase16_1_hrl_results.json",
+      "notes": "Discrete-SAC+HER over 6 goal-conditioned neural skill MLPs + learned termination networks climbed from 0.0% (step=0, ent=1.7905) to 30.0% PickPlace success / 33.33% grasp at 12k steps vs 0.0%/0.0% Flat SAC+HER (12k) and 100.0%/96.67% Phase 14 500k baseline."
+    },
+    {
+      "id": "16.2",
+      "name": "Vision-Based Robotic Manipulation (RGB-D)",
+      "status": "COMPLETE",
+      "evidence": "results/phase16_17/phase16_2_vision_results.json",
+      "notes": "Oblique 128x128 RGB-D detector achieved 99.9%-100.0% detection rate, 14.81-15.55 mm 3D loc RMSE, 0.9983-0.9999 IoU; pure-vision SAC achieved 60% grasp / 15% PickPlace, pure-vision HRL achieved 25% grasp / 20% PickPlace without GT state."
+    },
+    {
+      "id": "16.3",
+      "name": "Dynamic Object Manipulation",
+      "status": "COMPLETE",
+      "evidence": "results/phase16_17/phase16_3_dynamic_results.json",
+      "notes": "Sliding-window tracker + predictive intercept achieved 100% linear, 95% sinusoidal, 95% step-disturbance, and 100% moving-target+cube PickPlace (vs 95% non-predictive linear)."
+    },
+    {
+      "id": "16.4",
+      "name": "Contact-Rich Manipulation (Peg-in-Hole)",
+      "status": "PARTIALLY_COMPLETE",
+      "evidence": "results/phase16_17/phase16_4_contact_assembly_results.json",
+      "notes": "SCRIPTED_COMPLIANT controller improved assembly success from 50.0% -> 53.33% and reduced pos error (0.0532m -> 0.0468m) with 22 active jam recoveries; LEARNED_COMPLIANT_ASSEMBLY remains BLOCKED on prerequisite low-level RL grasp deficit (Phase 15 5k SAC: 3.33% grasp, 0% assembly)."
+    },
+    {
+      "id": "16.5",
+      "name": "Simulation Deployment Architecture",
+      "status": "COMPLETE",
+      "evidence": "src/deployment/runtime.py",
+      "notes": "Verified decoupled frozen checkpoint inference (zero import of train/HER), ObsPreprocessor, ActionPostprocessor, SafetyMonitor, and MetricsLogger via pytest."
+    },
+    {
+      "id": "16.6",
+      "name": "Autonomous Task Execution (Vision + HRL + Safety)",
+      "status": "PARTIALLY_COMPLETE",
+      "evidence": "results/phase16_17/phase16_6_autonomous_results.json",
+      "notes": "End-to-end 20-ep 2-object sorting using RGB-D perception + learned HRL + progress monitor achieved 25% Object-1 placement and 229 autonomous replans, with 0% full 2-object completion under 200-step budget."
+    }
+  ]
+}
+

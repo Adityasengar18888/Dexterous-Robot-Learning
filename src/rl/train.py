@@ -116,6 +116,16 @@ def make_env(env_cfg, render_mode=None):
             max_episode_steps=env_cfg.get("max_episode_steps", 200),
             action_scale=env_cfg.get("action_scale", 0.05)
         )
+    elif env_cfg.get("name") == "AssemblyDense":
+        from src.environments.assembly_dense_env import PandaAssemblyDenseEnv
+        return PandaAssemblyDenseEnv(
+            render_mode=render_mode,
+            distance_threshold=env_cfg.get("distance_threshold", 0.02),
+            orientation_threshold=env_cfg.get("orientation_threshold", 0.1),
+            max_episode_steps=env_cfg.get("max_episode_steps", 120),
+            action_scale=env_cfg.get("action_scale", 0.05),
+            yaw_scale=env_cfg.get("yaw_scale", 0.25),
+        )
     else:
         raise ValueError(f"Unknown environment: {env_cfg.get('name')}")
 
@@ -198,14 +208,35 @@ def main():
         replay_buffer_kwargs = None
 
     # MultiInputPolicy handles observation spaces of type spaces.Dict
+    use_bc_sac = bool(rl_cfg.get("use_bc_sac", False))
+    demo_path = rl_cfg.get("demo_warmstart_path")
+
     if args.resume_model:
-        print(f"Resuming SAC model from {args.resume_model}...")
-        model = SAC.load(
-            args.resume_model,
-            env=env,
-            device=rl_cfg.get("device", "auto"),
-            tensorboard_log=paths_cfg["tensorboard_log"],
-        )
+        print(f"Resuming SAC model from {args.resume_model} (use_bc_sac={use_bc_sac})...")
+        if use_bc_sac:
+            from src.rl.bc_sac import BCDecayingSAC
+            model = BCDecayingSAC.load(
+                args.resume_model,
+                env=env,
+                device=rl_cfg.get("device", "auto"),
+                tensorboard_log=paths_cfg["tensorboard_log"],
+            )
+            model.bc_lambda_init = float(rl_cfg.get("bc_lambda_init", 0.305))
+            model.bc_lambda_final = float(rl_cfg.get("bc_lambda_final", 0.02))
+            model.bc_decay_steps = int(rl_cfg.get("bc_decay_steps", 5000))
+            model.bc_batch_size = int(rl_cfg.get("bc_batch_size", 128))
+            model.min_ent_coef = float(rl_cfg.get("min_ent_coef", 0.02))
+            model.actor_update_start_step = int(rl_cfg.get("actor_update_start_step", 0))
+            model.bc_normalize_q = bool(rl_cfg.get("bc_normalize_q", False))
+            if demo_path:
+                model.load_bc_demonstrations(demo_path)
+        else:
+            model = SAC.load(
+                args.resume_model,
+                env=env,
+                device=rl_cfg.get("device", "auto"),
+                tensorboard_log=paths_cfg["tensorboard_log"],
+            )
         if args.resume_buffer:
             print(f"Loading replay buffer from {args.resume_buffer}...")
             model.load_replay_buffer(args.resume_buffer)
@@ -213,28 +244,66 @@ def main():
         train_steps = int(args.additional_timesteps if args.additional_timesteps is not None else rl_cfg["total_timesteps"])
         reset_ts = False
     else:
-        model = SAC(
-            rl_cfg.get("policy", "MultiInputPolicy"),
-            env,
-            seed=rl_cfg.get("seed", 42),
-            buffer_size=rl_cfg.get("buffer_size", 100000),
-            batch_size=rl_cfg.get("batch_size", 256),
-            learning_rate=rl_cfg.get("learning_rate", 0.001),
-            learning_starts=rl_cfg.get("learning_starts", 100),
-            gamma=rl_cfg.get("gamma", 0.95),
-            tau=rl_cfg.get("tau", 0.05),
-            device=rl_cfg.get("device", "auto"),
-            replay_buffer_class=replay_buffer_class,
-            replay_buffer_kwargs=replay_buffer_kwargs,
-            tensorboard_log=paths_cfg["tensorboard_log"],
-            verbose=1,
-        )
+        if use_bc_sac:
+            from src.rl.bc_sac import BCDecayingSAC
+            model = BCDecayingSAC(
+                rl_cfg.get("policy", "MultiInputPolicy"),
+                env,
+                seed=rl_cfg.get("seed", 42),
+                buffer_size=rl_cfg.get("buffer_size", 100000),
+                batch_size=rl_cfg.get("batch_size", 256),
+                learning_rate=rl_cfg.get("learning_rate", 0.001),
+                learning_starts=rl_cfg.get("learning_starts", 100),
+                gamma=rl_cfg.get("gamma", 0.95),
+                tau=rl_cfg.get("tau", 0.05),
+                device=rl_cfg.get("device", "auto"),
+                replay_buffer_class=replay_buffer_class,
+                replay_buffer_kwargs=replay_buffer_kwargs,
+                tensorboard_log=paths_cfg["tensorboard_log"],
+                bc_demos_path=demo_path,
+                bc_lambda_init=rl_cfg.get("bc_lambda_init", 0.305),
+                bc_lambda_final=rl_cfg.get("bc_lambda_final", 0.02),
+                bc_decay_steps=rl_cfg.get("bc_decay_steps", 5000),
+                bc_batch_size=rl_cfg.get("bc_batch_size", 128),
+                min_ent_coef=rl_cfg.get("min_ent_coef", 0.02),
+                actor_update_start_step=rl_cfg.get("actor_update_start_step", 0),
+                bc_normalize_q=rl_cfg.get("bc_normalize_q", False),
+                ent_coef=rl_cfg.get("ent_coef", "auto"),
+                verbose=1,
+            )
+        else:
+            model = SAC(
+                rl_cfg.get("policy", "MultiInputPolicy"),
+                env,
+                seed=rl_cfg.get("seed", 42),
+                buffer_size=rl_cfg.get("buffer_size", 100000),
+                batch_size=rl_cfg.get("batch_size", 256),
+                learning_rate=rl_cfg.get("learning_rate", 0.001),
+                learning_starts=rl_cfg.get("learning_starts", 100),
+                gamma=rl_cfg.get("gamma", 0.95),
+                tau=rl_cfg.get("tau", 0.05),
+                device=rl_cfg.get("device", "auto"),
+                replay_buffer_class=replay_buffer_class,
+                replay_buffer_kwargs=replay_buffer_kwargs,
+                tensorboard_log=paths_cfg["tensorboard_log"],
+                verbose=1,
+            )
 
         initial_path = os.path.join(paths_cfg["model_save_path"], "initial_model")
         model.save(initial_path)
         print(f"Saved initial model to {initial_path}.zip")
 
-        demo_path = rl_cfg.get("demo_warmstart_path")
+        bc_pretrain_steps = int(rl_cfg.get("bc_pretrain_steps", 0))
+        if use_bc_sac and bc_pretrain_steps > 0 and demo_path:
+            bc_stats = model.run_bc_warmstart(
+                steps=bc_pretrain_steps,
+                lr=float(rl_cfg.get("bc_pretrain_lr", 0.001)),
+                batch_size=int(rl_cfg.get("bc_batch_size", 128)),
+            )
+            bc_warm_path = os.path.join(paths_cfg["model_save_path"], "bc_warmstart_model")
+            model.save(bc_warm_path)
+            print(f"BC warmstart completed: {bc_stats} -> saved {bc_warm_path}.zip")
+
         demo_method = rl_cfg.get("demo_warmstart_method", "her_buffer")
         if demo_path and demo_method == "her_buffer":
             import pickle
@@ -255,6 +324,14 @@ def main():
                     model.replay_buffer.add(obs_b, nobs_b, act_b, rew_b, done_b, [info_rec])
                     inserted += 1
             print(f"Warm-started HerReplayBuffer with {len(demos)} demo episodes ({inserted} transitions, size={model.replay_buffer.size()})")
+
+        critic_warmup_steps = int(rl_cfg.get("critic_warmup_steps", 0))
+        if use_bc_sac and critic_warmup_steps > 0 and model.replay_buffer.size() > 0:
+            cw_stats = model.run_critic_warmup(
+                steps=critic_warmup_steps,
+                batch_size=int(rl_cfg.get("batch_size", 128)),
+            )
+            print(f"Critic warmup completed (actor frozen): {cw_stats}")
 
         train_steps = int(rl_cfg["total_timesteps"])
         reset_ts = True

@@ -1,0 +1,367 @@
+{
+  "total_elapsed_s": 393.36,
+  "pickplace_dr_results": [
+    {
+      "model": "DR4_Seed42",
+      "condition": "DR1_POS",
+      "n_episodes": 20,
+      "success_rate": 1.0,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.7
+    },
+    {
+      "model": "DR4_Seed42",
+      "condition": "DR2_POSE_TARGET",
+      "n_episodes": 20,
+      "success_rate": 1.0,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.8
+    },
+    {
+      "model": "DR4_Seed42",
+      "condition": "DR4_FULL_PHYSICS",
+      "n_episodes": 20,
+      "success_rate": 0.95,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.5
+    },
+    {
+      "model": "DR4_Seed42",
+      "condition": "DR4_OBS_NOISE_5MM",
+      "n_episodes": 20,
+      "success_rate": 1.0,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.6
+    },
+    {
+      "model": "DR4_Seed42",
+      "condition": "DR4_OBS_DELAY_1",
+      "n_episodes": 20,
+      "success_rate": 0.95,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.8
+    },
+    {
+      "model": "DR4_Seed43",
+      "condition": "DR1_POS",
+      "n_episodes": 20,
+      "success_rate": 1.0,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.7
+    },
+    {
+      "model": "DR4_Seed43",
+      "condition": "DR2_POSE_TARGET",
+      "n_episodes": 20,
+      "success_rate": 0.9,
+      "grasp_rate": 0.95,
+      "lift_rate": 0.75
+    },
+    {
+      "model": "DR4_Seed43",
+      "condition": "DR4_FULL_PHYSICS",
+      "n_episodes": 20,
+      "success_rate": 0.95,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.6
+    },
+    {
+      "model": "DR4_Seed43",
+      "condition": "DR4_OBS_NOISE_5MM",
+      "n_episodes": 20,
+      "success_rate": 0.95,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.65
+    },
+    {
+      "model": "DR4_Seed43",
+      "condition": "DR4_OBS_DELAY_1",
+      "n_episodes": 20,
+      "success_rate": 0.65,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.5
+    }
+  ],
+  "single_pregrasp_robustness": [
+    {
+      "model": "5B2_17500_SAC_HER",
+      "condition": "Nominal",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.675,
+      "std_grasp_rate": 0.025,
+      "mean_lift_rate": 0.075,
+      "std_lift_rate": 0.025,
+      "mean_hold_rate": 0.075,
+      "mean_table_coll_ep_rate": 0.325,
+      "batches": [
+        {
+          "condition": "Nominal_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 13.54,
+          "grasp_rate": 0.7,
+          "lift_rate": 0.05,
+          "lift_cond_grasp": 0.0714,
+          "hold_success_rate": 0.05,
+          "table_coll_ep_rate": 0.4,
+          "mean_reward": -5.24
+        },
+        {
+          "condition": "Nominal_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 13.22,
+          "grasp_rate": 0.65,
+          "lift_rate": 0.1,
+          "lift_cond_grasp": 0.1538,
+          "hold_success_rate": 0.1,
+          "table_coll_ep_rate": 0.25,
+          "mean_reward": -5.713
+        }
+      ]
+    },
+    {
+      "model": "5B2_17500_SAC_HER",
+      "condition": "DR1_Pos_Ori",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.6,
+      "std_grasp_rate": 0.05,
+      "mean_lift_rate": 0.025,
+      "std_lift_rate": 0.025,
+      "mean_hold_rate": 0.0,
+      "mean_table_coll_ep_rate": 0.3,
+      "batches": [
+        {
+          "condition": "DR1_Pos_Ori_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 13.08,
+          "grasp_rate": 0.65,
+          "lift_rate": 0.05,
+          "lift_cond_grasp": 0.0769,
+          "hold_success_rate": 0.0,
+          "table_coll_ep_rate": 0.25,
+          "mean_reward": -5.164
+        },
+        {
+          "condition": "DR1_Pos_Ori_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 12.71,
+          "grasp_rate": 0.55,
+          "lift_rate": 0.0,
+          "lift_cond_grasp": 0.0,
+          "hold_success_rate": 0.0,
+          "table_coll_ep_rate": 0.35,
+          "mean_reward": -6.163
+        }
+      ]
+    },
+    {
+      "model": "5B2_17500_SAC_HER",
+      "condition": "DR2_TargetZ_Ori",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.525,
+      "std_grasp_rate": 0.025,
+      "mean_lift_rate": 0.025,
+      "std_lift_rate": 0.025,
+      "mean_hold_rate": 0.025,
+      "mean_table_coll_ep_rate": 0.3,
+      "batches": [
+        {
+          "condition": "DR2_TargetZ_Ori_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 12.8,
+          "grasp_rate": 0.5,
+          "lift_rate": 0.05,
+          "lift_cond_grasp": 0.1,
+          "hold_success_rate": 0.05,
+          "table_coll_ep_rate": 0.2,
+          "mean_reward": -5.16
+        },
+        {
+          "condition": "DR2_TargetZ_Ori_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 12.62,
+          "grasp_rate": 0.55,
+          "lift_rate": 0.0,
+          "lift_cond_grasp": 0.0,
+          "hold_success_rate": 0.0,
+          "table_coll_ep_rate": 0.4,
+          "mean_reward": -6.293
+        }
+      ]
+    },
+    {
+      "model": "5B2_17500_SAC_HER",
+      "condition": "DR4_Phys_Noise_Delay",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.425,
+      "std_grasp_rate": 0.125,
+      "mean_lift_rate": 0.075,
+      "std_lift_rate": 0.075,
+      "mean_hold_rate": 0.075,
+      "mean_table_coll_ep_rate": 0.125,
+      "batches": [
+        {
+          "condition": "DR4_Phys_Noise_Delay_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 12.58,
+          "grasp_rate": 0.3,
+          "lift_rate": 0.0,
+          "lift_cond_grasp": 0.0,
+          "hold_success_rate": 0.0,
+          "table_coll_ep_rate": 0.1,
+          "mean_reward": -4.212
+        },
+        {
+          "condition": "DR4_Phys_Noise_Delay_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 13.54,
+          "grasp_rate": 0.55,
+          "lift_rate": 0.15,
+          "lift_cond_grasp": 0.2727,
+          "hold_success_rate": 0.15,
+          "table_coll_ep_rate": 0.15,
+          "mean_reward": -4.0
+        }
+      ]
+    },
+    {
+      "model": "5B7_BC_WARMSTART",
+      "condition": "Nominal",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.85,
+      "std_grasp_rate": 0.05,
+      "mean_lift_rate": 0.675,
+      "std_lift_rate": 0.025,
+      "mean_hold_rate": 0.675,
+      "mean_table_coll_ep_rate": 0.0,
+      "batches": [
+        {
+          "condition": "Nominal_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 10.45,
+          "grasp_rate": 0.8,
+          "lift_rate": 0.65,
+          "lift_cond_grasp": 0.8125,
+          "hold_success_rate": 0.65,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 2.438
+        },
+        {
+          "condition": "Nominal_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 11.31,
+          "grasp_rate": 0.9,
+          "lift_rate": 0.7,
+          "lift_cond_grasp": 0.7778,
+          "hold_success_rate": 0.7,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 1.937
+        }
+      ]
+    },
+    {
+      "model": "5B7_BC_WARMSTART",
+      "condition": "DR1_Pos_Ori",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.75,
+      "std_grasp_rate": 0.05,
+      "mean_lift_rate": 0.5,
+      "std_lift_rate": 0.05,
+      "mean_hold_rate": 0.5,
+      "mean_table_coll_ep_rate": 0.0,
+      "batches": [
+        {
+          "condition": "DR1_Pos_Ori_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 10.17,
+          "grasp_rate": 0.7,
+          "lift_rate": 0.55,
+          "lift_cond_grasp": 0.7857,
+          "hold_success_rate": 0.55,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 0.982
+        },
+        {
+          "condition": "DR1_Pos_Ori_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 10.96,
+          "grasp_rate": 0.8,
+          "lift_rate": 0.45,
+          "lift_cond_grasp": 0.5625,
+          "hold_success_rate": 0.45,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": -0.049
+        }
+      ]
+    },
+    {
+      "model": "5B7_BC_WARMSTART",
+      "condition": "DR2_TargetZ_Ori",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.75,
+      "std_grasp_rate": 0.05,
+      "mean_lift_rate": 0.5,
+      "std_lift_rate": 0.0,
+      "mean_hold_rate": 0.5,
+      "mean_table_coll_ep_rate": 0.0,
+      "batches": [
+        {
+          "condition": "DR2_TargetZ_Ori_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 10.62,
+          "grasp_rate": 0.7,
+          "lift_rate": 0.5,
+          "lift_cond_grasp": 0.7143,
+          "hold_success_rate": 0.5,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 0.44
+        },
+        {
+          "condition": "DR2_TargetZ_Ori_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 10.35,
+          "grasp_rate": 0.8,
+          "lift_rate": 0.5,
+          "lift_cond_grasp": 0.625,
+          "hold_success_rate": 0.5,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 1.053
+        }
+      ]
+    },
+    {
+      "model": "5B7_BC_WARMSTART",
+      "condition": "DR4_Phys_Noise_Delay",
+      "n_episodes_total": 40,
+      "mean_grasp_rate": 0.95,
+      "std_grasp_rate": 0.0,
+      "mean_lift_rate": 0.825,
+      "std_lift_rate": 0.025,
+      "mean_hold_rate": 0.8,
+      "mean_table_coll_ep_rate": 0.0,
+      "batches": [
+        {
+          "condition": "DR4_Phys_Noise_Delay_batch_A_seeds_4001_4020",
+          "n_episodes": 20,
+          "elapsed_s": 12.29,
+          "grasp_rate": 0.95,
+          "lift_rate": 0.85,
+          "lift_cond_grasp": 0.8947,
+          "hold_success_rate": 0.8,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 2.705
+        },
+        {
+          "condition": "DR4_Phys_Noise_Delay_batch_B_seeds_5001_5020",
+          "n_episodes": 20,
+          "elapsed_s": 12.47,
+          "grasp_rate": 0.95,
+          "lift_rate": 0.8,
+          "lift_cond_grasp": 0.8421,
+          "hold_success_rate": 0.8,
+          "table_coll_ep_rate": 0.0,
+          "mean_reward": 1.225
+        }
+      ]
+    }
+  ]
+}

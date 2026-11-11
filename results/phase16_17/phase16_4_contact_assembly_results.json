@@ -1,0 +1,49 @@
+{
+  "phase15_scripted_baseline_30ep": {
+    "policy_type": "SCRIPTED_PHASE15_BASELINE",
+    "n_episodes": 30,
+    "elapsed_s": 36.36,
+    "grasp_rate": 1.0,
+    "lift_rate": 1.0,
+    "pre_insert_align_rate": 1.0,
+    "assembly_success_rate": 0.5,
+    "jam_episode_rate": 0.1333,
+    "table_coll_ep_rate": 0.0,
+    "mean_max_insertion_depth_m": 0.1101,
+    "mean_peak_wall_force_n": 7.42,
+    "mean_final_pos_err_m": 0.0532,
+    "mean_final_angle_deg": 1.2,
+    "mean_steps_to_success": 110.53,
+    "total_jam_recoveries": 12,
+    "sim_force_note": "PyBullet contact impulses are simulator constraints, not hardware F/T equivalent."
+  },
+  "phase16_compliant_impedance_30ep": {
+    "policy_type": "SCRIPTED_COMPLIANT",
+    "n_episodes": 30,
+    "elapsed_s": 29.93,
+    "grasp_rate": 1.0,
+    "lift_rate": 1.0,
+    "pre_insert_align_rate": 1.0,
+    "assembly_success_rate": 0.5333,
+    "jam_episode_rate": 0.2,
+    "table_coll_ep_rate": 0.0,
+    "mean_max_insertion_depth_m": 0.1101,
+    "mean_peak_wall_force_n": 12.56,
+    "mean_final_pos_err_m": 0.0468,
+    "mean_final_angle_deg": 2.55,
+    "mean_steps_to_success": 104.5,
+    "total_jam_recoveries": 22,
+    "sim_force_note": "PyBullet contact impulses are simulator constraints, not hardware F/T equivalent."
+  },
+  "phase15_learned_reference": {
+    "bc_warmstart_only_BEHAVIOR_CLONING": {
+      "grasp_rate": 0.2333,
+      "assembly_success_rate": 0.0
+    },
+    "sac_her_5000_LEARNED_SAC_HER": {
+      "grasp_rate": 0.0333,
+      "assembly_success_rate": 0.0
+    }
+  },
+  "learned_compliant_assembly_status": "BLOCKED_PREREQUISITES_LOW_GRASP_RL"
+}

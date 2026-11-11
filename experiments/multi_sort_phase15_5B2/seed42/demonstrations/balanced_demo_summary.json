@@ -1,0 +1,28 @@
+{
+  "accepted_episodes": 50,
+  "rejected_episodes": 0,
+  "rejected_details": [],
+  "total_transitions": 1672,
+  "mean_episode_length": 33.44,
+  "mean_episode_return": 9.333687063050457,
+  "stage_step_counts": {
+    "APPROACH": 717,
+    "ALIGNMENT": 200,
+    "CONTROLLED_DESCENT": 205,
+    "GRASP_AUTHORIZATION": 50,
+    "GRASP": 50,
+    "LIFT_VERIFICATION": 252,
+    "ACQUIRED": 50,
+    "HOLD_AT_GOAL": 148
+  },
+  "distribution_pct": {
+    "open_approach_align_descent_pct": 67.11,
+    "auth_and_close_pct": 5.98,
+    "lift_pct": 15.07,
+    "hold_pct": 11.84,
+    "open_gripper_cmd_pct": 70.1
+  },
+  "total_table_collisions": 0,
+  "total_premature_closures": 0,
+  "dataset_path": "experiments/multi_sort_phase15_5B2/seed42/demonstrations\\balanced_pregrasp_demos_50ep.pkl"
+}

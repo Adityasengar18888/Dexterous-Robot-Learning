@@ -198,6 +198,10 @@ def main():
     parser.add_argument("--config", default="configs/multi_sort_phase15_5B1.yaml")
     parser.add_argument("--steps", nargs="+", type=int, default=[0, 2500, 5000, 7500, 10000])
     parser.add_argument("--n-episodes", type=int, default=20)
+    parser.add_argument("--out-paths", nargs="+", default=[
+        "experiments/multi_sort_phase15_5B1/phase15_2_5B1_training_results.json",
+        "results/phase15_2_5B1/phase15_2_5B1_training_results.json",
+    ])
     args = parser.parse_args()
 
     cfg = load_config(args.config)
@@ -233,10 +237,7 @@ def main():
         "tensorboard_scalars": _read_tb_scalars(tb_dir),
         "checkpoint_evaluations": evals,
     }
-    for out_path in (
-        "experiments/multi_sort_phase15_5B1/phase15_2_5B1_training_results.json",
-        "results/phase15_2_5B1/phase15_2_5B1_training_results.json",
-    ):
+    for out_path in args.out_paths:
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
         with open(out_path, "w") as f:
             json.dump(out_payload, f, indent=2)

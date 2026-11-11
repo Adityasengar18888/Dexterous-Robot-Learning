@@ -1,0 +1,56 @@
+# Phase 1 (5B6): Gate r_goal_lift on lifted desired_goal + balanced demos + BC+Critic calibrated SAC+HER
+
+env:
+  name: "SinglePreGrasp"
+  distance_threshold: 0.05
+  max_episode_steps: 80
+  action_scale: 0.05
+  reward_config:
+    use_vertical_potential: true
+    w_vertical_potential: 2.0
+    grasp_z_offset: 0.0
+    vert_stop_tol_m: 0.008
+    gate_goal_lift_on_lifted_dg: true
+
+rl:
+  algo: "SAC"
+  policy: "MultiInputPolicy"
+  seed: 42
+  total_timesteps: 10000
+  buffer_size: 100000
+  batch_size: 128
+  learning_rate: 0.0003
+  learning_starts: 1600
+  gamma: 0.98
+  tau: 0.005
+  use_her: true
+  her_strategy: "future"
+  her_n_sampled_goal: 1
+  her_copy_info_dict: true
+  device: "cpu"
+  demo_warmstart_path: "experiments/multi_sort_phase15_5B2/seed42/demonstrations/balanced_pregrasp_demos_50ep.pkl"
+  demo_warmstart_method: "her_buffer"
+  use_bc_sac: true
+  bc_pretrain_steps: 2000
+  bc_pretrain_lr: 0.001
+  actor_update_start_step: 2600
+  bc_lambda_init: 0.50
+  bc_lambda_final: 0.02
+  bc_decay_steps: 10000
+  bc_batch_size: 128
+  ent_coef: "auto_0.03"
+  min_ent_coef: 0.015
+
+eval:
+  eval_freq: 2500
+  n_eval_episodes: 10
+  deterministic: true
+
+checkpointing:
+  save_freq: 2500
+  naming_pattern: "checkpoint_{timesteps}_steps.zip"
+
+paths:
+  model_save_path: "experiments/multi_sort_phase15_5B6/seed42/models"
+  tensorboard_log: "logs/multi_sort_phase15_5B6/seed42"
+

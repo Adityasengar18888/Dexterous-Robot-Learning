@@ -1,0 +1,4114 @@
+{
+  "total_indexed_files": 587,
+  "files": [
+    {
+      "path": "GSD-STYLE.md",
+      "category": "root",
+      "extension": ".md",
+      "size_bytes": 6981,
+      "lines": 274
+    },
+    {
+      "path": "PROJECT_RULES.md",
+      "category": "root",
+      "extension": ".md",
+      "size_bytes": 9464,
+      "lines": 316
+    },
+    {
+      "path": "README.md",
+      "category": "root",
+      "extension": ".md",
+      "size_bytes": 10313,
+      "lines": 132
+    },
+    {
+      "path": "audit_dr0.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 6394,
+      "lines": 176
+    },
+    {
+      "path": "audit_dr1.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 6411,
+      "lines": 176
+    },
+    {
+      "path": "audit_fast_track_dr1.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 4652,
+      "lines": 89
+    },
+    {
+      "path": "audit_generic.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 6201,
+      "lines": 159
+    },
+    {
+      "path": "audit_phase13_dr1.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 11495,
+      "lines": 297
+    },
+    {
+      "path": "debug_init.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 1123,
+      "lines": 35
+    },
+    {
+      "path": "diagnostic_11_5.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 3981,
+      "lines": 111
+    },
+    {
+      "path": "diagnostic_11_6.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 3628,
+      "lines": 103
+    },
+    {
+      "path": "diagnostic_11_7.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 8875,
+      "lines": 218
+    },
+    {
+      "path": "diagnostic_11_8.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 14247,
+      "lines": 348
+    },
+    {
+      "path": "diagnostic_dr_10k_smoke.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 2341,
+      "lines": 75
+    },
+    {
+      "path": "diagnostic_dr_scripted.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 3817,
+      "lines": 90
+    },
+    {
+      "path": "diagnostic_dr_smoke.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 769,
+      "lines": 25
+    },
+    {
+      "path": "diagnostic_env.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 411,
+      "lines": 16
+    },
+    {
+      "path": "diagnostic_physics_controller.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 1597,
+      "lines": 56
+    },
+    {
+      "path": "draw_plots_pillow.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 4211,
+      "lines": 83
+    },
+    {
+      "path": "eval_dense.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 1389,
+      "lines": 42
+    },
+    {
+      "path": "generate_fast_track_report.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 10574,
+      "lines": 110
+    },
+    {
+      "path": "generate_report_11_8.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 5276,
+      "lines": 107
+    },
+    {
+      "path": "launch_fast_track.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 10006,
+      "lines": 255
+    },
+    {
+      "path": "launch_phase11.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 3076,
+      "lines": 83
+    },
+    {
+      "path": "launch_phase13.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 9891,
+      "lines": 246
+    },
+    {
+      "path": "model_capabilities.yaml",
+      "category": "root",
+      "extension": ".yaml",
+      "size_bytes": 2943,
+      "lines": 108
+    },
+    {
+      "path": "orchestrate_phase11.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 7400,
+      "lines": 181
+    },
+    {
+      "path": "plot_err.txt",
+      "category": "root",
+      "extension": ".txt",
+      "size_bytes": 0,
+      "lines": 0
+    },
+    {
+      "path": "plot_trajectories.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 4355,
+      "lines": 83
+    },
+    {
+      "path": "pyproject.toml",
+      "category": "root",
+      "extension": ".toml",
+      "size_bytes": 1132,
+      "lines": 52
+    },
+    {
+      "path": "requirements.txt",
+      "category": "root",
+      "extension": ".txt",
+      "size_bytes": 399,
+      "lines": 22
+    },
+    {
+      "path": "run_phase13_5_diagnostics.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 23649,
+      "lines": 612
+    },
+    {
+      "path": "run_phase14_3.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 17697,
+      "lines": 389
+    },
+    {
+      "path": "run_phase14_4.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 14665,
+      "lines": 322
+    },
+    {
+      "path": "run_phase14_lite.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 22201,
+      "lines": 541
+    },
+    {
+      "path": "run_phase15_1.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 19919,
+      "lines": 441
+    },
+    {
+      "path": "stop_at_500k.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 1415,
+      "lines": 40
+    },
+    {
+      "path": "test_debug.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 473,
+      "lines": 18
+    },
+    {
+      "path": "test_dense_reward.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 2756,
+      "lines": 71
+    },
+    {
+      "path": "test_dr1_stats.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 2038,
+      "lines": 54
+    },
+    {
+      "path": "test_svg.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 262,
+      "lines": 11
+    },
+    {
+      "path": "train_capacity.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 8596,
+      "lines": 235
+    },
+    {
+      "path": "train_curriculum.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 11491,
+      "lines": 316
+    },
+    {
+      "path": "train_dense.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 3544,
+      "lines": 97
+    },
+    {
+      "path": "train_phase12.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 8611,
+      "lines": 238
+    },
+    {
+      "path": "train_phase13_dr.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 26341,
+      "lines": 613
+    },
+    {
+      "path": "train_transport.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 10508,
+      "lines": 292
+    },
+    {
+      "path": "verify_500k.py",
+      "category": "root",
+      "extension": ".py",
+      "size_bytes": 2001,
+      "lines": 53
+    },
+    {
+      "path": ".agent/workflows/add-phase.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2033,
+      "lines": 96
+    },
+    {
+      "path": ".agent/workflows/add-todo.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 1629,
+      "lines": 69
+    },
+    {
+      "path": ".agent/workflows/audit-milestone.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2509,
+      "lines": 107
+    },
+    {
+      "path": ".agent/workflows/check-todos.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 1987,
+      "lines": 80
+    },
+    {
+      "path": ".agent/workflows/complete-milestone.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 4962,
+      "lines": 192
+    },
+    {
+      "path": ".agent/workflows/debug.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 6517,
+      "lines": 262
+    },
+    {
+      "path": ".agent/workflows/discuss-phase.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2891,
+      "lines": 123
+    },
+    {
+      "path": ".agent/workflows/execute.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 11659,
+      "lines": 415
+    },
+    {
+      "path": ".agent/workflows/help.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 3534,
+      "lines": 96
+    },
+    {
+      "path": ".agent/workflows/insert-phase.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2760,
+      "lines": 109
+    },
+    {
+      "path": ".agent/workflows/install.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 5613,
+      "lines": 177
+    },
+    {
+      "path": ".agent/workflows/list-phase-assumptions.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2163,
+      "lines": 82
+    },
+    {
+      "path": ".agent/workflows/map.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 9849,
+      "lines": 419
+    },
+    {
+      "path": ".agent/workflows/new-milestone.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 3674,
+      "lines": 155
+    },
+    {
+      "path": ".agent/workflows/new-project.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 9694,
+      "lines": 368
+    },
+    {
+      "path": ".agent/workflows/pause.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 4628,
+      "lines": 176
+    },
+    {
+      "path": ".agent/workflows/plan-milestone-gaps.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2475,
+      "lines": 116
+    },
+    {
+      "path": ".agent/workflows/plan.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 12630,
+      "lines": 440
+    },
+    {
+      "path": ".agent/workflows/progress.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2545,
+      "lines": 90
+    },
+    {
+      "path": ".agent/workflows/remove-phase.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2995,
+      "lines": 139
+    },
+    {
+      "path": ".agent/workflows/research-phase.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 3926,
+      "lines": 184
+    },
+    {
+      "path": ".agent/workflows/resume.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 3844,
+      "lines": 131
+    },
+    {
+      "path": ".agent/workflows/sprint.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 4623,
+      "lines": 192
+    },
+    {
+      "path": ".agent/workflows/update.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 5703,
+      "lines": 201
+    },
+    {
+      "path": ".agent/workflows/verify.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 7430,
+      "lines": 289
+    },
+    {
+      "path": ".agent/workflows/web-search.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 3204,
+      "lines": 121
+    },
+    {
+      "path": ".agent/workflows/whats-new.md",
+      "category": ".agent",
+      "extension": ".md",
+      "size_bytes": 2617,
+      "lines": 80
+    },
+    {
+      "path": ".agents/agents/gsd-debugger.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 3571,
+      "lines": 90
+    },
+    {
+      "path": ".agents/agents/gsd-executor.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 4321,
+      "lines": 102
+    },
+    {
+      "path": ".agents/agents/gsd-planner.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 2891,
+      "lines": 78
+    },
+    {
+      "path": ".agents/agents/gsd-researcher.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 3581,
+      "lines": 94
+    },
+    {
+      "path": ".agents/agents/gsd-verifier.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 3325,
+      "lines": 89
+    },
+    {
+      "path": ".agents/skills/codebase-mapper/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 4800,
+      "lines": 226
+    },
+    {
+      "path": ".agents/skills/context-compressor/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 4646,
+      "lines": 201
+    },
+    {
+      "path": ".agents/skills/context-fetch/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 4230,
+      "lines": 184
+    },
+    {
+      "path": ".agents/skills/context-health-monitor/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 3164,
+      "lines": 105
+    },
+    {
+      "path": ".agents/skills/debugger/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 7531,
+      "lines": 273
+    },
+    {
+      "path": ".agents/skills/empirical-validation/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 2689,
+      "lines": 97
+    },
+    {
+      "path": ".agents/skills/executor/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 13328,
+      "lines": 501
+    },
+    {
+      "path": ".agents/skills/plan-checker/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 6638,
+      "lines": 283
+    },
+    {
+      "path": ".agents/skills/planner/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 13262,
+      "lines": 485
+    },
+    {
+      "path": ".agents/skills/subagent-delegation/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 7007,
+      "lines": 156
+    },
+    {
+      "path": ".agents/skills/token-budget/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 3800,
+      "lines": 166
+    },
+    {
+      "path": ".agents/skills/verifier/SKILL.md",
+      "category": ".agents",
+      "extension": ".md",
+      "size_bytes": 10537,
+      "lines": 421
+    },
+    {
+      "path": ".gemini/GEMINI.md",
+      "category": ".gemini",
+      "extension": ".md",
+      "size_bytes": 1912,
+      "lines": 67
+    },
+    {
+      "path": ".gsd/examples/cross-platform.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2229,
+      "lines": 99
+    },
+    {
+      "path": ".gsd/examples/multi-wave-workflow.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 5912,
+      "lines": 256
+    },
+    {
+      "path": ".gsd/examples/quick-reference.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2486,
+      "lines": 73
+    },
+    {
+      "path": ".gsd/examples/workflow-example.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2602,
+      "lines": 139
+    },
+    {
+      "path": ".gsd/templates/DEBUG.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 3165,
+      "lines": 123
+    },
+    {
+      "path": ".gsd/templates/PLAN.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2077,
+      "lines": 90
+    },
+    {
+      "path": ".gsd/templates/RESEARCH.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1584,
+      "lines": 75
+    },
+    {
+      "path": ".gsd/templates/SUMMARY.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1950,
+      "lines": 103
+    },
+    {
+      "path": ".gsd/templates/UAT.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2976,
+      "lines": 168
+    },
+    {
+      "path": ".gsd/templates/VERIFICATION.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1540,
+      "lines": 70
+    },
+    {
+      "path": ".gsd/templates/architecture.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2568,
+      "lines": 67
+    },
+    {
+      "path": ".gsd/templates/context.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1505,
+      "lines": 91
+    },
+    {
+      "path": ".gsd/templates/decisions.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 622,
+      "lines": 37
+    },
+    {
+      "path": ".gsd/templates/discovery.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2668,
+      "lines": 122
+    },
+    {
+      "path": ".gsd/templates/journal.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 851,
+      "lines": 46
+    },
+    {
+      "path": ".gsd/templates/milestone.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1848,
+      "lines": 91
+    },
+    {
+      "path": ".gsd/templates/phase-summary.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1111,
+      "lines": 52
+    },
+    {
+      "path": ".gsd/templates/project.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2058,
+      "lines": 124
+    },
+    {
+      "path": ".gsd/templates/requirements.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2193,
+      "lines": 92
+    },
+    {
+      "path": ".gsd/templates/roadmap.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1829,
+      "lines": 103
+    },
+    {
+      "path": ".gsd/templates/spec.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1232,
+      "lines": 51
+    },
+    {
+      "path": ".gsd/templates/sprint.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1138,
+      "lines": 57
+    },
+    {
+      "path": ".gsd/templates/stack.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1431,
+      "lines": 62
+    },
+    {
+      "path": ".gsd/templates/state.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1567,
+      "lines": 92
+    },
+    {
+      "path": ".gsd/templates/state_snapshot.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 2618,
+      "lines": 132
+    },
+    {
+      "path": ".gsd/templates/todo.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 628,
+      "lines": 32
+    },
+    {
+      "path": ".gsd/templates/token_report.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1389,
+      "lines": 79
+    },
+    {
+      "path": ".gsd/templates/user-setup.md",
+      "category": ".gsd",
+      "extension": ".md",
+      "size_bytes": 1989,
+      "lines": 116
+    },
+    {
+      "path": "adapters/CLAUDE.md",
+      "category": "adapters",
+      "extension": ".md",
+      "size_bytes": 1965,
+      "lines": 77
+    },
+    {
+      "path": "adapters/GEMINI.md",
+      "category": "adapters",
+      "extension": ".md",
+      "size_bytes": 2055,
+      "lines": 92
+    },
+    {
+      "path": "adapters/GPT_OSS.md",
+      "category": "adapters",
+      "extension": ".md",
+      "size_bytes": 2902,
+      "lines": 130
+    },
+    {
+      "path": "configs/assembly.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 530,
+      "lines": 29
+    },
+    {
+      "path": "configs/assembly_phase15_3.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1231,
+      "lines": 53
+    },
+    {
+      "path": "configs/default.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 636,
+      "lines": 28
+    },
+    {
+      "path": "configs/multi_sort.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 517,
+      "lines": 29
+    },
+    {
+      "path": "configs/multi_sort_phase15.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1119,
+      "lines": 38
+    },
+    {
+      "path": "configs/multi_sort_phase15_4.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 944,
+      "lines": 40
+    },
+    {
+      "path": "configs/multi_sort_phase15_5A.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 691,
+      "lines": 31
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 968,
+      "lines": 39
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B1.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1230,
+      "lines": 46
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B2.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1266,
+      "lines": 51
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B3.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1328,
+      "lines": 53
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B4.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1389,
+      "lines": 55
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B5.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1331,
+      "lines": 55
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B6.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1367,
+      "lines": 56
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B7.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1389,
+      "lines": 57
+    },
+    {
+      "path": "configs/multi_sort_phase15_5B8.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1387,
+      "lines": 57
+    },
+    {
+      "path": "configs/multi_sort_phase15_dense.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1134,
+      "lines": 41
+    },
+    {
+      "path": "configs/phase14_4_config.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1854,
+      "lines": 43
+    },
+    {
+      "path": "configs/phase15_1_config.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1891,
+      "lines": 68
+    },
+    {
+      "path": "configs/pick.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 369,
+      "lines": 23
+    },
+    {
+      "path": "configs/pick_place_baseline.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 494,
+      "lines": 28
+    },
+    {
+      "path": "configs/pick_place_dr_physics.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 743,
+      "lines": 42
+    },
+    {
+      "path": "configs/pick_place_dr_pose.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 611,
+      "lines": 34
+    },
+    {
+      "path": "configs/pick_place_dr_position.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 534,
+      "lines": 30
+    },
+    {
+      "path": "configs/pick_place_dr_position_target.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 589,
+      "lines": 32
+    },
+    {
+      "path": "configs/pick_place_heldout.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 625,
+      "lines": 28
+    },
+    {
+      "path": "configs/pick_place_her.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 476,
+      "lines": 26
+    },
+    {
+      "path": "configs/pick_place_no_her.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 434,
+      "lines": 24
+    },
+    {
+      "path": "configs/reach.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 371,
+      "lines": 23
+    },
+    {
+      "path": "configs/sort.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 477,
+      "lines": 28
+    },
+    {
+      "path": "configs/robot/panda.yaml",
+      "category": "configs",
+      "extension": ".yaml",
+      "size_bytes": 1719,
+      "lines": 47
+    },
+    {
+      "path": "docs/architecture.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 2190,
+      "lines": 33
+    },
+    {
+      "path": "docs/experiments.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 1462,
+      "lines": 12
+    },
+    {
+      "path": "docs/methodology.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 1986,
+      "lines": 29
+    },
+    {
+      "path": "docs/phase10_dr_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 4687,
+      "lines": 79
+    },
+    {
+      "path": "docs/phase11_10_curriculum_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 3673,
+      "lines": 60
+    },
+    {
+      "path": "docs/phase11_10b_acquisition_learning_capacity.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 4553,
+      "lines": 70
+    },
+    {
+      "path": "docs/phase11_5_learning_capacity_diagnostic.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 4759,
+      "lines": 79
+    },
+    {
+      "path": "docs/phase11_6_dense_reward_diagnostic.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 3157,
+      "lines": 49
+    },
+    {
+      "path": "docs/phase11_7_transport_stability.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 967,
+      "lines": 27
+    },
+    {
+      "path": "docs/phase11_8_transport_accessibility_diagnostic.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 1852,
+      "lines": 42
+    },
+    {
+      "path": "docs/phase11_9_transport_only_diagnostic.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 1723,
+      "lines": 36
+    },
+    {
+      "path": "docs/phase11_batch1_dr0.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 4486,
+      "lines": 84
+    },
+    {
+      "path": "docs/phase11_batch2_dr1.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 4962,
+      "lines": 95
+    },
+    {
+      "path": "docs/phase11_batch_dr2.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 118,
+      "lines": 6
+    },
+    {
+      "path": "docs/phase11_batch_dr3.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 118,
+      "lines": 6
+    },
+    {
+      "path": "docs/phase11_batch_dr4.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 118,
+      "lines": 6
+    },
+    {
+      "path": "docs/phase11_final_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 2564,
+      "lines": 53
+    },
+    {
+      "path": "docs/phase11_results.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 2263,
+      "lines": 61
+    },
+    {
+      "path": "docs/phase12_1m_dense_scaling_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 6349,
+      "lines": 89
+    },
+    {
+      "path": "docs/phase13_5_diagnostic_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 15270,
+      "lines": 209
+    },
+    {
+      "path": "docs/phase13_fast_track_robustness_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 7891,
+      "lines": 93
+    },
+    {
+      "path": "docs/phase14_closure_and_phase15_readiness.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 17306,
+      "lines": 124
+    },
+    {
+      "path": "docs/phase17_3_hardware_architecture.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 2541,
+      "lines": 36
+    },
+    {
+      "path": "docs/phase9_diagnostic_report.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 4143,
+      "lines": 49
+    },
+    {
+      "path": "docs/reach_benchmark.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 1701,
+      "lines": 31
+    },
+    {
+      "path": "docs/results.md",
+      "category": "docs",
+      "extension": ".md",
+      "size_bytes": 1876,
+      "lines": 40
+    },
+    {
+      "path": "experiments/demo_assembly_scripted.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 4172,
+      "lines": 120
+    },
+    {
+      "path": "experiments/demo_multi_sort_scripted.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 3723,
+      "lines": 101
+    },
+    {
+      "path": "experiments/demo_panda.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 133,
+      "lines": 6
+    },
+    {
+      "path": "experiments/demo_pick_place_scripted.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 3157,
+      "lines": 86
+    },
+    {
+      "path": "experiments/demo_pick_scripted.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 2330,
+      "lines": 71
+    },
+    {
+      "path": "experiments/demo_reach_random.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 983,
+      "lines": 31
+    },
+    {
+      "path": "experiments/demo_reach_scripted.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 1681,
+      "lines": 47
+    },
+    {
+      "path": "experiments/demo_sort_random.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 637,
+      "lines": 22
+    },
+    {
+      "path": "experiments/demo_sort_scripted.py",
+      "category": "experiments",
+      "extension": ".py",
+      "size_bytes": 3436,
+      "lines": 92
+    },
+    {
+      "path": "experiments/assembly_phase15_3/seed42/demonstrations/assembly_demo_summary.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 258,
+      "lines": 8
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5A/phase15_2_5A_diagnostics.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 248126,
+      "lines": 8616
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5A/phase15_2_5A_final_report.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 8941,
+      "lines": 88
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5A/scripted_50ep_raw.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 245406,
+      "lines": 8515
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B/phase15_2_5B_C_combined_report.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 6289,
+      "lines": 62
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B/phase15_2_5B_final_report.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 7162,
+      "lines": 69
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B/phase15_2_5B_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 160948,
+      "lines": 6851
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B1/phase15_2_5B1_action_pathway_audit.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 4825,
+      "lines": 38
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B1/phase15_2_5B1_demonstration_audit.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 4214,
+      "lines": 48
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B1/phase15_2_5B1_final_report.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 9885,
+      "lines": 85
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B1/phase15_2_5B1_reward_audit.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 5600,
+      "lines": 65
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B1/phase15_2_5B1_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 346748,
+      "lines": 12451
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B1/seed42/demonstrations/demo_dataset_summary.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 1838,
+      "lines": 94
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B2/phase15_2_5B2_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 373038,
+      "lines": 14119
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B2/seed42/demonstrations/balanced_demo_summary.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 801,
+      "lines": 28
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B4/phase15_2_5B4_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 206058,
+      "lines": 6592
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B5/phase15_2_5B5_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 206161,
+      "lines": 6592
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B6/phase15_2_5B6_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 206006,
+      "lines": 6592
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B7/phase15_2_5B7_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 205973,
+      "lines": 6592
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5B8/phase15_2_5B8_training_results.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 171593,
+      "lines": 5494
+    },
+    {
+      "path": "experiments/multi_sort_phase15_5C/phase15_2_5C_transfer_audit.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 3661,
+      "lines": 48
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 585,
+      "lines": 30
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 1187,
+      "lines": 31
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/evaluations/eval_checkpoint_1000000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 56035,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 58274,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 56377,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/evaluations/eval_checkpoint_750000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55725,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1969,
+      "lines": 13
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/metrics/completed.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 188,
+      "lines": 8
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 3975,
+      "lines": 85
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 332,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed42/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 26257,
+      "lines": 401
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 585,
+      "lines": 30
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 1187,
+      "lines": 31
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/evaluations/eval_checkpoint_1000000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 56481,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 58180,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55858,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/evaluations/eval_checkpoint_750000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55982,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1980,
+      "lines": 13
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/metrics/completed.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 189,
+      "lines": 8
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 3976,
+      "lines": 85
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 332,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed43/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 26193,
+      "lines": 401
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 585,
+      "lines": 30
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 544,
+      "lines": 22
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 58029,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55659,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1090,
+      "lines": 7
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1997,
+      "lines": 43
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 329,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed44/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1494,
+      "lines": 23
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 585,
+      "lines": 30
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 544,
+      "lines": 22
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 56712,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55847,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1102,
+      "lines": 7
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 2004,
+      "lines": 43
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 330,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr1/seed45/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1122,
+      "lines": 17
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 616,
+      "lines": 30
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 945,
+      "lines": 27
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 58090,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55790,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1095,
+      "lines": 7
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/metrics/completed.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 187,
+      "lines": 8
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 2001,
+      "lines": 43
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 332,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed42/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 12990,
+      "lines": 201
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 616,
+      "lines": 30
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 945,
+      "lines": 27
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 58771,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55704,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1106,
+      "lines": 7
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/metrics/completed.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 187,
+      "lines": 8
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 2010,
+      "lines": 43
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 332,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr2/seed43/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 13021,
+      "lines": 201
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 849,
+      "lines": 40
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 945,
+      "lines": 27
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 57995,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 55878,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1090,
+      "lines": 7
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/metrics/completed.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 187,
+      "lines": 8
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 2006,
+      "lines": 43
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 332,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed42/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 13028,
+      "lines": 201
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/config_snapshot.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 849,
+      "lines": 40
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/training_metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 944,
+      "lines": 27
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/evaluations/eval_checkpoint_250000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 58317,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/evaluations/eval_checkpoint_500000.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 56376,
+      "lines": 301
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/metrics/checkpoint_metrics.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 1108,
+      "lines": 7
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/metrics/completed.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 186,
+      "lines": 8
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/metrics/failure_taxonomy.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 2010,
+      "lines": 43
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/metrics/resource_check_10k.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 331,
+      "lines": 12
+    },
+    {
+      "path": "experiments/phase13_dense_dr/dr4/seed43/metrics/training_progress.csv",
+      "category": "experiments",
+      "extension": ".csv",
+      "size_bytes": 13027,
+      "lines": 201
+    },
+    {
+      "path": "experiments/pick_place/run_experiments.ps1",
+      "category": "experiments",
+      "extension": ".ps1",
+      "size_bytes": 884,
+      "lines": 18
+    },
+    {
+      "path": "experiments/pick_place/smoke_results.md",
+      "category": "experiments",
+      "extension": ".md",
+      "size_bytes": 2234,
+      "lines": 30
+    },
+    {
+      "path": "experiments/pnp_dr0_seed42/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 528,
+      "lines": 25
+    },
+    {
+      "path": "experiments/pnp_dr0_seed42/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr0_seed43/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 528,
+      "lines": 25
+    },
+    {
+      "path": "experiments/pnp_dr0_seed43/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr0_seed44/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 528,
+      "lines": 25
+    },
+    {
+      "path": "experiments/pnp_dr0_seed44/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr0_seed45/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 528,
+      "lines": 25
+    },
+    {
+      "path": "experiments/pnp_dr0_seed45/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr0_seed46/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 528,
+      "lines": 25
+    },
+    {
+      "path": "experiments/pnp_dr0_seed46/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr0_smoke_seed42/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 538,
+      "lines": 25
+    },
+    {
+      "path": "experiments/pnp_dr0_smoke_seed42/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 170,
+      "lines": 7
+    },
+    {
+      "path": "experiments/pnp_dr1_seed42/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 570,
+      "lines": 27
+    },
+    {
+      "path": "experiments/pnp_dr1_seed42/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr1_seed43/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 570,
+      "lines": 27
+    },
+    {
+      "path": "experiments/pnp_dr1_seed43/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr1_seed44/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 570,
+      "lines": 27
+    },
+    {
+      "path": "experiments/pnp_dr1_seed44/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr1_seed45/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 570,
+      "lines": 27
+    },
+    {
+      "path": "experiments/pnp_dr1_seed45/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr1_seed46/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 570,
+      "lines": 27
+    },
+    {
+      "path": "experiments/pnp_dr1_seed46/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr2_seed42/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 613,
+      "lines": 29
+    },
+    {
+      "path": "experiments/pnp_dr2_seed42/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr2_seed43/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 613,
+      "lines": 29
+    },
+    {
+      "path": "experiments/pnp_dr2_seed43/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr2_seed44/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 613,
+      "lines": 29
+    },
+    {
+      "path": "experiments/pnp_dr2_seed44/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr2_seed45/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 613,
+      "lines": 29
+    },
+    {
+      "path": "experiments/pnp_dr2_seed45/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr2_seed46/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 613,
+      "lines": 29
+    },
+    {
+      "path": "experiments/pnp_dr2_seed46/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr3_seed42/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 659,
+      "lines": 31
+    },
+    {
+      "path": "experiments/pnp_dr3_seed42/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr3_seed43/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 659,
+      "lines": 31
+    },
+    {
+      "path": "experiments/pnp_dr3_seed43/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr3_seed44/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 659,
+      "lines": 31
+    },
+    {
+      "path": "experiments/pnp_dr3_seed44/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr3_seed45/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 659,
+      "lines": 31
+    },
+    {
+      "path": "experiments/pnp_dr3_seed45/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr3_seed46/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 659,
+      "lines": 31
+    },
+    {
+      "path": "experiments/pnp_dr3_seed46/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr4_seed42/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 792,
+      "lines": 39
+    },
+    {
+      "path": "experiments/pnp_dr4_seed42/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr4_seed43/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 792,
+      "lines": 39
+    },
+    {
+      "path": "experiments/pnp_dr4_seed43/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr4_seed44/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 792,
+      "lines": 39
+    },
+    {
+      "path": "experiments/pnp_dr4_seed44/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr4_seed45/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 792,
+      "lines": 39
+    },
+    {
+      "path": "experiments/pnp_dr4_seed45/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "experiments/pnp_dr4_seed46/config.yaml",
+      "category": "experiments",
+      "extension": ".yaml",
+      "size_bytes": 792,
+      "lines": 39
+    },
+    {
+      "path": "experiments/pnp_dr4_seed46/metadata.json",
+      "category": "experiments",
+      "extension": ".json",
+      "size_bytes": 199,
+      "lines": 8
+    },
+    {
+      "path": "results/phase11_10_curriculum_distribution.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 72,
+      "lines": 2
+    },
+    {
+      "path": "results/phase11_10_curriculum_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 561,
+      "lines": 4
+    },
+    {
+      "path": "results/phase11_10b_acquisition_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 324,
+      "lines": 8
+    },
+    {
+      "path": "results/phase11_6_dense_reward_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 10239,
+      "lines": 101
+    },
+    {
+      "path": "results/phase11_8_state_initialization_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 24199,
+      "lines": 183
+    },
+    {
+      "path": "results/phase11_9_transport_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 7451,
+      "lines": 101
+    },
+    {
+      "path": "results/phase11_9_transport_trajectories.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 409468,
+      "lines": 2001
+    },
+    {
+      "path": "results/phase11_dr0_episode_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 94971,
+      "lines": 1001
+    },
+    {
+      "path": "results/phase11_dr0_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1268,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr1_episode_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 94976,
+      "lines": 1001
+    },
+    {
+      "path": "results/phase11_dr1_seed_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1125,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr1_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1264,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr2_episode_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 94974,
+      "lines": 1001
+    },
+    {
+      "path": "results/phase11_dr2_seed_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1127,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr2_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1266,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr3_episode_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 94954,
+      "lines": 1001
+    },
+    {
+      "path": "results/phase11_dr3_seed_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1126,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr3_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1265,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr4_episode_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 94974,
+      "lines": 1001
+    },
+    {
+      "path": "results/phase11_dr4_seed_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1126,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_dr4_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1265,
+      "lines": 11
+    },
+    {
+      "path": "results/phase11_final_episode_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 492493,
+      "lines": 5001
+    },
+    {
+      "path": "results/phase11_final_seed_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 5077,
+      "lines": 51
+    },
+    {
+      "path": "results/phase11_final_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 5736,
+      "lines": 51
+    },
+    {
+      "path": "results/phase12_1m/checkpoint_metrics.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 723,
+      "lines": 9
+    },
+    {
+      "path": "results/phase12_1m/failure_taxonomy.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 451,
+      "lines": 18
+    },
+    {
+      "path": "results/phase13_5/d1_baseline_reproduction/combined_reproduction.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 37596,
+      "lines": 201
+    },
+    {
+      "path": "results/phase13_5/d1_baseline_reproduction/seed42_reproduction.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 19141,
+      "lines": 101
+    },
+    {
+      "path": "results/phase13_5/d1_baseline_reproduction/seed43_reproduction.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 18693,
+      "lines": 101
+    },
+    {
+      "path": "results/phase13_5/d2_mass_sensitivity/mass_sensitivity.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 77896,
+      "lines": 401
+    },
+    {
+      "path": "results/phase13_5/d2_mass_sensitivity/mass_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 549,
+      "lines": 5
+    },
+    {
+      "path": "results/phase13_5/d3_friction_sensitivity/friction_sensitivity.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 97082,
+      "lines": 501
+    },
+    {
+      "path": "results/phase13_5/d3_friction_sensitivity/friction_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 371,
+      "lines": 6
+    },
+    {
+      "path": "results/phase13_5/d4_contact_geometry/contact_geometry.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 88390,
+      "lines": 421
+    },
+    {
+      "path": "results/phase13_5/d4_contact_geometry/contact_geometry_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 808,
+      "lines": 8
+    },
+    {
+      "path": "results/phase13_5/d5_lift_trajectories/grasp_but_no_lift_sample_1_seed42_ep5002.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 40568,
+      "lines": 102
+    },
+    {
+      "path": "results/phase13_5/d5_lift_trajectories/grasp_but_no_lift_sample_2_seed42_ep5004.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 41117,
+      "lines": 102
+    },
+    {
+      "path": "results/phase13_5/d5_lift_trajectories/grasp_but_no_lift_sample_3_seed42_ep5005.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 41561,
+      "lines": 102
+    },
+    {
+      "path": "results/phase13_5/d5_lift_trajectories/success_sample_1_seed42_ep5001.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 44332,
+      "lines": 102
+    },
+    {
+      "path": "results/phase13_5/d5_lift_trajectories/success_sample_2_seed42_ep5003.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 44858,
+      "lines": 102
+    },
+    {
+      "path": "results/phase13_5/d5_lift_trajectories/success_sample_3_seed42_ep5006.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 45588,
+      "lines": 102
+    },
+    {
+      "path": "results/phase13_dr1/audit_report.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 794,
+      "lines": 26
+    },
+    {
+      "path": "results/phase13_dr1/stage_42-43_10k_check.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 781,
+      "lines": 26
+    },
+    {
+      "path": "results/phase13_dr1/stage_44-45_10k_check.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 781,
+      "lines": 26
+    },
+    {
+      "path": "results/phase13_dr2/stage_10k_check.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 781,
+      "lines": 26
+    },
+    {
+      "path": "results/phase13_dr4/stage_10k_check.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 780,
+      "lines": 26
+    },
+    {
+      "path": "results/phase13_fast_track/dr1_seed44_45_screening.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 8075,
+      "lines": 222
+    },
+    {
+      "path": "results/phase14_3/confirm_d_seed42.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 90125,
+      "lines": 301
+    },
+    {
+      "path": "results/phase14_3/confirm_d_seed43.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 90474,
+      "lines": 301
+    },
+    {
+      "path": "results/phase14_3/confirmation_episodes.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 381184,
+      "lines": 1201
+    },
+    {
+      "path": "results/phase14_3/confirmation_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1663,
+      "lines": 13
+    },
+    {
+      "path": "results/phase14_3/phase14_3_episodes.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 72149,
+      "lines": 241
+    },
+    {
+      "path": "results/phase14_3/phase14_3_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 10954,
+      "lines": 115
+    },
+    {
+      "path": "results/phase14_3/phase14_3_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1594,
+      "lines": 13
+    },
+    {
+      "path": "results/phase14_4/confirm_e_seed42.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 52670,
+      "lines": 301
+    },
+    {
+      "path": "results/phase14_4/confirm_e_seed43.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 52586,
+      "lines": 301
+    },
+    {
+      "path": "results/phase14_4/confirmation_episodes.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 284408,
+      "lines": 1801
+    },
+    {
+      "path": "results/phase14_4/confirmation_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 3492,
+      "lines": 28
+    },
+    {
+      "path": "results/phase14_4/phase14_4_confirmation_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 20812,
+      "lines": 599
+    },
+    {
+      "path": "results/phase14_4/phase14_4_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 9966,
+      "lines": 96
+    },
+    {
+      "path": "results/phase14_4/phase14_4_screening_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 6977,
+      "lines": 203
+    },
+    {
+      "path": "results/phase14_4/screening_episodes.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 20841,
+      "lines": 121
+    },
+    {
+      "path": "results/phase14_lite/controller_comparison.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 7388,
+      "lines": 28
+    },
+    {
+      "path": "results/phase14_lite/lift_telemetry.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1927178,
+      "lines": 6001
+    },
+    {
+      "path": "results/phase14_lite/lift_telemetry_seed42.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1024109,
+      "lines": 3001
+    },
+    {
+      "path": "results/phase14_lite/lift_telemetry_seed43.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 963408,
+      "lines": 3001
+    },
+    {
+      "path": "results/phase14_lite/phase14_lite_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 13367,
+      "lines": 133
+    },
+    {
+      "path": "results/phase14_lite/seed42_results.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 293812,
+      "lines": 901
+    },
+    {
+      "path": "results/phase14_lite/seed43_results.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 293084,
+      "lines": 901
+    },
+    {
+      "path": "results/phase14_lite/screening/controller_comparison.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 8944,
+      "lines": 28
+    },
+    {
+      "path": "results/phase14_lite/screening/lift_telemetry.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 1969259,
+      "lines": 6001
+    },
+    {
+      "path": "results/phase14_lite/screening/seed42_results.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 87590,
+      "lines": 271
+    },
+    {
+      "path": "results/phase14_lite/screening/seed43_results.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 87481,
+      "lines": 271
+    },
+    {
+      "path": "results/phase15_1/phase15_1_episodes.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 51021,
+      "lines": 321
+    },
+    {
+      "path": "results/phase15_1/phase15_1_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 21223,
+      "lines": 182
+    },
+    {
+      "path": "results/phase15_1/phase15_1_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 21293,
+      "lines": 606
+    },
+    {
+      "path": "results/phase15_1/phase15_1_seed42.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 25844,
+      "lines": 161
+    },
+    {
+      "path": "results/phase15_1/phase15_1_seed43.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 25884,
+      "lines": 161
+    },
+    {
+      "path": "results/phase15_1/phase15_1_summary.csv",
+      "category": "results",
+      "extension": ".csv",
+      "size_bytes": 3595,
+      "lines": 25
+    },
+    {
+      "path": "results/phase15_2_1/phase15_2_1_audit_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 12148,
+      "lines": 108
+    },
+    {
+      "path": "results/phase15_2_1/phase15_2_1_environment_tests.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 4383,
+      "lines": 50
+    },
+    {
+      "path": "results/phase15_2_1/phase15_2_1_reward_her_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 6047,
+      "lines": 56
+    },
+    {
+      "path": "results/phase15_2_1/phase15_2_1_scripted_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 16924,
+      "lines": 647
+    },
+    {
+      "path": "results/phase15_2_1/phase15_2_training_plan.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 6552,
+      "lines": 85
+    },
+    {
+      "path": "results/phase15_2_2/phase15_2_2_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 6385,
+      "lines": 65
+    },
+    {
+      "path": "results/phase15_2_2/phase15_2_2_reward_design.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 5443,
+      "lines": 57
+    },
+    {
+      "path": "results/phase15_2_2/phase15_2_2_test_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 4375,
+      "lines": 51
+    },
+    {
+      "path": "results/phase15_2_3/phase15_2_3_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 5777,
+      "lines": 62
+    },
+    {
+      "path": "results/phase15_2_3/phase15_2_3_integration_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3154,
+      "lines": 32
+    },
+    {
+      "path": "results/phase15_2_3/phase15_2_3_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 85328,
+      "lines": 3241
+    },
+    {
+      "path": "results/phase15_2_3/phase15_2_3_training_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 5117,
+      "lines": 66
+    },
+    {
+      "path": "results/phase15_2_4/phase15_2_4_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 7545,
+      "lines": 81
+    },
+    {
+      "path": "results/phase15_2_4/phase15_2_4_reward_comparison.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3579,
+      "lines": 41
+    },
+    {
+      "path": "results/phase15_2_4/phase15_2_4_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 151255,
+      "lines": 6220
+    },
+    {
+      "path": "results/phase15_2_5A/phase15_2_5A_diagnostics.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 248126,
+      "lines": 8616
+    },
+    {
+      "path": "results/phase15_2_5A/phase15_2_5A_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 8941,
+      "lines": 88
+    },
+    {
+      "path": "results/phase15_2_5B/phase15_2_5B_C_combined_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 6289,
+      "lines": 62
+    },
+    {
+      "path": "results/phase15_2_5B/phase15_2_5B_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 7162,
+      "lines": 69
+    },
+    {
+      "path": "results/phase15_2_5B/phase15_2_5B_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 160948,
+      "lines": 6851
+    },
+    {
+      "path": "results/phase15_2_5B1/phase15_2_5B1_action_pathway_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 4825,
+      "lines": 38
+    },
+    {
+      "path": "results/phase15_2_5B1/phase15_2_5B1_demonstration_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 4214,
+      "lines": 48
+    },
+    {
+      "path": "results/phase15_2_5B1/phase15_2_5B1_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 9872,
+      "lines": 85
+    },
+    {
+      "path": "results/phase15_2_5B1/phase15_2_5B1_reward_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 5600,
+      "lines": 65
+    },
+    {
+      "path": "results/phase15_2_5B1/phase15_2_5B1_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 346748,
+      "lines": 12451
+    },
+    {
+      "path": "results/phase15_2_5B2/phase15_2_5B2_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 373038,
+      "lines": 14119
+    },
+    {
+      "path": "results/phase15_2_5B3/phase15_2_5B3_100ep_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 85967,
+      "lines": 3438
+    },
+    {
+      "path": "results/phase15_2_5B3/phase15_2_5B3_5k_diag.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 137220,
+      "lines": 4396
+    },
+    {
+      "path": "results/phase15_2_5B3/phase15_2_5B3_final_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 4583,
+      "lines": 43
+    },
+    {
+      "path": "results/phase15_2_5B4/phase15_2_5B4_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 206058,
+      "lines": 6592
+    },
+    {
+      "path": "results/phase15_2_5B5/phase15_2_5B5_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 206161,
+      "lines": 6592
+    },
+    {
+      "path": "results/phase15_2_5B6/phase15_2_5B6_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 206006,
+      "lines": 6592
+    },
+    {
+      "path": "results/phase15_2_5B7/phase15_2_5B7_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 205973,
+      "lines": 6592
+    },
+    {
+      "path": "results/phase15_2_5B8/phase15_2_5B8_training_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 171593,
+      "lines": 5494
+    },
+    {
+      "path": "results/phase15_2_5C/phase15_2_5C_transfer_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3661,
+      "lines": 48
+    },
+    {
+      "path": "results/phase15_3_assembly/phase15_3_assembly_learned_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 26867,
+      "lines": 1040
+    },
+    {
+      "path": "results/phase15_3_assembly/phase15_3_assembly_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3291,
+      "lines": 31
+    },
+    {
+      "path": "results/phase15_3_assembly/phase15_3_assembly_scripted_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 13739,
+      "lines": 528
+    },
+    {
+      "path": "results/phase15_master/PHASE15_FINAL_TECHNICAL_REPORT.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 14201,
+      "lines": 141
+    },
+    {
+      "path": "results/phase15_master/phase0_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3671,
+      "lines": 48
+    },
+    {
+      "path": "results/phase15_phase3/phase15_3_robustness_report.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3198,
+      "lines": 39
+    },
+    {
+      "path": "results/phase15_phase3/phase15_phase3_robustness_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 10377,
+      "lines": 367
+    },
+    {
+      "path": "results/phase16_17/PHASE16_FINAL_TECHNICAL_REPORT.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 5276,
+      "lines": 53
+    },
+    {
+      "path": "results/phase16_17/PHASE17_DEPLOYMENT_READINESS_REPORT.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 4542,
+      "lines": 50
+    },
+    {
+      "path": "results/phase16_17/phase16_0_baseline_audit.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 1578,
+      "lines": 25
+    },
+    {
+      "path": "results/phase16_17/phase16_17_experiment_registry.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 2452,
+      "lines": 31
+    },
+    {
+      "path": "results/phase16_17/phase16_17_failure_analysis.md",
+      "category": "results",
+      "extension": ".md",
+      "size_bytes": 3853,
+      "lines": 27
+    },
+    {
+      "path": "results/phase16_17/phase16_17_master_charts.py",
+      "category": "results",
+      "extension": ".py",
+      "size_bytes": 11951,
+      "lines": 275
+    },
+    {
+      "path": "results/phase16_17/phase16_1_hrl_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 29339,
+      "lines": 1474
+    },
+    {
+      "path": "results/phase16_17/phase16_2_vision_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 1566,
+      "lines": 58
+    },
+    {
+      "path": "results/phase16_17/phase16_3_dynamic_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 1968,
+      "lines": 72
+    },
+    {
+      "path": "results/phase16_17/phase16_4_contact_assembly_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 1652,
+      "lines": 49
+    },
+    {
+      "path": "results/phase16_17/phase16_6_autonomous_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 377,
+      "lines": 17
+    },
+    {
+      "path": "results/phase16_17/phase16_benchmark_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 38372,
+      "lines": 1672
+    },
+    {
+      "path": "results/phase16_17/phase16_completion_matrix.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 3009,
+      "lines": 56
+    },
+    {
+      "path": "results/phase16_17/phase17_completion_matrix.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 1716,
+      "lines": 28
+    },
+    {
+      "path": "results/phase16_17/phase17_cross_simulator_results.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 1848,
+      "lines": 67
+    },
+    {
+      "path": "results/phase16_17/phase17_safety_assessment.json",
+      "category": "results",
+      "extension": ".json",
+      "size_bytes": 1485,
+      "lines": 57
+    },
+    {
+      "path": "scripts/eval_phase15_3_assembly.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 7533,
+      "lines": 175
+    },
+    {
+      "path": "scripts/eval_phase15_5B1.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 11797,
+      "lines": 249
+    },
+    {
+      "path": "scripts/eval_phase15_phase1_b3.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 5669,
+      "lines": 131
+    },
+    {
+      "path": "scripts/eval_phase15_phase3_robustness.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 9470,
+      "lines": 177
+    },
+    {
+      "path": "scripts/generate_phase15_2_charts.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 12084,
+      "lines": 269
+    },
+    {
+      "path": "scripts/generate_phase15_3_assembly_demos.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 3595,
+      "lines": 98
+    },
+    {
+      "path": "scripts/generate_phase15_5B1_demos.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 7804,
+      "lines": 188
+    },
+    {
+      "path": "scripts/generate_phase15_5B2_balanced_demos.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 8802,
+      "lines": 210
+    },
+    {
+      "path": "scripts/generate_phase15_master_charts.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 16828,
+      "lines": 362
+    },
+    {
+      "path": "scripts/run_phase16_1_hrl.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 15446,
+      "lines": 355
+    },
+    {
+      "path": "scripts/run_phase16_2_and_6_vision_auto.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 13788,
+      "lines": 295
+    },
+    {
+      "path": "scripts/run_phase16_3_dynamic.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 5962,
+      "lines": 139
+    },
+    {
+      "path": "scripts/run_phase16_4_contact_assembly.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 6139,
+      "lines": 138
+    },
+    {
+      "path": "scripts/run_phase17_cross_sim_and_safety.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 13405,
+      "lines": 291
+    },
+    {
+      "path": "scripts/run_phase3_complete.py",
+      "category": "scripts",
+      "extension": ".py",
+      "size_bytes": 3753,
+      "lines": 80
+    },
+    {
+      "path": "scripts/search_repo.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 2253,
+      "lines": 95
+    },
+    {
+      "path": "scripts/setup_search.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 4683,
+      "lines": 97
+    },
+    {
+      "path": "scripts/validate-agents.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 5070,
+      "lines": 124
+    },
+    {
+      "path": "scripts/validate-all.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 2800,
+      "lines": 62
+    },
+    {
+      "path": "scripts/validate-encoding.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 2866,
+      "lines": 68
+    },
+    {
+      "path": "scripts/validate-skills.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 2439,
+      "lines": 68
+    },
+    {
+      "path": "scripts/validate-templates.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 2307,
+      "lines": 58
+    },
+    {
+      "path": "scripts/validate-workflows.ps1",
+      "category": "scripts",
+      "extension": ".ps1",
+      "size_bytes": 2309,
+      "lines": 59
+    },
+    {
+      "path": "src/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 77,
+      "lines": 3
+    },
+    {
+      "path": "src/controllers/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 251,
+      "lines": 10
+    },
+    {
+      "path": "src/controllers/assembly_controller.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 6761,
+      "lines": 153
+    },
+    {
+      "path": "src/controllers/compliant_assembly_controller.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 5217,
+      "lines": 110
+    },
+    {
+      "path": "src/controllers/pregrasp_controller.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 16684,
+      "lines": 338
+    },
+    {
+      "path": "src/cross_sim/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 76,
+      "lines": 2
+    },
+    {
+      "path": "src/cross_sim/mujoco_panda_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 13956,
+      "lines": 278
+    },
+    {
+      "path": "src/deployment/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 93,
+      "lines": 2
+    },
+    {
+      "path": "src/deployment/hardware_interface.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 7626,
+      "lines": 173
+    },
+    {
+      "path": "src/deployment/runtime.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 13786,
+      "lines": 334
+    },
+    {
+      "path": "src/environments/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 64,
+      "lines": 1
+    },
+    {
+      "path": "src/environments/assembly_dense_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 14690,
+      "lines": 314
+    },
+    {
+      "path": "src/environments/assembly_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 9642,
+      "lines": 243
+    },
+    {
+      "path": "src/environments/base_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 3030,
+      "lines": 88
+    },
+    {
+      "path": "src/environments/contact_assembly_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 3688,
+      "lines": 92
+    },
+    {
+      "path": "src/environments/curriculum_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 3905,
+      "lines": 93
+    },
+    {
+      "path": "src/environments/dense_multi_sort_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 30726,
+      "lines": 616
+    },
+    {
+      "path": "src/environments/dense_pick_place_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 4861,
+      "lines": 108
+    },
+    {
+      "path": "src/environments/dynamic_pick_place_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 6118,
+      "lines": 140
+    },
+    {
+      "path": "src/environments/multi_sort_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 11645,
+      "lines": 292
+    },
+    {
+      "path": "src/environments/pick_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 6578,
+      "lines": 174
+    },
+    {
+      "path": "src/environments/pick_place_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 9335,
+      "lines": 238
+    },
+    {
+      "path": "src/environments/pregrasp_multi_sort_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 20425,
+      "lines": 411
+    },
+    {
+      "path": "src/environments/reach_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 6912,
+      "lines": 177
+    },
+    {
+      "path": "src/environments/single_pregrasp_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 19019,
+      "lines": 372
+    },
+    {
+      "path": "src/environments/sort_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 9167,
+      "lines": 234
+    },
+    {
+      "path": "src/environments/transport_diagnostic_env.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 2738,
+      "lines": 66
+    },
+    {
+      "path": "src/hrl/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 65,
+      "lines": 2
+    },
+    {
+      "path": "src/hrl/hrl_agent.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 13252,
+      "lines": 333
+    },
+    {
+      "path": "src/hrl/skills.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 10110,
+      "lines": 248
+    },
+    {
+      "path": "src/metrics/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 50,
+      "lines": 1
+    },
+    {
+      "path": "src/objects/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 64,
+      "lines": 1
+    },
+    {
+      "path": "src/objects/bin.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 1231,
+      "lines": 37
+    },
+    {
+      "path": "src/objects/cube.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 2538,
+      "lines": 77
+    },
+    {
+      "path": "src/objects/parts.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 5486,
+      "lines": 108
+    },
+    {
+      "path": "src/objects/targets.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 1253,
+      "lines": 39
+    },
+    {
+      "path": "src/perception/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 300,
+      "lines": 9
+    },
+    {
+      "path": "src/perception/dynamic_tracker.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 4576,
+      "lines": 108
+    },
+    {
+      "path": "src/perception/rgbd_camera.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 4571,
+      "lines": 106
+    },
+    {
+      "path": "src/perception/vision_detector.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 5770,
+      "lines": 144
+    },
+    {
+      "path": "src/rl/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 69,
+      "lines": 1
+    },
+    {
+      "path": "src/rl/adaptive_controllers.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 30115,
+      "lines": 623
+    },
+    {
+      "path": "src/rl/bc_sac.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 14238,
+      "lines": 281
+    },
+    {
+      "path": "src/rl/callbacks.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 1833,
+      "lines": 45
+    },
+    {
+      "path": "src/rl/evaluate.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 9341,
+      "lines": 218
+    },
+    {
+      "path": "src/rl/evaluate_phase11.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 4195,
+      "lines": 118
+    },
+    {
+      "path": "src/rl/sim_to_real_latency_wrapper.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 2643,
+      "lines": 64
+    },
+    {
+      "path": "src/rl/sim_to_real_observation_wrapper.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 3691,
+      "lines": 90
+    },
+    {
+      "path": "src/rl/train.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 17067,
+      "lines": 366
+    },
+    {
+      "path": "src/rl/transfer_utils.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 6928,
+      "lines": 140
+    },
+    {
+      "path": "src/rl/unprivileged_contact_wrapper.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 12555,
+      "lines": 268
+    },
+    {
+      "path": "src/robots/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 256,
+      "lines": 7
+    },
+    {
+      "path": "src/robots/base_robot.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 2212,
+      "lines": 75
+    },
+    {
+      "path": "src/robots/controller.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 7081,
+      "lines": 205
+    },
+    {
+      "path": "src/robots/demo_panda.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 3838,
+      "lines": 99
+    },
+    {
+      "path": "src/robots/panda.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 12607,
+      "lines": 300
+    },
+    {
+      "path": "src/utils/__init__.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 132,
+      "lines": 5
+    },
+    {
+      "path": "src/utils/config.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 2862,
+      "lines": 81
+    },
+    {
+      "path": "src/utils/randomization.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 4244,
+      "lines": 117
+    },
+    {
+      "path": "src/utils/simulation.py",
+      "category": "src",
+      "extension": ".py",
+      "size_bytes": 4863,
+      "lines": 135
+    },
+    {
+      "path": "tests/test_assembly_dense_and_orientation.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2849,
+      "lines": 73
+    },
+    {
+      "path": "tests/test_assembly_env.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 1326,
+      "lines": 42
+    },
+    {
+      "path": "tests/test_b1_demos_and_warmstart.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 4034,
+      "lines": 102
+    },
+    {
+      "path": "tests/test_bc_sac.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 3070,
+      "lines": 78
+    },
+    {
+      "path": "tests/test_config.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2013,
+      "lines": 62
+    },
+    {
+      "path": "tests/test_controller.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 3712,
+      "lines": 115
+    },
+    {
+      "path": "tests/test_dense_multi_sort_env.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 17408,
+      "lines": 388
+    },
+    {
+      "path": "tests/test_deployment_runtime.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2855,
+      "lines": 79
+    },
+    {
+      "path": "tests/test_environment.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2932,
+      "lines": 90
+    },
+    {
+      "path": "tests/test_hrl_phase16.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2062,
+      "lines": 59
+    },
+    {
+      "path": "tests/test_imports.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2000,
+      "lines": 67
+    },
+    {
+      "path": "tests/test_multi_sort_env.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 1399,
+      "lines": 43
+    },
+    {
+      "path": "tests/test_panda_robot.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 5874,
+      "lines": 157
+    },
+    {
+      "path": "tests/test_phase15_integration.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 5784,
+      "lines": 105
+    },
+    {
+      "path": "tests/test_phase15_wrappers.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 5331,
+      "lines": 120
+    },
+    {
+      "path": "tests/test_phase16_17_envs.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2358,
+      "lines": 61
+    },
+    {
+      "path": "tests/test_phase16_integration_all.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 1301,
+      "lines": 27
+    },
+    {
+      "path": "tests/test_pick_env.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 1389,
+      "lines": 42
+    },
+    {
+      "path": "tests/test_pregrasp_controller.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 3396,
+      "lines": 90
+    },
+    {
+      "path": "tests/test_pregrasp_her_compatibility.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 3574,
+      "lines": 92
+    },
+    {
+      "path": "tests/test_pregrasp_reward.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 5773,
+      "lines": 107
+    },
+    {
+      "path": "tests/test_randomization.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2355,
+      "lines": 69
+    },
+    {
+      "path": "tests/test_simulation.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 1963,
+      "lines": 55
+    },
+    {
+      "path": "tests/test_single_pregrasp_and_transfer.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 4155,
+      "lines": 101
+    },
+    {
+      "path": "tests/test_sort_env.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 1157,
+      "lines": 40
+    },
+    {
+      "path": "tests/test_vertical_action_pathway.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 5511,
+      "lines": 121
+    },
+    {
+      "path": "tests/test_vertical_potential_reward_her.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 7496,
+      "lines": 183
+    },
+    {
+      "path": "tests/test_vision_and_dynamic_phase16.py",
+      "category": "tests",
+      "extension": ".py",
+      "size_bytes": 2288,
+      "lines": 55
+    }
+  ]
+}

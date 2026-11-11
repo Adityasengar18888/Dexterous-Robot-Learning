@@ -1,0 +1,170 @@
+{
+  "0": {
+    "source_files": [
+      "src/utils/config.py",
+      "tests/test_imports.py",
+      "tests/test_config.py"
+    ],
+    "test_evidence": "tests/test_imports.py (13 tests), tests/test_config.py (5 tests)",
+    "evidence_quality": "SOURCE_VERIFIED"
+  },
+  "1": {
+    "source_files": [
+      "src/robots/base_robot.py",
+      "src/robots/panda.py",
+      "src/robots/controller.py",
+      "src/utils/simulation.py"
+    ],
+    "test_evidence": "37/37 tests passing in 4.71s (docs/results.md)",
+    "evidence_quality": "SOURCE_VERIFIED"
+  },
+  "2": {
+    "source_files": [
+      "src/environments/base_env.py",
+      "src/environments/reach_env.py",
+      "src/objects/targets.py",
+      "configs/reach.yaml"
+    ],
+    "test_evidence": "tests/test_environment.py, docs/reach_benchmark.md",
+    "evidence_quality": "REPORT_VERIFIED"
+  },
+  "3": {
+    "source_files": [
+      "src/rl/train.py",
+      "src/rl/evaluate.py",
+      "src/rl/callbacks.py"
+    ],
+    "test_evidence": "checkpoints/reach_sac/evaluations.npz; logs/reach_sac/SAC_3 TensorBoard scalars",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "4": {
+    "source_files": [
+      "src/objects/cube.py",
+      "src/environments/pick_env.py",
+      "tests/test_pick_env.py"
+    ],
+    "test_evidence": "tests/test_pick_env.py (2 tests), checkpoints/pick_sac/evaluations.npz",
+    "evidence_quality": "SOURCE_VERIFIED"
+  },
+  "5": {
+    "source_files": [
+      "src/environments/pick_env.py",
+      "docs/phase9_diagnostic_report.md"
+    ],
+    "test_evidence": "docs/phase9_diagnostic_report.md verification entries; exact standalone Phase 5 report file NOT_RECOVERABLE.",
+    "evidence_quality": "HISTORICALLY_REPORTED"
+  },
+  "6": {
+    "source_files": [
+      "src/environments/pick_place_env.py",
+      "src/robots/panda.py",
+      "experiments/pick_place/smoke_results.md"
+    ],
+    "test_evidence": "experiments/pick_place/E1_no_her & E2_her evaluations.npz + TB scalars + smoke_results.md",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "7": {
+    "source_files": [
+      "src/objects/bin.py",
+      "src/environments/sort_env.py",
+      "tests/test_sort_env.py"
+    ],
+    "test_evidence": "tests/test_sort_env.py (3 tests), experiments/sort/models/evaluations.npz, logs/sort/SAC_2",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "8": {
+    "source_files": [
+      "src/environments/multi_sort_env.py",
+      "src/objects/parts.py",
+      "src/environments/assembly_env.py"
+    ],
+    "test_evidence": "tests/test_multi_sort_env.py (3 tests), tests/test_assembly_env.py (3 tests), evaluations.npz + TB logs",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "9": {
+    "source_files": [
+      "src/environments/assembly_env.py",
+      "docs/phase9_diagnostic_report.md"
+    ],
+    "test_evidence": "docs/phase9_diagnostic_report.md (52/52 pytest pass)",
+    "evidence_quality": "REPORT_VERIFIED"
+  },
+  "10": {
+    "source_files": [
+      "src/utils/randomization.py",
+      "src/environments/base_env.py",
+      "tests/test_randomization.py"
+    ],
+    "test_evidence": "56/56 tests passing including tests/test_randomization.py (4 tests)",
+    "evidence_quality": "REPORT_VERIFIED"
+  },
+  "11": {
+    "source_files": [
+      "src/environments/dense_pick_place_env.py",
+      "src/environments/curriculum_env.py",
+      "src/environments/transport_diagnostic_env.py"
+    ],
+    "test_evidence": "results/phase11_final_summary.csv + 11_6..11_10b metrics CSVs",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "12": {
+    "source_files": [
+      "train_phase12.py",
+      "results/phase12_1m/checkpoint_metrics.csv"
+    ],
+    "test_evidence": "results/phase12_1m/checkpoint_metrics.csv & failure_taxonomy.csv",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "13": {
+    "source_files": [
+      "train_phase13_dr.py",
+      "run_phase13_5_diagnostics.py"
+    ],
+    "test_evidence": "results/phase13_5/d1..d5 CSVs and fast_track matched/heldout logs",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "14": {
+    "source_files": [
+      "src/rl/adaptive_controllers.py",
+      "run_phase14_lite.py",
+      "run_phase14_3.py",
+      "run_phase14_4.py",
+      "configs/phase14_4_config.yaml"
+    ],
+    "test_evidence": "results/phase14_4/phase14_4_confirmation_results.json",
+    "evidence_quality": "LOG_VERIFIED"
+  },
+  "15": {
+    "source_files": [
+      "src/rl/bc_sac.py",
+      "src/controllers/pregrasp_controller.py",
+      "src/controllers/assembly_controller.py",
+      "src/environments/single_pregrasp_env.py",
+      "src/environments/assembly_dense_env.py"
+    ],
+    "test_evidence": "tests/test_phase15_integration.py & 111/111 full suite pass",
+    "evidence_quality": "SOURCE_VERIFIED"
+  },
+  "16": {
+    "source_files": [
+      "src/hrl/hrl_agent.py",
+      "src/hrl/skills.py",
+      "src/perception/rgbd_camera.py",
+      "src/perception/vision_detector.py",
+      "src/perception/dynamic_tracker.py",
+      "src/environments/contact_assembly_env.py",
+      "src/deployment/runtime.py"
+    ],
+    "test_evidence": "tests/test_deployment_runtime.py, test_hrl_phase16.py, test_vision_and_dynamic_phase16.py, test_phase16_17_envs.py",
+    "evidence_quality": "SOURCE_VERIFIED"
+  },
+  "17": {
+    "source_files": [
+      "src/cross_sim/mujoco_panda_env.py",
+      "src/deployment/hardware_interface.py",
+      "docs/phase17_3_hardware_architecture.md"
+    ],
+    "test_evidence": "results/phase16_17/phase17_cross_simulator_results.json & phase17_safety_assessment.json",
+    "evidence_quality": "SOURCE_VERIFIED"
+  }
+}

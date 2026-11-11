@@ -1,0 +1,58 @@
+{
+  "SAC_Privileged_GT_20ep": {
+    "mode": "SAC",
+    "observation_source": "PRIVILEGED_GT_STATE",
+    "n_episodes": 20,
+    "elapsed_s": 27.37,
+    "success_rate": 1.0,
+    "grasp_rate": 1.0,
+    "mean_collisions": 0.05,
+    "safety_ws_clamps_mean": 2.0,
+    "detection_rate": null,
+    "mean_3d_loc_err_mm": null,
+    "mean_seg_iou": null,
+    "mean_yaw_sym_err_deg": null
+  },
+  "SAC_RGBD_Vision_20ep": {
+    "mode": "SAC",
+    "observation_source": "RGBD_VISION",
+    "n_episodes": 20,
+    "elapsed_s": 143.54,
+    "success_rate": 0.15,
+    "grasp_rate": 0.6,
+    "mean_collisions": 0.45,
+    "safety_ws_clamps_mean": 2.5,
+    "detection_rate": 0.999,
+    "mean_3d_loc_err_mm": 15.55,
+    "mean_seg_iou": 0.9983,
+    "mean_yaw_sym_err_deg": 25.17
+  },
+  "HRL_Privileged_GT_20ep": {
+    "mode": "HRL",
+    "observation_source": "PRIVILEGED_GT_STATE",
+    "n_episodes": 20,
+    "elapsed_s": 11.18,
+    "success_rate": 0.4,
+    "grasp_rate": 0.4,
+    "mean_collisions": 3.9,
+    "safety_ws_clamps_mean": 1.35,
+    "detection_rate": null,
+    "mean_3d_loc_err_mm": null,
+    "mean_seg_iou": null,
+    "mean_yaw_sym_err_deg": null
+  },
+  "HRL_RGBD_Vision_20ep": {
+    "mode": "HRL",
+    "observation_source": "RGBD_VISION",
+    "n_episodes": 20,
+    "elapsed_s": 81.21,
+    "success_rate": 0.2,
+    "grasp_rate": 0.25,
+    "mean_collisions": 1.55,
+    "safety_ws_clamps_mean": 7.9,
+    "detection_rate": 1.0,
+    "mean_3d_loc_err_mm": 14.81,
+    "mean_seg_iou": 0.9999,
+    "mean_yaw_sym_err_deg": 29.06
+  }
+}

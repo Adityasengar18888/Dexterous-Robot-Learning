@@ -114,6 +114,16 @@ def make_env(env_cfg, render_mode=None):
             max_episode_steps=env_cfg.get("max_episode_steps", 200),
             action_scale=env_cfg.get("action_scale", 0.05)
         )
+    elif env_cfg.get("name") == "AssemblyDense":
+        from src.environments.assembly_dense_env import PandaAssemblyDenseEnv
+        return PandaAssemblyDenseEnv(
+            render_mode=render_mode,
+            distance_threshold=env_cfg.get("distance_threshold", 0.02),
+            orientation_threshold=env_cfg.get("orientation_threshold", 0.1),
+            max_episode_steps=env_cfg.get("max_episode_steps", 120),
+            action_scale=env_cfg.get("action_scale", 0.05),
+            yaw_scale=env_cfg.get("yaw_scale", 0.25),
+        )
     else:
         raise ValueError(f"Unknown environment: {env_cfg.get('name')}")
 
