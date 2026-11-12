@@ -1,0 +1,11 @@
+ref_id,authors,title_venue,url_or_doi,access_date
+REF-01,Haarnoja et al.,Soft Actor-Critic (ICML 2018),https://arxiv.org/abs/1801.01290,2026-11-12
+REF-02,Andrychowicz et al.,Hindsight Experience Replay (NeurIPS 2017),https://arxiv.org/abs/1707.01495,2026-11-12
+REF-03,Raffin et al.,Stable-Baselines3 (JMLR 2021),https://jmlr.org/papers/v22/20-1364.html,2026-11-12
+REF-04,Coumans & Bai,PyBullet Official Simulation Docs,https://pybullet.org,2026-11-12
+REF-05,Todorov et al.,"MuJoCo (IROS 2012, DOI 10.1109/IROS.2012.6386109)",https://mujoco.org,2026-11-12
+REF-06,Tobin et al.,"Domain Randomization (IROS 2017, DOI 10.1109/IROS.2017.8202133)",https://arxiv.org/abs/1703.06907,2026-11-12
+REF-07,Sutton et al.,Between MDPs and semi-MDPs: Options (AIJ 1999),https://doi.org/10.1016/S0004-3702(99)00052-1,2026-11-12
+REF-08,Nair et al.,Overcoming Exploration in RL with Demonstrations (ICRA 2018),https://doi.org/10.1109/ICRA.2018.8463162,2026-11-12
+REF-09,Hogan,Impedance Control (ASME JDSMC 1985),https://asmedigitalcollection.asme.org,2026-11-12
+REF-10,Kalman,Linear Filtering and Prediction Problems (1960),https://asmedigitalcollection.asme.org,2026-11-12

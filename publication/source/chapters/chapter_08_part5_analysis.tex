@@ -1,0 +1,23 @@
+% PART V — RESEARCH ANALYSIS
+\chapter{Chapter 8: Cross-Phase Synthesis, Negative Results, and Provenance Analysis}
+\section{8.1 Strict Provenance Comparison (`SCRIPTED` vs `BEHAVIOR\_CLONING` vs `LEARNED`)}
+Conflating scripted kinematic heuristics with end-to-end neural reinforcement learning leads to misleading engineering claims. Across all 27 registered experiments, deterministic scripted controllers (`Phase 15.2.5A`: 100\% 2-obj sorting; `Phase 16.4`: 53.33\% compliant insertion) excel when exact geometric state and contact thresholds are known, yet brittle failure ensues outside calibrated bounds. Pure SAC+HER achieves 100\% DR0 at 600k–1M steps (`Phase 12`), suffers OOD slip collapse without runtime shielding (`Phase 13.5`: 57\% -> `Phase 14`: 98\%), and outperforms sparse HER under balanced Behavioral Cloning warm-starts at low sample budgets (`5B7`: 45\% lift vs `5B2`: 7\% lift).
+
+\section{8.2 Value of Negative Results and Statistical Failure Taxonomy}
+Four negative experimental outcomes fundamentally shaped system architecture: (1) Phase 11's 25x100k sparse 0\% plateau proved static-goal HER equilibria; (2) Phase 15.2.5B's 0\% hover at z=0.50 m identified strict XY tolerance cylinder deadzones; (3) Phase 15.2.5B.1's 78.4\% closed-gripper bias exposed how unmasked demo tails poison critic/actor rollouts; and (4) Phase 17.1's 98\% -> 5\% PyBullet-to-MuJoCo drop falsified any premature assumption that PyBullet DR4 success implies physical FCI hardware readiness.
+
+\begin{longtable}{l l l l l}\caption{Table 8.1: Cross-Phase Defect Root-Cause Registry (ERR-001 through ERR-012)}\\\toprule
+ID & Phase & Module & Observed Failure & Verified Resolution \\ \midrule \endhead
+ERR-001 & Phase 6 & src/robots/panda.py & Cube slipped from fingers during upward lift under scripted P-controller & Added changeDynamics lateralFriction=2.0 and spinningFriction=0.1 on finger links 9 \& 10 \\
+ERR-002 & Phase 9 & src/environments/assembly\_env.py & PyBullet connection failure / invalid body ID during test\_assembly\_env.py & Dynamically inject active self.sim.client\_id into Peg \& Receptacle inside reset() prior to load() \\
+ERR-003 & Phase 11.5 & src/environments/pick\_place\_env.py & 0.0\% success \& 0.0\% grasp across all 25 DR0-DR4 100k sparse models & Created isolated PandaPickPlaceDenseRewardEnv breaking exploration trap (+1.0 lift + distance shaping) \\
+ERR-004 & Phase 13.5 & src/environments/pick\_place\_env.py & Held-out DR4 collapsed to 61.0\% (57.0\% final, Seed 43 33.0\%) with 30.5\% GRASP\_BUT\_NO\_LIFT & Implemented zero-retraining inference controllers B->C->D->E (src/rl/adaptive\_controllers.py) \\
+ERR-005 & Phase 15.2.4 & src/environments/dense\_multi\_sort\_env.py & 0\% bilateral grasp \& 163.2 collisions/ep despite EE reaching 0.1745m & Added 5-check bilateral grasp authorization gate + open-gripper compliance penalty in PreGraspController/Env \\
+ERR-006 & Phase 15.2.5B & src/environments/single\_pregrasp\_env.py & 20k SAC+HER converged to XY=0.0110m hover at z=0.50m (0\% grasp) & Verified vertical action pathway (0.485m->0.0216m) \& added continuous vertical potential Phi\_z = -2.0*clip(|dz|,0,1) \\
+ERR-007 & Phase 15.2.5B.1 & scripts/generate\_phase15\_5B1\_demos.py & Premature gripper closure climbed to 100\% \& lift stayed 0\% by 20k & Balanced 50/50 demos (70.1\% open cmd), gate\_goal\_lift\_on\_lifted\_dg, \& BCDecayingSAC \\
+ERR-008 & Phase 16.1 & src/rl/adaptive\_controllers.py / SAC.load & AssertionError: You must pass an environment when using HerReplayBuffer & CheckpointLoader.load\_sb3\_sac passes custom\_objects={'replay\_buffer\_class': None, 'replay\_buffer\_kwargs': {}} \\
+ERR-009 & Phase 16.1 & src/hrl/hrl\_agent.py & HRL achieved 93.3\% grasp @ 25k but dropped to 0\% placement & Replaced repeat bonus with bounded potential difference 1.5*(h1-h0) + +6.0 sparse success \\
+ERR-010 & Phase 16.1/16.2 & src/environments/pick\_place\_env.py & Cube spawned half-sunk at z=-0.00008m \& Seed42 500k model scored 0/5 & Explicitly pass randomizer\_config={'enabled': True, ...} setting z\_fixed=0.025 \& load checkpoint\_500000.zip \\
+ERR-011 & Phase 16.2 & src/perception/rgbd\_camera.py & OMP Error \#15 (libomp vs libiomp5md), PyBullet client=-1 capture error, \& 18.65\% overhead self-occlusion & Moved CameraConfig to oblique (0.92,0.28,0.45), lazy camera init post-reset(), KMP\_DUPLICATE\_LIB\_OK=TRUE \\
+ERR-012 & Phase 17.1 & src/cross\_sim/mujoco\_panda\_env.py & ValueError: mass and inertia of moving bodies must be larger than mjMINVAL (link6) & Added explicit inertial/geom blocks on link5-hand; classified Z-offset \& elliptic slip in MuJoCo \\
+\bottomrule \end{longtable}

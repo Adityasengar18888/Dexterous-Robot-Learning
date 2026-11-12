@@ -145,9 +145,30 @@ $env:PATH = "$PWD\.conda-env;$PWD\.conda-env\Library\bin;$PWD\.conda-env\Scripts
 .\.conda-env\python.exe publication/validate_pdf.py
 ```
 
+### Launching the Web Robotics Workstation (`backend/` + `frontend/`)
+
+Terminal 1 — Authoritative PyBullet FastAPI Backend (`http://127.0.0.1:8000`):
+```powershell
+.\scripts\startup\start_backend.ps1
+```
+
+Terminal 2 — React + Three.js Industrial Workstation Frontend (`http://localhost:5173`):
+```powershell
+.\scripts\startup\start_frontend.ps1
+```
+
+Run combined Python + FastAPI/WebSocket tests & Frontend Vitest/Vite build:
+```powershell
+$env:KMP_DUPLICATE_LIB_OK = "TRUE"
+.\.conda-env\python.exe -m pytest tests backend/tests -q
+cd frontend; npm test; npm run build
+```
+
 ---
 
 ## 6. Key Technical Documentation Index
+
+- **Workstation Reports & Audit:** [Website Development Report](docs/website_development_report.md) · [Implementation Status](docs/implementation_status.md) · [Repository Audit](docs/repository_audit.md) · [Backend API & WS Spec](docs/api/backend_api_and_ws.md) · [Robotics Integration](docs/architecture/robotics_integration.md)
 
 - **Master 100-Page Monograph:** [`publication/Dexterous_Robot_Learning_Phase_1_to_17_Monograph.pdf`](publication/Dexterous_Robot_Learning_Phase_1_to_17_Monograph.pdf)
 - **Phase 17 Deployment Readiness Report:** [`results/phase16_17/PHASE17_DEPLOYMENT_READINESS_REPORT.md`](results/phase16_17/PHASE17_DEPLOYMENT_READINESS_REPORT.md)

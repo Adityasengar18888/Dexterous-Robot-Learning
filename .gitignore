@@ -59,3 +59,7 @@ Thumbs.db
 
 # Monograph temporary page preview renders
 publication/_page_previews/
+
+# Frontend dependencies and Vite production bundle
+frontend/node_modules/
+frontend/dist/

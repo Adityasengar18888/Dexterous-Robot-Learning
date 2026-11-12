@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    background-color: #111315;
+    color: #e7e9eb;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111315;
+}
+::-webkit-scrollbar-thumb {
+  background: #343b42;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #48525c;
+}
+
+input[type='range'] {
+  accent-color: #789dc4;
+}
+

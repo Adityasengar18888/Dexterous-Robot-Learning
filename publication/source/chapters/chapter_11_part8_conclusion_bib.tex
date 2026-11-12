@@ -1,0 +1,99 @@
+% PART VIII — CONCLUSIONS, BIBLIOGRAPHY & APPENDICES
+\chapter{Chapter 11: Verified Conclusions, Bibliography, Further Reading, and Registries}
+\section{11.1 Verified Contributions \& Explicit Technical Limitations}
+Major Contributions: (1) Resolved sparse HER static-goal stagnation (Phase 11->12: 0\% -> 100\% DR0 at 600k-1M); (2) Diagnosed micro-scale OOD slip collapse and delivered zero-retraining adaptive shielding (+41.0 pp Held-Out DR4 to 98.0\% in Phase 14); (3) Built collision-free two-object PreGrasp sorting (50/50 scripted in Phase 15.2.5A) and unbiased progress-masked BC (75\% grasp / 45\% lift); (4) Delivered hierarchical options (30\% vs 0\%), oblique RGB-D unprojection (14.8 mm), predictive Kalman tracking (95-100\%), MuJoCo 4.0.1 parity verification, 32.41 us E-stop bounds, and a live Three.js/FastAPI Digital Twin workstation backed by 126 passing automated tests.
+Principal Limitations: Full 2-object autonomous RL sorting (0\% in 16.6), learned compliant peg insertion (0\% full insert vs 53.33\% scripted), and cross-simulator MuJoCo transfer without retraining (5\% calibrated) remain open problems. No physical Panda hardware was executed.
+
+\section{11.2 Annotated IEEE Bibliography}
+[1] T. Haarnoja, A. Zhou, P. Abbeel, and S. Levine, 'Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor,' ICML, 2018. https://arxiv.org/abs/1801.01290
+
+[2] T. Haarnoja et al., 'Soft Actor-Critic Algorithms and Applications,' arXiv:1812.05905, 2018.
+
+[3] M. Andrychowicz et al., 'Hindsight Experience Replay,' Advances in Neural Information Processing Systems (NeurIPS), 2017. https://arxiv.org/abs/1707.01495
+
+[4] A. Raffin et al., 'Stable-Baselines3: Reliable Reinforcement Learning Implementations,' Journal of Machine Learning Research (JMLR), vol. 22, no. 268, pp. 1-8, 2021.
+
+[5] E. Coumans and Y. Bai, 'PyBullet, a Python Module for Physics Simulation for Games, Robotics and Machine Learning,' PyBullet Official Documentation, 2016-2021. https://pybullet.org
+
+[6] E. Todorov, T. Erez, and Y. Tassa, 'MuJoCo: A physics engine for model-based control,' IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2012. DOI: 10.1109/IROS.2012.6386109
+
+[7] J. Tobin et al., 'Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World,' IEEE/RSJ IROS, 2017. DOI: 10.1109/IROS.2017.8202133
+
+[8] S. Haddadin, S. Parusel, and A. Albu-Schaffer, 'Franka Emika Panda Technical Documentation \& FCI Architecture,' Franka Robotics GmbH, 2017.
+
+[9] R. S. Sutton, D. Precup, and S. Singh, 'Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning,' Artificial Intelligence, vol. 112, pp. 181-211, 1999.
+
+[10] A. Nair et al., 'Overcoming Exploration in Reinforcement Learning with Demonstrations,' IEEE ICRA, 2018. DOI: 10.1109/ICRA.2018.8463162
+
+[11] N. Hogan, 'Impedance Control: An Approach to Manipulation,' ASME Journal of Dynamic Systems, Measurement, and Control, 1985.
+
+[12] R. E. Kalman, 'A New Approach to Linear Filtering and Prediction Problems,' ASME Journal of Basic Engineering, 1960.
+
+[13] M. Towers et al., 'Gymnasium: A Standard Interface for Reinforcement Learning Environments,' Farama Foundation, 2023. https://gymnasium.farama.org
+
+[14] S. Ramirez, 'FastAPI Framework Documentation,' Tiangolo / FastAPI Official Docs, 2024. https://fastapi.tiangolo.com
+
+[15] R. Cabello et al., 'Three.js 3D Library Documentation,' Three.js Authors, 2024. https://threejs.org/docs/
+
+\section{11.3 Further Reading and Learning Resources}
+\begin{longtable}{l l}\caption{Table 11.1: Curated Robotics \& Reinforcement Learning Study Guide}\\\toprule
+Research Domain & Recommended Resource \& Technical Takeaways \\ \midrule \endhead
+Robotics Fundamentals \& Kinematics & Lynch \& Park, Modern Robotics (Cambridge Univ. Press, 2017) — screw theory, Jacobians, manipulability ellipsoids, and dynamics. \\
+Reinforcement Learning & Sutton \& Barto, Reinforcement Learning: An Introduction (MIT Press, 2nd Ed.) — MDPs, Bellman optimality, actor-critic derivations. \\
+Robot Learning \& Sim-to-Real & OpenAI et al., Solving Rubik's Cube with a Robot Hand (arXiv:1910.07113) — Automatic Domain Randomization at scale. \\
+Simulation \& Digital Twins & PyBullet Quickstart Guide \& MuJoCo Documentation — solver integrators, elliptic vs. pyramidal friction cones, MJCF modeling. \\
+Multi-Agent Robotics (Phase 18) & Rashid et al., QMIX / Lowe et al., MADDPG — centralized critics for decentralized multi-robot policy coordination. \\
+Web \& Control Stack & FastAPI WebSockets + React Three Fiber — deterministic state-sync architectures separating physics stepping from UI frame rates. \\
+\bottomrule \end{longtable}
+\section{11.4 Reproducibility, Experiment Summary \& Historical Provenance Registry}
+\begin{longtable}{l l l l l l}\caption{Table 11.2: Representative Executed Experiments Ledger (Strict Provenance Separation)}\\\toprule
+Exp ID & Phase & Env & Method & Budget / Eval & Verified Outcome \\ \midrule \endhead
+EXP-P0-001 & Phase 1 & Panda Kinematics Demo & SCRIPTED\_IK & N/A & 0.7-4.5 mm error; gripper 0-8 cm \\
+EXP-P1-REACH & Phase 2-3 & PandaReachEnv & SAC+HER (k=4) & 10,000 & SAC\_3 TB: actor -9.1->+19.5, rollout succ 1.0\% \\
+EXP-P4-PICK & Phase 4-5 & PandaPickEnv & SAC+HER & 10,000 & Eval -100.0 reward / 0\% @ 10k; Scripted step 67 \\
+EXP-P6-E1 & Phase 6 & PandaPickPlaceEnv & SAC (No HER) & 10,000 & Actor loss ~17.8; coll=7.7; eval 0\% \\
+EXP-P6-E2 & Phase 6 & PandaPickPlaceEnv & SAC+HER (k=4) & 10,000 & Actor loss ~2.59; coll=0.0; Scripted step 74 (friction fix) \\
+EXP-P7-SORT & Phase 7 & PandaSortEnv & SAC+HER & 10,000 & 10k smoke reward -150; Scripted step 79 \\
+EXP-P8-MSORT & Phase 8 & PandaMultiSortEnv (N=2) & SAC+HER & 10,000 & 10k smoke reward -600; Scripted step 209 \\
+EXP-P9-ASSEM & Phase 8-9 & PandaAssemblyEnv & SAC+HER & 10,000 & 10k smoke reward -200; Scripted step 143 \\
+EXP-P10-DR & Phase 10 & PickPlace R0-R4 & Scripted vs 2k SAC & 20 eps/cond & Scripted: R0 90\%, R1 85\%, R2 100\%, R3 85\%, R4 75\% \\
+EXP-P11-SPARSE & Phase 11 & PickPlace DR0-DR4 Sparse & SAC+HER & 25 x 100,000 & 0.0\% all 25 models (HER resting-goal trap) \\
+EXP-P11-9 & Phase 11.9 & TransportDiagnostic & SAC+HER & 50,000 & 100.0\% isolated transport @ 40k-50k (0.009m dist) \\
+EXP-P11-10B & Phase 11.10b & PickPlaceDense & SAC+HER & 250,000 & Peak @ 225k: 28\% Reach, 23\% Grasp, 7.3 step hold \\
+EXP-P12-1M & Phase 12 & PickPlaceDense DR-0 & SAC+HER & 1,000,000 & 43\%@400k -> 99\%@500k -> 100\%@600k..1M (+502 rew) \\
+EXP-P13-DR & Phase 13 & PickPlaceDense DR1/DR2/DR4 & SAC+HER & 500k-1M & DR4: 99\% Matched / 61\% ever (57\% final) OOD Held-out \\
+EXP-P13-5 & Phase 13.5 & PickPlace OOD D1-D5 & Frozen DR4 & 1,520 eval eps & Mass alone 100\%, Yaw 98-100\%, Fric 90\%, Coupled GBNL 30.5\% \\
+EXP-P14-4 & Phase 14.4 & PickPlace A->E & SAC + E\_ADAPTIVE & 600+ confirm eps & Held-out DR4: 57\%->98.0\% (Seed 43: 33\%->99\%), DR0 100\% \\
+EXP-P15-1 & Phase 15.1 & PickPlace Noise/Lag/Force & E\_ADAPTIVE & 320 eval eps & Clean 97.5\%, 5mm 95\%, 1-lag 72.5\%, 2-lag 0\%, Unpriv 42.5\% \\
+EXP-P15-2-5A & Phase 15.2.5A & MultiSortPreGrasp & SCRIPTED PreGrasp & 50 eval eps & 50/50 (100.0\%) 2-obj sorting, 76.4 steps, 0 colls \\
+EXP-P15-2-5B3 & Phase 15.2.5B & SinglePreGrasp & BC vs BCDecayingSAC & 5k-20k / 100 ep & 100-ep: 5B7 BC 75\% Grasp / 45\% Lift; 5B2 SAC 62\%/7\% \\
+EXP-P15-3 & Phase 15.3 & AssemblyDense & Scripted vs 5k BC/SAC & 30 eval eps & Scripted 56.67\% (1.41 deg); BC 23.3\%/0\%; SAC 3.3\%/0\% \\
+EXP-P16-1 & Phase 16.1 & PickPlace HRL vs Flat & DiscreteSAC+HER vs SAC & 12,000 & HRL 30.0\%/33.3\% vs Flat SAC 0.0\%/0.0\% vs Phase14 100\% \\
+EXP-P16-2 & Phase 16.2 & PickPlace RGB-D Vision & SAC/HRL (Obs=RGBD) & 20 eval eps & 99.9-100\% det, 14.81mm err; SAC 60\% grasp/15\%; HRL 25\%/20\% \\
+EXP-P16-3 & Phase 16.3 & DynamicPickPlace & Tracker+Predictive & 5x20 eval eps & 100\% linear/moving-tgt, 95\% sine/disturb (100\% grasp) \\
+EXP-P16-4 & Phase 16.4 & ContactAssemblyEnv & Compliant Impedance & 30 eval eps & Compliant 53.33\% vs Phase15 Scripted 50.0\% (pos err 0.0468m) \\
+EXP-P16-6 & Phase 16.6 & Autonomous MultiSort & RGBD+HRL+Safety & 20 eval eps & 25.0\% Obj-1 placed, 0\% full 2-obj, 229 replans \\
+EXP-P17-1 & Phase 17.1 & MuJoCo PickPlace & Frozen PyBullet SAC/HRL & 5x20 eval eps & Zero-shot 40\% contact/5\% grasp -> Calib 50\%/15\%/5\% \\
+EXP-P17-2 & Phase 17.2 & Sim-to-Real Stress & SAC+SafetyMonitor & 7x20 eval eps & 100\% 5mm/jitter/fric-mass, 90\% 1-lag, 60\% cam calib, 32.4us Estop \\
+\bottomrule \end{longtable}
+\begin{longtable}{l l l l l}\caption{Table 11.3: Phase 0–17 Verification Status Summary}\\\toprule
+Phase & Title & Period & Status & Evidence Quality \\ \midrule \endhead
+0 & Project Initialization \& Infrastructure Scaffold & 2026-10-03 (git commit 3a345f3) & COMPLETE & SOURCE\_VERIFIED \\
+1 & Franka Panda Kinematics, PyBullet Foundation \& Cartesian Controller & 2026-10-03 (git commits a5cc06b, 7ad9848) & COMPLETE & SOURCE\_VERIFIED \\
+2 & Goal-Conditioned Manipulation Environment Abstraction \& Reach Benchmark & Oct 2026 (pre-commit 008cd30; recovered from docs/ \& tests/) & COMPLETE & REPORT\_VERIFIED \\
+3 & SAC + HER RL Training, Evaluation \& Callback Infrastructure & Oct 2026 (recovered from src/rl/, logs/reach\_sac, checkpoints/reach\_sac) & COMPLETE & LOG\_VERIFIED \\
+4 & Object Grasping Abstraction \& PandaPickEnv & Oct 2026 (recovered from src/objects/cube.py, src/environments/pick\_env.py) & COMPLETE & SOURCE\_VERIFIED \\
+5 & Reach/Pick Exploration \& Early Controller Baseline Scripts & Oct-Nov 2026 & PARTIALLY\_COMPLETE & HISTORICALLY\_REPORTED \\
+6 & Pick \& Place Environment, HER Comparative Smoke \& Finger Friction Bug Fix & Oct-Nov 2026 (experiments/pick\_place/smoke\_results.md) & COMPLETE & LOG\_VERIFIED \\
+7 & Color-Conditioned Dynamic Sorting Benchmark (PandaSortEnv) & Oct-Nov 2026 (docs/experiments.md EXP-P7-SORT) & COMPLETE & LOG\_VERIFIED \\
+8 & Sequential Multi-Object Sorting \& Orientation-Aware Assembly Foundations & Oct-Nov 2026 (docs/experiments.md EXP-P8-MULTI\_SORT, EXP-P9-ASSEMBLY) & COMPLETE & LOG\_VERIFIED \\
+9 & Full-System Diagnostic Audit \& Lazy Simulation Connection Bug Fix & Nov 2026 (docs/phase9\_diagnostic\_report.md) & COMPLETE & REPORT\_VERIFIED \\
+10 & Deterministic Domain Randomization Engine (DR-0 to DR-4) & Nov 2026 (docs/phase10\_dr\_report.md) & COMPLETE & REPORT\_VERIFIED \\
+11 & 100k Sparse DR Matrix \& Diagnostic Isolation Series (11.5-11.10b) & Nov 2026 (docs/phase11\_*.md, results/phase11\_*.csv) & COMPLETE & LOG\_VERIFIED \\
+12 & 1M-Step Dense SAC+HER Scaling Breakthrough & Nov 2026 (docs/phase12\_1m\_dense\_scaling\_report.md) & COMPLETE & LOG\_VERIFIED \\
+13 & Dense Domain Randomization (DR1/DR2/DR4) \& Causal OOD Failure Diagnostics (13.5) & 2026-11-03 to 2026-11-04 (docs/phase13\_*.md) & COMPLETE & LOG\_VERIFIED \\
+14 & Zero-Retraining Adaptive Control Suite (14-Lite -> 14.3 -> 14.4) & 2026-11-10 (results/phase14\_*, docs/phase14\_closure\_and\_phase15\_readiness.md) & COMPLETE & LOG\_VERIFIED \\
+15 & Sim-to-Real Sensitivity (15.1), Multi-Object Sorting (15.2) \& Orientation Assembly (15.3) & 2026-11-10 to 2026-11-11 (results/phase15\_*) & PARTIALLY\_COMPLETE & SOURCE\_VERIFIED \\
+16 & Hierarchical RL, Oblique RGB-D Vision, Dynamic Tracking, Contact Assembly \& Deployment & 2026-11-11 to 2026-11-12 (results/phase16\_17/) & COMPLETE & SOURCE\_VERIFIED \\
+17 & MuJoCo Cross-Simulator Validation, Sim-to-Real Readiness \& Hardware Contract & 2026-11-12 (results/phase16\_17/) & PARTIALLY\_COMPLETE & SOURCE\_VERIFIED \\
+\bottomrule \end{longtable}
